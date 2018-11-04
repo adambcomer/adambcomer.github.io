@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700');
+
+body, html {
+    font-family: Nanum Gothic;
+    margin: 0;
+}
+
+/* Navbar CSS*/
+nav {
+    display: grid;
+    grid-template-columns: auto 30px;
+    padding: 1em;
+    background: transparent;
+}
+
+#icon {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+    line-height: 0.8em;
+    color: #707070;
+}
+
+#icon-subtext {
+    font-size: 0.7em;
+    font-weight: normal;
+    color: #707070;
+}
+
+#nav-icon {
+    background: no-repeat;
+    cursor: pointer;
+    width: 30px;
+}
+
+/* Superhero CSS*/
+
+#card {
+    position: relative;
+    background-color: white;
+    background-image: -webkit-linear-gradient(-30deg, white 70%, #002984 30%);
+    min-height: 700px;
+}
+
+/* #card2 {
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(60deg, #002984 50%, transparent 50%);
+    height: 500px;
+    margin-top: -500px;
+} */
+
+#cta {
+    margin: 4em 3em 0 3em;
+    line-height: 0.5em
+}
+
+h1 {
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+#tool1 {
+    font-weight: bold;
+}
+
+#tool2 {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 50%);
+}
+
+#tool3 {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 25%);
+}
+
+#tool4 {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 12.5%);
+}
+
+#button {
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: #E91E63;
+    padding: 1em 3em 1em 3em;
+    border-radius: 10px;
+    margin-top: 5em;
+    width: 10em;
+}
+
+#superhero {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+}
+
+#git {
+    display: none;
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+    #card {
+        background-image: -webkit-linear-gradient(-30deg, white 50%, #002984 50%);
+    }
+
+    #cta {
+        margin: 6em 5em 0 5em;
+    }
+
+    h1 {
+        font-weight: normal;
+        font-size: 2.8em;
+    }
+    
+    h2 {
+        font-size: 3em;
+    }
+
+    #superhero {
+        display: grid;
+        grid-template-columns: 65% 30%;
+        width: 100%;
+    }
+
+    #git {
+        display: inherit;
+        width: 100%;
+        margin-top: 5em;
+    }
+}
