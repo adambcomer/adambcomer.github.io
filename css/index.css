@@ -94,20 +94,21 @@ h2 {
     margin-left: -2em;
 }
 
-#box-two-text {
-    padding: 2em;
+#block-two-text {
+    padding: 1em;
     color: white;
 }
 
-#box-two-title {
+#block-two-title {
     margin: 0;
 }
 
-#box-two-subtitle {
+#block-two-subtitle {
+    font-size: 1.2em;
     margin: 0.2em 0 0 0;
 }
 
-#box-two-button {
+#block-two-button {
     display: block;
     font-size: 1em;
     font-weight: bold;
@@ -131,9 +132,48 @@ h2 {
 
 /* Block Three */
 #block-three {
-    min-height: 90vh;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    padding: 5em 1em 0 1em;
+    min-height: 50vh;
+}
+
+#block-three-title {
+    font-weight: normal;
+    margin: 0;
+    text-align: right;
+}
+
+#block-three-github-profile {
+    color: black;
+    text-decoration: none;
+}
+
+#block-three-subtitle {
+    font-size: 1.2em;
+    margin: 0.2em 0 0 0;
+    text-align: right;
+}
+
+#block-three-button { 
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: #00fff5; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff5', endColorstr='#0076ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    padding: 1em 3em 1em 3em;
+    border-radius: 1000pt;
+    margin-top: 2em;
+    width: 5em;
+    float: right;
+
+    -webkit-box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
+    -moz-box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
+    box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
 }
 
 /* Desktop */
@@ -178,7 +218,29 @@ h2 {
         margin: 10em 0 -10em -2em;
     }
 
-    #box-two-text {
-        padding-top: 10em;
+    #block-two-text {
+        margin-top: 10em;
+        text-align: right;
+    }
+    
+    #block-two-button {
+        float: right;
+    }
+
+    /* Block Three */
+    #block-three {
+        margin: 12em 1em 0 1em;
+    }
+
+    #block-three-subtitle {
+        text-align: left;
+    }
+
+    #block-three-title {
+        text-align: left;
+    }
+
+    #block-three-button { 
+        float: left;
     }
 }
