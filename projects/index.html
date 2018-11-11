@@ -10,7 +10,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
-    <title>Adam Comer</title>
+    <title>Adam Comer: Projects</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129077573-1"></script>
@@ -43,51 +43,66 @@
 
         <!-- Landing page box 1 -->
         <div id="cta">
-                <div>
-                    <h1 id="cta-title">Startups to Neural Networks</h1>
-                    <h2 id="cta-subtext">Here are some projects I’ve worked on.</h2>
-                </div>
-                <div><img id="nn-img" src="/assets/nn.svg"></div>
+            <div>
+                <h1 id="cta-title">Startups to Neural Networks</h1>
+                <h2 id="cta-subtext">Here are some projects I’ve worked on.</h2>
             </div>
+            <div><img id="nn-img" src="/assets/nn.svg"></div>
+        </div>
+    </div>
+
+    <!-- Project 1 -->
+    <div id="project-one">
+        <div id="project-one-img-block">
+            <img id="project-one-img" src="/assets/project-knowtworthy.png">
+        </div>
+        <div id="project-one-text-block">
+            <h2 id="project-one-title">Knowtworthy</h2>
+            <p id="project-one-description">We all know that meetings suck! Hours are spent on minutes and organizing the meeting only for everyone to leave on a different page. Knowtworthy aims to change this by creating easy to use templates and real-time transcription to make meetings move smoothly. </p>
+            <div id="project-one-text-block-extra">
+                <h3 id="project-one-date">Nov 2017 - Present</h3>
+                <a id="project-one-nav" href="/">Read More</a>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
     <footer>
-            <div>
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/projects">Projects</a></li>
-                    <li><a href="/sitemap.xml">Sitemap</a></li>
-                </ul>
-            </div>
-    
-            <div>
-                <h4>Social</h4>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/adambcomer/">Linkedin</a></li>
-                    <li><a href="https://github.com/adambcomer">Github</a></li>
-                    <li><a href="https://gitlab.com/adambcomer">Gitlab</a></li>
-                    <li><a href="https://twitter.com/adambcomer">Twitter</a></li>
-                    <li><a href="https://www.facebook.com/adam.comer.779">Facebook</a></li>
-                </ul>
-            </div>
-    
-        </footer>
-    
-        <script>
-            (function () {
-                var drawer = document.querySelector("ul");
-                var drawerIcon = document.getElementById('nav-img')
-    
-                drawerIcon.addEventListener("click", function (e) {
-                    drawer.classList.toggle("active");
-                    e.preventDefault();
-                });
-            })();
-        </script>
+        <div>
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/sitemap.xml">Sitemap</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Social</h4>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/adambcomer/">Linkedin</a></li>
+                <li><a href="https://github.com/adambcomer">Github</a></li>
+                <li><a href="https://gitlab.com/adambcomer">Gitlab</a></li>
+                <li><a href="https://twitter.com/adambcomer">Twitter</a></li>
+                <li><a href="https://www.facebook.com/adam.comer.779">Facebook</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script>
+        (function () {
+            var drawer = document.querySelector("ul");
+            var drawerIcon = document.getElementById('nav-img')
+
+            drawerIcon.addEventListener("click", function (e) {
+                drawer.classList.toggle("active");
+                e.preventDefault();
+            });
+        })();
+    </script>
 </body>
 
 </html>
