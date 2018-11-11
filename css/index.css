@@ -1,57 +1,78 @@
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 body, html {
-    font-family: Nanum Gothic;
+    font-family: Montserrat;
     margin: 0;
 }
 
 /* Navbar CSS*/
 nav {
     display: grid;
-    grid-template-columns: auto 30px;
+    grid-template-columns: max-content auto 30px;
     padding: 1em;
-    background: transparent;
 }
 
 #icon {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: bold;
-    display: block;
     line-height: 0.8em;
-    color: #707070;
+    color: #000000;
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
 }
 
 #icon-subtext {
-    font-size: 0.7em;
+    font-size: 0.6em;
     font-weight: normal;
-    color: #707070;
+    color: #000000;
 }
 
-#nav-icon {
+#nav-img {
     background: no-repeat;
     cursor: pointer;
     width: 30px;
+    margin-right: 1em;
 }
 
-/* Superhero CSS*/
+#nav-block {
+    list-style-type: none;
+    list-style: none;
+    overflow: hidden;
+	margin: 0;
+    padding: 0;
+}
 
-#card {
-    position: relative;
-    background-color: white;
-    background-image: -webkit-linear-gradient(-30deg, white 70%, #002984 30%);
+#nav-elements {
+    display: none;
+}
+
+/* Block One CSS*/
+
+#block-one-bg {
     min-height: 700px;
+
+    background: #00fff5; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff5', endColorstr='#0076ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-/* #card2 {
-    background-color: transparent;
-    background-image: -webkit-linear-gradient(60deg, #002984 50%, transparent 50%);
-    height: 500px;
-    margin-top: -500px;
-} */
+#block-one {
+    background-image: -webkit-linear-gradient(-30deg, white 70%, transparent 30%);
+
+    min-height: 700px;
+    margin-top: -700px
+}
 
 #cta {
-    margin: 4em 3em 0 3em;
-    line-height: 0.5em
+    line-height: 0.9em;
+    margin: 5em 2em 0 2em;
+}
+
+#cloud-img {
+    display: none;
 }
 
 h1 {
@@ -59,7 +80,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.2em;
+    font-size: 2.5em;
 }
 
 #tool1 {
@@ -88,51 +109,65 @@ h2 {
     text-align: center;
     text-decoration: none;
     color: white;
-    background: #E91E63;
+    background: #00fff5; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff5', endColorstr='#0076ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     padding: 1em 3em 1em 3em;
-    border-radius: 10px;
+    border-radius: 1000pt;
     margin-top: 5em;
-    width: 10em;
-}
+    width: 5em;
 
-#superhero {
-    display: grid;
-    grid-template-columns: 100%;
-    width: 100%;
-}
-
-#git {
-    display: none;
+    -webkit-box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
+    -moz-box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
+    box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
 }
 
 /* Desktop */
 @media only screen and (min-width: 768px) {
-    #card {
-        background-image: -webkit-linear-gradient(-30deg, white 50%, #002984 50%);
+
+    /* Navbar CSS*/
+    nav {
+        grid-template-columns: auto auto none;
+    }
+
+    #nav-img {
+        display: none;
+    }
+
+    #nav-elements {
+        display: inline;
+        float: right;
+        padding: 0.5em 0 0 1.5em;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2em;
+        vertical-align: top;
+    }
+
+    /* Block One CSS*/
+    #block-one {
+        background-image: -webkit-linear-gradient(-30deg, white 40%, transparent 40%);
+    }
+
+    #cloud-img {
+        display: block;
+        float: right;
     }
 
     #cta {
-        margin: 6em 5em 0 5em;
+        margin: 2em 2em 0 2em;
+        display: grid;
+        grid-template-columns: 50% 50%
     }
 
     h1 {
         font-weight: normal;
-        font-size: 2.8em;
+        font-size: 2.2em;
     }
     
     h2 {
-        font-size: 3em;
-    }
-
-    #superhero {
-        display: grid;
-        grid-template-columns: 65% 30%;
-        width: 100%;
-    }
-
-    #git {
-        display: inherit;
-        width: 100%;
-        margin-top: 5em;
+        font-size: 2.5em;
     }
 }
