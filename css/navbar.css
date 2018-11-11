@@ -45,7 +45,7 @@ nav {
 }
 
 .active {
-    position: absolute;
+    position: fixed;
     display: block !important;
     background: #ffffff;
     width: 50%;
