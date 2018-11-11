@@ -49,7 +49,37 @@ body, html {
     background: #FF595E;
 }
 
+/* Project 3 */
+#project-three-img-block {
+    background: #576069;
+}
+
+/* Project 4 */
+#project-four-img-block {
+    background: #FF8900;
+}
+
+#project-four-img {
+    padding: 1.3em 0 1.3em 0;
+}
+
+/* Project 5 */
+#project-five-img-block {
+    background: #143A83;
+    text-align: center;
+    padding: 0 !important;
+}
+
+#project-five-img {
+    max-width: 260px; 
+    max-height: 260px;
+}
+
 /* Project classes */
+.project {
+    padding: 0 1em 0 1em;
+}
+
 .project-img {
     width: 100%
 }
@@ -123,6 +153,17 @@ body, html {
         font-size: 1.5em;
         font-size: 3vw;
         margin: 0;
+    }
+
+    /* Project 4 */
+    #project-five-img {
+        padding: 2em 0 2em 0;
+    }
+
+    /* Project 4 */
+    #project-five-img {
+        max-width: 300px; 
+        max-height: 300px;
     }
 
     /* Project classes */
