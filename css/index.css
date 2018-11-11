@@ -5,9 +5,9 @@ body, html {
     margin: 0;
 }
 
-/* Block One CSS*/
+/* Block One*/
 #block-one-bg {
-    min-height: 700px;
+    min-height: 90vh;
 
     background: #00fff5; /* Old browsers */
     background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
@@ -19,8 +19,8 @@ body, html {
 #block-one {
     background-image: -webkit-linear-gradient(-30deg, white 70%, transparent 30%);
 
-    min-height: 700px;
-    margin-top: -700px
+    min-height: 90vh;
+    margin-top: -90vh;
 }
 
 #cta {
@@ -84,6 +84,58 @@ h2 {
     box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
 }
 
+/* Block Two*/
+#block-two {
+    min-height: 90vh;;
+    background: #34363A;
+}
+
+#editor-img {
+    margin-left: -2em;
+}
+
+#box-two-text {
+    padding: 2em;
+    color: white;
+}
+
+#box-two-title {
+    margin: 0;
+}
+
+#box-two-subtitle {
+    margin: 0.2em 0 0 0;
+}
+
+#box-two-button {
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: #00fff5; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff5', endColorstr='#0076ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    padding: 1em 3em 1em 3em;
+    border-radius: 1000pt;
+    margin-top: 2em;
+    width: 5em;
+
+    -webkit-box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
+    -moz-box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
+    box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
+}
+
+/* Block Three */
+#block-three {
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
 /* Desktop */
 @media only screen and (min-width: 768px) {
 
@@ -100,15 +152,33 @@ h2 {
     #cta {
         margin: 2em 2em 0 2em;
         display: grid;
-        grid-template-columns: 50% 50%
+        grid-template-columns: 50% 50%;
     }
 
     h1 {
         font-weight: normal;
         font-size: 2.2em;
+        font-size: 3.5vw;
     }
     
     h2 {
         font-size: 2.5em;
+        font-size: 4.5vw;
+    }
+
+    /* Block Two*/
+    #block-two {
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    #editor-img {
+        background: transparent;
+        width: 100%;
+        margin: 10em 0 -10em -2em;
+    }
+
+    #box-two-text {
+        padding-top: 10em;
     }
 }

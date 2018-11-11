@@ -32,28 +32,43 @@
         <!-- Landing page box 1 -->
         <div id="cta">
             <div>
-            <h1>Ready to work with</h1>
-            <h2 id="tool1">Kubernetes</h2>
-            <h2 id="tool2">Node.js</h2>
-            <h2 id="tool3">Python</h2>
-            <h2 id="tool4">Git</h2>
+                <h1>Ready to work with</h1>
+                <h2 id="tool1">Kubernetes</h2>
+                <h2 id="tool2">Node.js</h2>
+                <h2 id="tool3">Python</h2>
+                <h2 id="tool4">Git</h2>
 
-            <a id="button" href="#">Projects</a>
-        </div>
+                <a id="button" href="#">Projects</a>
+            </div>
             <div><img id="cloud-img" src="/assets/cloud.svg"></div>
         </div>
     </div>
 
+    <!-- Landing page box 2 -->
+    <div id="block-two">
+        <img id="editor-img" src="/assets/editor.svg">
+        <div id="box-two-text">
+            <h2 id="box-two-title">Coding Since Birth</h2>
+            <p id="box-two-subtitle">"What a baller" - Alex Gordienko</p>
+
+            <a id="box-two-button" href="#">Blog</a>
+        </div>
+    </div>
+
+    <!-- Landing page box 3 -->
+    <div id="block-three"></div>
+
     <script>
-        (function (){
+        (function () {
             var drawer = document.querySelector("ul");
             var drawerIcon = document.getElementById('nav-img')
 
-            drawerIcon.addEventListener("click", function(e) {
+            drawerIcon.addEventListener("click", function (e) {
                 drawer.classList.toggle("active");
                 e.preventDefault();
             });
         })();
     </script>
 </body>
+
 </html>
