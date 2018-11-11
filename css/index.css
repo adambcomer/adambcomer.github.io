@@ -95,7 +95,7 @@ h2 {
 }
 
 #block-two-text {
-    padding: 1em;
+    padding: 2em;
     color: white;
 }
 
@@ -132,7 +132,7 @@ h2 {
 
 /* Block Three */
 #block-three {
-    padding: 5em 1em 0 1em;
+    padding: 5em 2em 0 2em;
     min-height: 50vh;
 }
 
