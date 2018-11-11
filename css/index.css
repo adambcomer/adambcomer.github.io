@@ -5,50 +5,7 @@ body, html {
     margin: 0;
 }
 
-/* Navbar CSS*/
-nav {
-    display: grid;
-    grid-template-columns: max-content auto 30px;
-    padding: 1em;
-}
-
-#icon {
-    font-size: 1.5em;
-    font-weight: bold;
-    line-height: 0.8em;
-    color: #000000;
-    text-decoration: none;
-    overflow: hidden;
-    display: block;
-}
-
-#icon-subtext {
-    font-size: 0.6em;
-    font-weight: normal;
-    color: #000000;
-}
-
-#nav-img {
-    background: no-repeat;
-    cursor: pointer;
-    width: 30px;
-    margin-right: 1em;
-}
-
-#nav-block {
-    list-style-type: none;
-    list-style: none;
-    overflow: hidden;
-	margin: 0;
-    padding: 0;
-}
-
-#nav-elements {
-    display: none;
-}
-
 /* Block One CSS*/
-
 #block-one-bg {
     min-height: 700px;
 
@@ -77,10 +34,13 @@ nav {
 
 h1 {
     font-weight: normal;
+    font-size: 1.5em;
+    font-size: 8vw;
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 2.2em;
+    font-size: 10vw;
 }
 
 #tool1 {
@@ -126,25 +86,6 @@ h2 {
 
 /* Desktop */
 @media only screen and (min-width: 768px) {
-
-    /* Navbar CSS*/
-    nav {
-        grid-template-columns: auto auto none;
-    }
-
-    #nav-img {
-        display: none;
-    }
-
-    #nav-elements {
-        display: inline;
-        float: right;
-        padding: 0.5em 0 0 1.5em;
-        color: white;
-        font-weight: bold;
-        font-size: 1.2em;
-        vertical-align: top;
-    }
 
     /* Block One CSS*/
     #block-one {
