@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/navbar-footer.css">
+    <link rel="stylesheet" href="/css/projects.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <title>Adam Comer</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129077573-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129077573-1');
+    </script>
+</head>
+
+<body>
+    <div id="block-one-bg"></div>
+    <div id="block-one">
+        <!-- Navbar -->
+        <nav>
+            <a id="icon" href="/">ADAM COMER <br> <span id="icon-subtext">Software Engineer</span></a>
+
+            <ul id="nav-block">
+                <li id="nav-elements"><a href="/contact">Contact</a></li>
+                <li id="nav-elements"><a href="/projects">Projects</a></li>
+                <li id="nav-elements"><a href="/blog">Blog</a></li>
+            </ul>
+
+            <div id="nav-img-container">
+                <img id="nav-img" src="/assets/navIcon.svg">
+            </div>
+        </nav>
+
+        <!-- Landing page box 1 -->
+        <div id="cta">
+                <div>
+                    <h1 id="cta-title">Startups to Neural Networks</h1>
+                    <h2 id="cta-subtext">Here are some projects I’ve worked on.</h2>
+                </div>
+                <div><img id="nn-img" src="/assets/nn.svg"></div>
+            </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+            <div>
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/sitemap.xml">Sitemap</a></li>
+                </ul>
+            </div>
+    
+            <div>
+                <h4>Social</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/adambcomer/">Linkedin</a></li>
+                    <li><a href="https://github.com/adambcomer">Github</a></li>
+                    <li><a href="https://gitlab.com/adambcomer">Gitlab</a></li>
+                    <li><a href="https://twitter.com/adambcomer">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/adam.comer.779">Facebook</a></li>
+                </ul>
+            </div>
+    
+        </footer>
+    
+        <script>
+            (function () {
+                var drawer = document.querySelector("ul");
+                var drawerIcon = document.getElementById('nav-img')
+    
+                drawerIcon.addEventListener("click", function (e) {
+                    drawer.classList.toggle("active");
+                    e.preventDefault();
+                });
+            })();
+        </script>
+</body>
+
+</html>

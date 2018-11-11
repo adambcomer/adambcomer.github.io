@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body, html {
+    font-family: Montserrat;
+    margin: 0;
+}
+
+#block-one-bg {
+    min-height: 110vh;
+
+    background: #00fff5; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff5', endColorstr='#0076ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#block-one {
+    background-image: -webkit-linear-gradient(-30deg, white 70%, transparent 30%);
+
+    min-height: 110vh;
+    margin-top: -110vh;
+}
+
+#cta {
+    margin: 1em 2em 0 2em;
+}
+
+#cta-title {
+    font-size: 2.2em;
+    font-size: 10vw;
+    margin: 0;
+}
+
+#cta-subtext {
+    font-weight: normal;
+    font-size: 1.5em;
+    font-size: 8vw;
+    margin: 0;
+}
+
+#nn-img {
+    align-content: center;
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+    #block-one-bg {
+        min-height: 100vh;
+    
+        background: #00fff5; /* Old browsers */
+        background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff5', endColorstr='#0076ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+
+    #block-one {
+        background-image: -webkit-linear-gradient(30deg, white 60%, transparent 60%);
+    
+        min-height: 100vh;
+        margin-top: -100vh;
+    }
+
+    #cta {
+        display: grid;
+        grid-template-columns: 60% 35%;
+    }
+
+    #cta-title {
+        font-size: 2.2em;
+        font-size: 4vw;
+        margin: 2em 0 0 0;
+    }
+    
+    #cta-subtext {
+        font-weight: normal;
+        font-size: 1.5em;
+        font-size: 3vw;
+        margin: 0;
+    }
+}
