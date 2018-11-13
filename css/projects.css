@@ -3,11 +3,11 @@
 body, html {
     font-family: Montserrat;
     margin: 0;
+    background: #F4F4F4;
 }
 
 #block-one-bg {
-    min-height: 110vh;
-
+    min-height: 750px;
     background: #00fff5; /* Old browsers */
     background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* Chrome10-25,Safari5.1-6 */
@@ -17,9 +17,8 @@ body, html {
 
 #block-one {
     background-image: -webkit-linear-gradient(-30deg, white 70%, transparent 30%);
-
-    min-height: 110vh;
-    margin-top: -110vh;
+    min-height: 750px;
+    margin-top: -750px;
 }
 
 #cta {
@@ -39,57 +38,48 @@ body, html {
     margin: 0;
 }
 
-/* Project 1 */
-#project-one-img-block {
-    background: #3949AB;
-}
-
-/* Project 2 */
-#project-two-img-block {
-    background: #FF595E;
-}
-
-/* Project 3 */
-#project-three-img-block {
-    background: #576069;
-}
-
 /* Project 4 */
-#project-four-img-block {
+#project-four-img {
     background: #FF8900;
 }
 
-#project-four-img {
-    padding: 1.3em 0 1.3em 0;
-}
-
 /* Project 5 */
-#project-five-img-block {
+#project-five-img {
     background: #143A83;
-    text-align: center;
-    padding: 0 !important;
+    max-height: 240px;
+    border-bottom: none;
 }
 
-#project-five-img {
-    max-width: 260px; 
-    max-height: 260px;
+#project-five-img-block { 
+    background: #143A83;
+    border-radius: 15px 15px 0 0;
 }
 
 /* Project classes */
 .project {
-    padding: 0 1em 0 1em;
+    margin: 0 0.8em 0 0.8em;
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    background: white;
 }
 
 .project-img {
-    width: 100%
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 240px;
+    min-height: 240px;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 1px solid #C4C4C4;
 }
 
-.project-img-block{
-    padding: 2em;
+.project-img-block {
+    text-align: center;
 }
 
 .project-text-block {
-    padding: 2em;
+    padding: 0 1em 1em 1em;
 }
 
 .project-text-block-extra {
@@ -114,14 +104,14 @@ body, html {
 }
 
 .separator {
-    padding: 2em;
+    padding: 1em;
 }
 
 
 /* Desktop */
 @media only screen and (min-width: 768px) {
     #block-one-bg {
-        min-height: 100vh;
+        min-height: 600px;
     
         background: #00fff5; /* Old browsers */
         background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
@@ -133,8 +123,8 @@ body, html {
     #block-one {
         background-image: -webkit-linear-gradient(30deg, white 60%, transparent 60%);
     
-        min-height: 100vh;
-        margin-top: -100vh;
+        min-height: 600px;
+        margin-top: -600px;
     }
 
     #cta {
