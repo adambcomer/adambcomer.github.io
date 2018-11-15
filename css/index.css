@@ -5,27 +5,41 @@ body, html {
     margin: 0;
 }
 
-/* Block One*/
-#block-one-bg {
-    min-height: 90vh;
-
+/* Classes */
+.button {
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
     background: #00fff5; /* Old browsers */
     background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff5', endColorstr='#0076ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    padding: 1em 3em 1em 3em;
+    border-radius: 1000pt;
+    width: 5em;
+
+    -webkit-box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
+    -moz-box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
+    box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
 }
 
-#block-one {
-    background-image: -webkit-linear-gradient(-30deg, white 70%, transparent 30%);
 
-    min-height: 90vh;
-    margin-top: -90vh;
+/* Block One */
+#block-one {
+    background: #00fff5;
+    background: -webkit-linear-gradient(120deg, white 70%, transparent 70%), -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%);
+    background: -moz-linear-gradient(120deg, white 70%, transparent 70%), -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
+    background: linear-gradient(120deg, white 70%, transparent 70%), linear-gradient(45deg, #00fff5 0%,#0076ff 100%);
 }
 
 #cta {
     line-height: 0.9em;
     margin: 5em 2em 0 2em;
+    padding-bottom: 5em;
 }
 
 #cloud-img {
@@ -62,31 +76,13 @@ h2 {
     color: rgba(0, 0, 0, 12.5%);
 }
 
-#button {
-    display: block;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background: #00fff5; /* Old browsers */
-    background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff5', endColorstr='#0076ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    padding: 1em 3em 1em 3em;
-    border-radius: 1000pt;
-    margin-top: 5em;
-    width: 5em;
-
-    -webkit-box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
-    -moz-box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
-    box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
+#block-one-button {
+    margin-top: 3em;
 }
 
-/* Block Two*/
+/* Block Two */
 #block-two {
-    min-height: 90vh;;
+    padding: 2em 0 2em 0;
     background: #34363A;
 }
 
@@ -95,7 +91,7 @@ h2 {
 }
 
 #block-two-text {
-    padding: 2em;
+    padding: 2em 2em 0 2em;
     color: white;
 }
 
@@ -109,37 +105,18 @@ h2 {
 }
 
 #block-two-button {
-    display: block;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background: #00fff5; /* Old browsers */
-    background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff5', endColorstr='#0076ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    padding: 1em 3em 1em 3em;
-    border-radius: 1000pt;
     margin-top: 2em;
-    width: 5em;
-
-    -webkit-box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
-    -moz-box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
-    box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
 }
 
 /* Block Three */
 #block-three {
-    padding: 5em 2em 0 2em;
-    min-height: 50vh;
+    padding: 2em;
+    text-align: right;
 }
 
 #block-three-title {
     font-weight: normal;
     margin: 0;
-    text-align: right;
 }
 
 #block-three-github-profile {
@@ -150,38 +127,20 @@ h2 {
 #block-three-subtitle {
     font-size: 1.2em;
     margin: 0.2em 0 0 0;
-    text-align: right;
 }
 
 #block-three-button { 
-    display: block;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background: #00fff5; /* Old browsers */
-    background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff5', endColorstr='#0076ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    padding: 1em 3em 1em 3em;
-    border-radius: 1000pt;
-    margin-top: 2em;
-    width: 5em;
-    float: right;
-
-    -webkit-box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
-    -moz-box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
-    box-shadow: 0px 0px 20px 3px rgba(0,118,255,0.33);
+    margin: 2em 0 0 auto;
 }
 
 /* Desktop */
-@media only screen and (min-width: 768px) {
-
-    /* Block One CSS*/
+@media only screen and (min-width: 1024px) {
+    /* Block One */
     #block-one {
-        background-image: -webkit-linear-gradient(-30deg, white 40%, transparent 40%);
+        background: #00fff5;
+        background: -webkit-linear-gradient(120deg, white 45%, transparent 45%), -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%);
+        background: -moz-linear-gradient(120deg, white 45%, transparent 45%), -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
+        background: linear-gradient(120deg, white 45%, transparent 45%), linear-gradient(45deg, #00fff5 0%,#0076ff 100%);
     }
 
     #cloud-img {
@@ -215,11 +174,12 @@ h2 {
     #editor-img {
         background: transparent;
         width: 100%;
-        margin: 10em 0 -10em -2em;
+        margin: 5em 0 -15em -2em;
     }
 
     #block-two-text {
-        margin-top: 10em;
+        margin-top: 5em;
+        margin-bottom: 5em;
         text-align: right;
     }
     
@@ -229,18 +189,77 @@ h2 {
 
     /* Block Three */
     #block-three {
-        margin: 12em 1em 0 1em;
-    }
-
-    #block-three-subtitle {
-        text-align: left;
-    }
-
-    #block-three-title {
+        margin: 12em 1em 4em 1em;
         text-align: left;
     }
 
     #block-three-button { 
-        float: left;
+        margin: 2em auto 0 0;
+    } 
+}
+
+
+/* Tablets */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+    /* Block One */
+    #block-one {
+        background: #00fff5;
+        background: -webkit-linear-gradient(120deg, white 45%, transparent 45%), -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%);
+        background: -moz-linear-gradient(120deg, white 45%, transparent 45%), -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
+        background: linear-gradient(120deg, white 45%, transparent 45%), linear-gradient(45deg, #00fff5 0%,#0076ff 100%);
     }
+
+    #cloud-img {
+        display: block;
+        float: right;
+    }
+
+    #cta {
+        margin: 2em 2em 0 2em;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    h1 {
+        font-weight: normal;
+        font-size: 2.2em;
+        font-size: 3.5vw;
+    }
+    
+    h2 {
+        font-size: 2.5em;
+        font-size: 4.5vw;
+    }
+
+    /* Block Two*/
+    #block-two {
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    #editor-img {
+        background: transparent;
+        width: 100%;
+        margin: 5em 0 -10em -2em;
+    }
+
+    #block-two-text {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        text-align: right;
+    }
+    
+    #block-two-button {
+        float: right;
+    }
+
+    /* Block Three */
+    #block-three {
+        margin: 8em 1em 2em 1em;
+        text-align: left;
+    }
+
+    #block-three-button { 
+        margin: 2em auto 0 0;
+    } 
 }
