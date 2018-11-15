@@ -6,23 +6,19 @@ body, html {
     background: #F4F4F4;
 }
 
-#block-one-bg {
-    min-height: 750px;
-    background: #00fff5; /* Old browsers */
-    background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff5', endColorstr='#0076ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-
 #block-one {
-    background-image: -webkit-linear-gradient(-30deg, white 70%, transparent 30%);
-    min-height: 750px;
-    margin-top: -750px;
+    background: #00fff5;
+    background: -webkit-linear-gradient(120deg, white 60%, transparent 60%), -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%);
+    background: -moz-linear-gradient(120deg, white 60%, transparent 60%), -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
+    background: linear-gradient(120deg, white 60%, transparent 60%), linear-gradient(45deg, #00fff5 0%,#0076ff 100%);
 }
 
 #cta {
     margin: 1em 2em 0 2em;
+}
+
+#cta-text {
+    padding-right: 2em;
 }
 
 #cta-title {
@@ -38,23 +34,6 @@ body, html {
     margin: 0;
 }
 
-/* Project 4 */
-#project-four-img {
-    background: #FF8900;
-}
-
-/* Project 5 */
-#project-five-img {
-    background: #143A83;
-    max-height: 240px;
-    border-bottom: none;
-}
-
-#project-five-img-block { 
-    background: #143A83;
-    border-radius: 15px 15px 0 0;
-}
-
 /* Project classes */
 .project {
     margin: 0 0.8em 0 0.8em;
@@ -66,10 +45,9 @@ body, html {
 }
 
 .project-img {
+    display: block;
     max-width: 100%;
     max-height: 100%;
-    min-width: 240px;
-    min-height: 240px;
     border-radius: 15px 15px 0 0;
     border-bottom: 1px solid #C4C4C4;
 }
@@ -107,35 +85,116 @@ body, html {
     padding: 1em;
 }
 
-
 /* Desktop */
-@media only screen and (min-width: 768px) {
-    #block-one-bg {
-        min-height: 600px;
+@media only screen and (min-width: 1024px) {
     
-        background: #00fff5; /* Old browsers */
-        background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(45deg, #00fff5 0%,#0076ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff5', endColorstr='#0076ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    }
-
     #block-one {
-        background-image: -webkit-linear-gradient(30deg, white 60%, transparent 60%);
-    
-        min-height: 600px;
-        margin-top: -600px;
+        background: -webkit-linear-gradient(110deg, white 50%, transparent 50%), -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%);
+        background: -moz-linear-gradient(110deg, white 50%, transparent 50%), -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
+        background: linear-gradient(110deg, white 50%, transparent 50%), linear-gradient(45deg, #00fff5 0%,#0076ff 100%);
     }
 
     #cta {
         display: grid;
         grid-template-columns: 60% 35%;
+        margin-top: 0;
+    }
+
+    #nn-img {
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+
+    #cta-text {
+        align-self: center;
+        padding-right: 4em;
+        margin-top: 1em;
+        margin-bottom: 2em;
     }
 
     #cta-title {
         font-size: 2.2em;
         font-size: 4vw;
-        margin: 2em 0 0 0;
+    }
+    
+    #cta-subtext {
+        font-weight: normal;
+        font-size: 1em;
+        font-size: 3vw;
+        margin: 0;
+    }
+
+
+    /* Project classes */
+    .project {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .project-text-block {
+        font-size: 1.2em;
+        position: relative;
+    }
+
+    .project-text-block-extra {
+        margin-top: 1.3em;
+        position: absolute;
+        bottom: 1em;
+        width: 90%;
+    }
+
+    .project-title {
+        margin-top: 0.5em;
+    }
+
+    .project-description {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    .project-img-block {
+        height: 100%;
+    }
+
+    .project-img {
+        border-radius: 15px 0 0 15px;
+        border-bottom: 0;
+        border-right: 1px solid #C4C4C4;
+        max-height: none;
+        width: 100%;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+
+    #block-one {
+        background: -webkit-linear-gradient(110deg, white 50%, transparent 50%), -webkit-linear-gradient(45deg, #00fff5 0%,#0076ff 100%);
+        background: -moz-linear-gradient(110deg, white 50%, transparent 50%), -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
+        background: linear-gradient(110deg, white 50%, transparent 50%), linear-gradient(45deg, #00fff5 0%,#0076ff 100%);
+    }
+
+    #cta {
+        display: grid;
+        grid-template-columns: 60% 35%;
+        margin-top: 0;
+    }
+
+    #nn-img {
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+
+    #cta-text {
+        align-self: center;
+        padding-right: 3em;
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+
+    #cta-title {
+        font-size: 2.2em;
+        font-size: 4vw;
     }
     
     #cta-subtext {
@@ -145,47 +204,43 @@ body, html {
         margin: 0;
     }
 
-    /* Project 4 */
-    #project-five-img {
-        padding: 2em 0 2em 0;
-    }
-
-    /* Project 4 */
-    #project-five-img {
-        max-width: 300px; 
-        max-height: 300px;
-    }
 
     /* Project classes */
     .project {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 60% 40%;
     }
 
     .project-text-block {
-        font-size: 1.3em;
+        font-size: 0.95em;
+        position: relative;
     }
 
     .project-text-block-extra {
-        margin-top: 2em;
-        vertical-align: bottom;
+        margin-top: 1.3em;
+        position: absolute;
+        bottom: 1em;
+        width: 90%;
     }
 
     .project-title {
-        margin: 0;
+        margin-top: 0.5em;
     }
 
-    .project-discription {
+    .project-description {
         margin: 0;
+        font-size: 1em;
     }
 
     .project-img-block {
-        padding: 0 2em 4em 2em;
+        height: 100%;
     }
 
     .project-img {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
+        border-radius: 15px 0 0 15px;
+        border-bottom: 0;
+        border-right: 1px solid #C4C4C4;
+        max-height: none;
+        width: 100%;
     }
 }
