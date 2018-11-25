@@ -45,11 +45,48 @@ body, html {
     display: block;
     font-weight: bold;
     font-size: 1.2em;
+    margin-bottom: 2em;
 }
 
 #short-about-me {
     display: none;
 }
+
+#history-header {
+    margin: 2em 0 0 1em;
+}
+
+/* Block Two */
+#block-two {
+    margin: 1em;
+}
+
+#block-two-img {
+    width: 100%;
+}
+
+/* Block Three */
+#block-three {
+    margin: 5em 1em 1em 1em;
+}
+
+#block-three-img {
+    width: 100%;
+}
+
+/* Block Four */
+#block-four {
+    margin: 5em 1em 1em 1em;
+}
+
+#block-four-img {
+    width: 100%;
+}
+
+#to-be-continued {
+    text-align: center;
+}
+
 
 /* Desktop */
 @media only screen and (min-width: 1024px) {
@@ -73,6 +110,7 @@ body, html {
     #headshot-img {
         max-width: 50%;
     }
+
     #contact-email{
         font-size: 2.5vh
     }
@@ -80,16 +118,275 @@ body, html {
     #short-about-me {
         display: block;
         width: 70%;
-        margin: 1em auto 0 auto;
+        margin: 0 auto 0 auto;
     }
 
     #short-about-me-header {
         margin: 0;
-        font-size: 3vh;
+        font-size: 4vh;
     }
 
     #short-about-me-content {
         margin: 0;
-        font-size: 2vh;
+        font-size: 3vh;
+    }
+
+    #history-header {
+        margin: 1em 0 1em 1em;
+        font-size: 4vh;
+    }
+
+    .history-text {
+        width: 80%;
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 3vh;
+    }
+
+    /* Block Two */
+    #block-two {
+        margin: 1em;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #block-two-img {
+        width: 100%;
+    }
+
+    /* Block Three */
+    #block-three {
+        margin: 12em 1em 1em 1em;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "text img"
+    }
+
+    #block-three-img {
+        width: 100%;
+        grid-area: img;
+    }
+
+    #block-three-text {
+        grid-area: text;
+    }
+
+    /* Block Four */
+    #block-four {
+        margin: 12em 1em 1em 1em;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #block-four-img {
+        width: 100%;
+    }
+
+    #to-be-continued {
+        margin: 2em;
+        font-size: 4vh;
+    }
+}
+
+/* Tablet Landscape */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+    /* Header Changes */
+    #nav-elements a {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* Call To Action */
+    #cta {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 2em;
+    }
+
+    #contact-info-header {
+        display: none;
+    }
+
+    #headshot-img {
+        max-width: 50%;
+    }
+
+    #contact-email{
+        font-size: 2.5vh
+    }
+
+    #short-about-me {
+        display: block;
+        width: 70%;
+        margin: 0 auto 0 auto;
+    }
+
+    #short-about-me-header {
+        margin: 0;
+        font-size: 3.5vh;
+    }
+
+    #short-about-me-content {
+        margin: 0;
+        font-size: 2.5vh;
+    }
+
+    #history-header {
+        margin: 1em 0 1em 1em;
+        font-size: 4vh;
+    }
+
+    .history-text {
+        width: 80%;
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 2.5vh;
+    }
+
+    /* Block Two */
+    #block-two {
+        margin: 1em;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #block-two-img {
+        width: 100%;
+    }
+
+    /* Block Three */
+    #block-three {
+        margin: 12em 1em 1em 1em;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "text img"
+    }
+
+    #block-three-img {
+        width: 100%;
+        grid-area: img;
+    }
+
+    #block-three-text {
+        grid-area: text;
+    }
+
+    /* Block Four */
+    #block-four {
+        margin: 12em 1em 1em 1em;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #block-four-img {
+        width: 100%;
+    }
+
+    #to-be-continued {
+        margin: 2em;
+        font-size: 4vh;
+    }
+}
+
+/* Tablet Portrait */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+    /* Header Changes */
+    #nav-elements a {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* Call To Action */
+    #cta {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 2em;
+    }
+
+    #contact-info-header {
+        display: none;
+    }
+
+    #headshot-img {
+        max-width: 50%;
+    }
+
+    #contact-email{
+        font-size: 2.5vh
+    }
+
+    #short-about-me {
+        display: block;
+        width: 70%;
+        margin: 0 auto 0 auto;
+    }
+
+    #short-about-me-header {
+        margin: 0;
+        font-size: 1.5em;
+    }
+
+    #short-about-me-content {
+        margin: 0;
+        font-size: 1.1em;
+    }
+
+    #history-header {
+        margin: 1em 0 1em 1em;
+        font-size: 2em;
+    }
+
+    .history-text {
+        width: 90%;
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.1em;
+    }
+
+    /* Block Two */
+    #block-two {
+        margin: 1em;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #block-two-img {
+        width: 100%;
+    }
+
+    /* Block Three */
+    #block-three {
+        margin: 12em 1em 1em 1em;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "text img"
+    }
+
+    #block-three-img {
+        width: 100%;
+        grid-area: img;
+    }
+
+    #block-three-text {
+        grid-area: text;
+    }
+
+    /* Block Four */
+    #block-four {
+        margin: 12em 1em 1em 1em;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #block-four-img {
+        width: 100%;
+    }
+
+    #to-be-continued {
+        margin: 2em;
+        font-size: 1.5em;
     }
 }

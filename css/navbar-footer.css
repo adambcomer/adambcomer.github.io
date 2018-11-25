@@ -97,6 +97,14 @@ footer ul li a {
         padding: 1em;
     }
 
+    #icon {
+        font-size: 3vh;
+    }
+    
+    #icon-subtext {
+        font-size: 2vh;
+    }
+
     #nav-img-container {
         display: none;
     }
@@ -111,7 +119,59 @@ footer ul li a {
         padding: 0.5em 0 0 1.5em;
         color: white;
         font-weight: bold;
+        font-size: 3vh;
+        vertical-align: top;
+    }
+
+    #nav-elements a {
+        color: white;
+    }
+
+    .active {
+        position: initial;
+        display: initial !important;
+        width: 100%;
+        font-size: 1em;
+        text-align: none;
+        background: transparent;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+/* Tablet Portrait */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+    /* Navbar CSS*/
+    nav {
+        display: grid;
+        grid-template-columns: max-content auto none;
+        padding: 1em;
+    }
+
+    #icon {
         font-size: 1.2em;
+    }
+    
+    #icon-subtext {
+        font-size: 0.9em;
+    }
+
+    #nav-img-container {
+        display: none;
+    }
+
+    #nav-block {
+        display: block;
+    }
+
+    #nav-elements {
+        display: inline;
+        float: right;
+        padding: 0.5em 0 0 1.5em;
+        color: white;
+        font-weight: bold;
+        font-size: 1em;
         vertical-align: top;
     }
 
