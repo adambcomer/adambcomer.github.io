@@ -40,6 +40,28 @@ body, html {
     margin: 0;
 }
 
+/* Blog Article */
+.blog-article {
+    margin: 1em;
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.blog-article h2 {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.blog-article a {
+    position: absolute;
+    bottom: 0em;
+    right: 0em;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
 /* Desktop */
 @media only screen and (min-width: 1024px) {
     #cta h1 {
@@ -48,6 +70,23 @@ body, html {
 
     #cta h3 {
         font-size: 3vh;
+    }
+
+    /* Blog Article */
+    .blog-article {
+        margin: 3em;
+    }
+
+    .blog-article h2 {
+        font-size: 4vh;
+    }
+
+    .blog-article p {
+        font-size: 2.5vh;
+    }
+
+    .blog-article a {
+        font-size: 3vh
     }
 }
 
@@ -59,5 +98,22 @@ body, html {
 
     #cta h3 {
         font-size: 2vh;
+    }
+
+    /* Blog Article */
+    .blog-article {
+        margin: 3em;
+    }
+
+    .blog-article h2 {
+        font-size: 4vh;
+    }
+
+    .blog-article p {
+        font-size: 2vh;
+    }
+
+    .blog-article a {
+        font-size: 2.5vh
     }
 }
