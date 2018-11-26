@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body, html {
+    font-family: Montserrat;
+    margin: 0;
+}
+
+/* Block One */
+#block-one {
+    background: #00fff5;
+    background: -webkit-linear-gradient(45deg, #FF6F6F 0%,#FF9140 100%);
+    background: -moz-linear-gradient(45deg, #FF6F6F 0%, #FF9140 100%);
+    background: linear-gradient(45deg, #FF6F6F 0%,#FF9140 100%);
+
+    padding-bottom: 2em;
+}
+
+/* Navbar changes */
+#icon {
+    color: white;
+}
+
+#icon-subtext {
+    color: white;
+}
+
+#nav-img {
+    fill: white;
+}
+
+/* Call to Action */
+#cta {
+    text-align: center;
+    color: white;
+    margin: 1em;
+}
+
+#cta h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+    #cta h1 {
+        font-size: 5vh;
+    }
+
+    #cta h3 {
+        font-size: 3vh;
+    }
+}
+
+/* Tablet Portrait */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+    #cta h1 {
+        font-size: 3.5vh;
+    }
+
+    #cta h3 {
+        font-size: 2vh;
+    }
+}
