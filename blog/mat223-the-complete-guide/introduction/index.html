@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/navbar-footer.css">
-    <link rel="stylesheet" href="/css/blog/mat223-the-complete-guide.css">
+    <link rel="stylesheet" href="/css/blog/mat223-the-complete-guide/introduction.css">
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="canonical" href="https://adambcomer.com/blog/mat223-the-complete-guide/introduction" />
 
     <title>MAT223: The Complete Guide| Introduction | Adam Comer</title>
-    <meta name="description" content="Introduction to the MAT223 and the foundational material in the course. This article covers sets, set notation, and set operations. These topics are necessary to understand the course content">
+    <meta name="description" content="Introduction to the MAT223 and the foundational material in the course. This article covers sets, set notation, and set operations. These topics are necessary to understand later course content.">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129077573-1"></script>
@@ -23,9 +23,228 @@
 
         gtag('config', 'UA-129077573-1');
     </script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } },
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true,
+            linebreaks: { automatic: true }
+        }
+        });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 </head>
 
 <body>
+
+    <!-- Navbar -->
+    <nav>
+        <a id="icon" href="/">ADAM COMER <br> <span id="icon-subtext">Software Developer</span></a>
+
+        <ul id="nav-block">
+            <li id="nav-elements"><a href="/contact">Contact</a></li>
+            <li id="nav-elements"><a href="/projects">Projects</a></li>
+            <li id="nav-elements"><a href="/blog">Blog</a></li>
+        </ul>
+
+        <div id="nav-img-container">
+            <img id="nav-img" alt="Navigation button" src="/assets/navIcon.svg">
+        </div>
+    </nav>
+
+    <div id="blog-article">
+        <h1>MAT223: Introduction</h1>
+        <h6>Adam Comer | 11/26/18 | Read time: 5 min 13 sec</h6>
+        <p>Before diving into any new study, a foundational vocabulary must be established to facilitate a discussion
+            among the people who study or work in that area. Once we develop this vocabulary, we can build the concepts
+            and theorems in MAT223 out of this foundational vocabulary. This section of the guide will be about sets,
+            set notation, set operations, and set building. To anyone one who is familiar with set notation and logic,
+            I recommend skimming to find any unfamiliar concepts and reviewing those. </p>
+
+        <h2>Sets:</h2>
+        <p>A <a class="definition" href="https://en.wikipedia.org/wiki/Set_(mathematics)">set</a> is a collection of
+            unique objects. This collection can be of finite or infinite length. Each object in a
+            set is called an <a class="definition" href="https://en.wikipedia.org/wiki/Element_(mathematics)">element</a>.
+            For example, we could imagine a set of things in my backpack; this would include
+            my laptop, a planner, a pen, and a phone charger. This set would look like this.</p>
+
+        <p>$$Backpack = \{laptop, planer, phone\,charger\}$$</p>
+
+        <p>Using brackets, this is the simplest way we can define the set of things in my backpack. In this example,
+            each item in my backpack is an element of the set. Now, what if I add another pen to my backpack. Under the
+            definition of a set, the set Backpack wouldn’t change as there is already a pen in the set. Now if I add a
+            water bottle to my backpack, this will change the set to include a water bottle. This example is supposed
+            to give you an intuitive understanding of a set before we start working with sets of numbers.</p>
+
+        <p>Just like we can have a set of things in my backpack we can have a set of numbers. Before we start creating
+            our own numerical sets. There are a few basic sets that we must learn first. Here they are,</p>
+        <div>
+            <p><span class="special-sets">$\mathbb{N}$</span> - Set of Natural Numbers. The natural numbers are also
+                known as the counting numbers. This set
+                looks like $\{0, 1, 2, 3, ...\}.$</p>
+            <p><span class="special-sets">$\mathbb{Z}$</span> - Set of Integers. The set of integers are similar to
+                natural numbers but includes negative
+                numbers. This set looks like $\{..., -3, -2, -1, 0, 1, 2, 3, ...\}.$</p>
+            <p><span class="special-sets">$\mathbb{Q}$</span> - Set of Rational numbers. The set of rational numbers is
+                the set of all fractions of
+                integers. This set would include numbers like $7/12, 8/5, -40/9$ as well as all of the integers.</p>
+            <p><span class="special-sets">$\mathbb{R}$</span> - Set of Real Numbers. The set of real numbers is the set
+                of all irrational numbers(numbers
+                like $\pi$ and $e$) and all rational numbers(fractions). The set is all of the numbers on a number
+                line.</p><br>
+        </div>
+
+        <p>These four sets are needed to produce the definitions and theorems in MAT223 and are the only ones you have
+            to memorize as they come up often.</p>
+
+
+        <h2>Set Comparisons:</h2>
+        <p>Now that we have a basic understanding of sets and can identify a few, we can start to apply comparisons on
+            sets. First, we need to be able to check if an element is in a set. Using the first example, we need a way
+            to say that a pen is in my backpack and an elephant is not in my backpack. Using notation, this is written
+            as,</p>
+
+        <p>$$pen \in Backpack$$</p>
+        <p>$$elephant \notin Backpack$$</p>
+
+        <p>The curvy E is used to say that the pen is in Backpack and the E with a slash is used to say that the
+            Elephant is not in Backpack. This E is read as “____ is an element of ____” and the E with a slash is read
+            as “____ is not an element of ____.”</p>
+
+        <p>The next comparison operator to look at is the subset. Sometimes we may need to determine if all of the
+            elements in one set are in another set. To better visualize this we will use this Venn diagram.</p>
+
+        <img id="sets-one-img" src="/assets/blog/mat223-the-complete-guide/sets-one.svg">
+
+        <p>In this Venn diagram, we can see that the set B is inside of the set A, in other words, all of the elements
+            in set B are in set A. If we took every element in B and checked if it was in A, they would all pass this
+            test. Thus we can say that the set B is a subset of set A. Using notation we can write this as.</p>
+
+        <p>$$B \subseteq A$$</p>
+
+        <p>The last comparison operator is to check if two sets are equal to each other. Equality of sets is when the
+            first set is a subset of the second and the second set is a subset of the first. In other words, this would
+            mean that the elements in both sets are the same, thus creating equality. Using two sets A and B we can say
+            they are equal if.</p>
+
+        <div class="test-definition">
+            <div><i>Test Definition</i></div>
+            <p>$$A \subseteq B\,\,and\,\,B \subseteq A$$</p>
+        </div>
+
+
+        <h2>Set Building:</h2>
+        <p>The most challenging part of the foundation material is set building. When sets can be very large or in some
+            cases infinitely long we can’t write them using the bracket notation. To express a set with infinite
+            elements, we need to tell the reader how to construct the set. This idea is called set building, and it
+            comes along with notation called set builder notation. To start, I will show a simple example. Let's say I
+            want to get all of the natural numbers greater than 5. Since this set is of infinite size, I can’t write
+            every element of this set. Thus we need to build a set from the natural numbers such that all elements are
+            greater than 5. We would write this as,</p>
+
+        <p>$$X = \{x \in \mathbb{N} : x > 5\}$$</p>
+
+        <p>Let's start by walking through this example. This set is read as “for all $x$ such that $x$ is a natural
+            number and greater than 5”. To build this set, we would take all natural numbers and check if they pass the
+            condition $x \gt 5$ and if it passes the test, then it is in the set. For example, let's take the natural
+            number 1. Since $1 \lt 5$ we can say 1 is not in the set $X$. Another example would be set $x$ to 10. Since
+            $10 \gt 5$ we can say that 10 is in the set $X$.</p>
+
+        <p>You can see that using set builder notation we can create subsets of sets reasonably easily. For example,
+            the definition of a subset in the course is defined using set builder notation.</p>
+
+        <div class="test-definition">
+            <div><i>Test Definition</i></div>
+            <p>$$Y = \{x \in X : some\,restriction\,on\,x\} \\
+                or \\
+                Y = \{\forall x \in X, some\,restriction\,on\,x\}$$</p>
+        </div>
+
+
+        <h2>Set Operations:</h2>
+        <p>Now that we have a basic understanding of sets and can identify a few, we can start to apply operations on
+            sets. First, we want to perform operations on sets using other sets, not just individual elements. Let's
+            start with the scenario that we might have two sets and want to combine them. This merging of two sets is
+            called a union of two sets. To best understand a union of two sets I recommend looking at a Vein diagram of
+            two sets.</p>
+
+        <img id="sets-two-img" src="/assets/blog/mat223-the-complete-guide/sets-two.svg">
+
+        <p>If we want to take the union of these sets we will create a new set, call this set C. This set C consists of
+            the elements in the green area(in set A, but not set B), blue area(in set B, but not set A), and orange
+            area(in set A and in set B). Using mathematical notation we can write this operation as.</p>
+
+        <div class="test-definition">
+            <div><i>Test Definition</i></div>
+            <p>$$\begin{align}
+                C &= A \cup B \\
+                &= \{x : x \in A\,\,or\,\,x \in B\}
+                \end{align}$$</p>
+        </div>
+
+        <p>The second operation to look at is an intersection of two sets. The intersection of two sets is a set of
+            elements that are in both sets. Using the Vien diagram from above, we can produce a set of elements that
+            are only in A and B and will create a new set. We will call this D. The set D will consist of all the
+            elements in the orange area (in set A and in set B). Using mathematical notation we can write this
+            operation as.</p>
+
+        <div class="test-definition">
+            <div><i>Test Definition</i></div>
+            <p>$$\begin{align}
+                D &= A \cap B \\
+                &= \{x : x \in A\,\,and\,\,x \in B\}
+                \end{align}$$</p>
+        </div>
+
+
+        <h2>Conclusion:</h2>
+        <p>Sets and set notation is often the foundational material of many mathematics courses at the University of
+            Toronto. Having a strong understanding of the four main sets and set builder notation will be very helpful
+            in later lectures and courses. Most if not all of the concepts and definitions in this article will show up
+            in every lecture during the semester.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/sitemap.xml">Sitemap</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Social</h4>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/adambcomer/">Linkedin</a></li>
+                <li><a href="https://github.com/adambcomer">Github</a></li>
+                <li><a href="https://gitlab.com/adambcomer">Gitlab</a></li>
+                <li><a href="https://twitter.com/adambcomer">Twitter</a></li>
+                <li><a href="https://www.facebook.com/adam.comer.779">Facebook</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script>
+        (function () {
+            var drawer = document.querySelector("ul");
+            var drawerIcon = document.getElementById('nav-img')
+
+            drawerIcon.addEventListener("click", function (e) {
+                drawer.classList.toggle("active");
+                e.preventDefault();
+            });
+        })();
+    </script>
 
 </body>
 

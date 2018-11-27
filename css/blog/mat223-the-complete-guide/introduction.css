@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body, html {
+    font-family: Montserrat;
+    margin: 0;
+}
+
+#blog-article {
+    margin: 1em;
+}
+
+#blog-article h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#blog-article h6 {
+    color: grey;
+    margin-top: 0;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+#sets-one-img {
+    display: block;
+    margin: 0 auto 0 auto;
+    width: 70%;
+}
+
+#sets-two-img{
+    display: block;
+    margin: 0 auto 0 auto;
+    width: 90%;
+}
+
+.special-sets {
+    font-size: 2em;
+}
+
+.definition{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.test-definition {
+    width: 100%;
+    background: #7BFFA3;
+    margin: 0 auto 0 auto;
+}
+
+.test-definition div {
+    width: 100%;
+    background: #4ED979;
+    color: black;
+}
+
+.test-definition p {
+    padding: 0.5em;
+    margin: 0;
+}
+
+.test-definition i {
+    display: block;
+    padding: 2px 5px 2px 5px;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+    /* Header Changes */
+    #nav-elements a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #blog-article {
+        width: 60%;
+        margin: 0 auto 0 auto;
+    }
+    
+    #blog-article h1 {
+        font-size: 5.5vh;
+    }
+
+    #blog-article p{
+        font-size: 2.5vh;
+    }
+
+    #blog-article h2 {
+        font-size: 3.5vh;
+    }
+
+    #blog-article h6 {
+        font-size: 2vh;
+    }
+
+    #sets-one-img {
+        width: 40%;
+    }
+
+    #sets-two-img {
+        width: 60%;
+    }
+}
+
+/* Tablet Portrait */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+    /* Header Changes */
+    #nav-elements a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #blog-article {
+        width: 80%;
+        margin: 0 auto 0 auto;
+    }
+    
+    #blog-article h1 {
+        font-size: 4vh;
+    }
+
+    #blog-article p{
+        font-size: 2vh;
+    }
+
+    #blog-article h2 {
+        font-size: 3vh;
+    }
+
+    #blog-article h6 {
+        font-size: 1.8vh;
+    }
+
+    #sets-one-img {
+        width: 50%;
+    }
+
+    #sets-two-img {
+        width: 70%;
+    }
+}
