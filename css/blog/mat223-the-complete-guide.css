@@ -23,6 +23,10 @@ body, html {
     margin-top: 5em;
 }
 
+#blog-article h2 {
+    font-size: 1.5em;
+}
+
 #table-of-contents li a {
     color: black;
 }
@@ -55,6 +59,14 @@ body, html {
     #blog-article h4 {
         font-size: 2.5vh;
     }
+
+    #blog-article h2 {
+        font-size: 3.25vh;
+    }
+
+    #table-of-contents li {
+        font-size: 2.75vh;
+    }
 }
 
 /* Tablet Portrait */
@@ -80,5 +92,13 @@ body, html {
 
     #blog-article h4 {
         font-size: 2.2vh;
+    }
+
+    #blog-article h2 {
+        font-size: 3vh;
+    }
+
+    #table-of-contents li {
+        font-size: 2.25vh;
     }
 }
