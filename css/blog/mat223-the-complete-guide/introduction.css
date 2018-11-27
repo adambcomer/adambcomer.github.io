@@ -34,6 +34,30 @@ body, html {
     width: 90%;
 }
 
+#bottom-navigation {
+    display: inline-flex;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+}
+
+#bottom-navigation li {
+    padding: 0.25em;
+}
+
+#bottom-navigation li a {
+    color: black;
+}
+
+#references {
+    margin: 1em;
+}
+
+#references ul li a {
+    color: black;
+}
+
 .special-sets {
     font-size: 2em;
 }
@@ -102,6 +126,27 @@ body, html {
     #sets-two-img {
         width: 60%;
     }
+
+    #bottom-navigation li {
+        font-size: 2.5vh;
+    }
+
+    #references {
+        width: 60%;
+        margin: 0 auto 0 auto;
+    }
+
+    #references h3{
+        font-size: 3vh;
+    }
+    
+    #references ul li a {
+        font-size: 2.5vh;
+    }
+
+    .test-definition i {
+        font-size: 2.5vh;
+    }
 }
 
 /* Tablet Portrait */
@@ -139,5 +184,26 @@ body, html {
 
     #sets-two-img {
         width: 70%;
+    }
+
+    #bottom-navigation li {
+        font-size: 2vh;
+    }
+
+    #references {
+        width: 80%;
+        margin: 0 auto 0 auto;
+    }
+
+    #references h3{
+        font-size: 2.5vh;
+    }
+    
+    #references ul li a {
+        font-size: 1.8vh;
+    }
+
+    .test-definition i {
+        font-size: 2vh;
     }
 }
