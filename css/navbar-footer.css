@@ -1,21 +1,22 @@
+/* Navbar */
 nav {
     display: grid;
     grid-template-columns: max-content auto;
-    padding: 1em;
+    padding: 5vw;
 }
 
-#icon {
-    font-size: 1.5em;
+#nav-icon {
+    font-size: 5vw;
     font-weight: bold;
-    line-height: 0.8em;
+    line-height: 4.5vw;
     color: #000000;
     text-decoration: none;
     overflow: hidden;
     display: block;
 }
 
-#icon-subtext {
-    font-size: 0.6em;
+#nav-icon-subtext {
+    font-size: 3.5vw;
     font-weight: normal;
     color: #000000;
 }
@@ -35,40 +36,64 @@ nav {
     list-style-type: none;
     list-style: none;
     overflow: hidden;
-	margin: 0;
+    margin: 0;
     padding: 0;
     display: none;
 }
 
-#nav-elements {
-    padding: 3em 0 0 0;
+.nav-elements {
+    padding: 8vh 0 0 0;
 }
 
-#nav-elements a {
+.nav-elements a {
     color: black;
     text-decoration: none;
 }
 
-.active {
+.nav-active {
     position: fixed;
     display: block !important;
     background: #ffffff;
     width: 50%;
     height: 100%;
     left: 0;
-    font-size: 1.5em;
+    top: 0;
+    font-size: 5.5vw;
     text-align: center;
-    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
 }
 
+.nav-open a {
+    font-weight: bold;
+}
+
+/* Footer */
 footer {
     background: #EFEFEF;
-    padding: 2em 2em 2em 2em;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    font-size: 1.2em;
+    padding: 5vw;
+    font-size: 5.5vw;
+}
+
+#footer-social {
+    display: inline-flex;
+    list-style: none;
+    margin: 1.5vh 2vh 0 2vh;
+}
+
+#footer-social li {
+    display: inline-flex;
+    list-style: none;
+    padding: 0 8vw 0 0;
+}
+
+#footer-nav {
+    margin: 0 2vh 0 2vh;
+}
+
+footer h4 {
+    margin: 5vh 0 1vh 0;
 }
 
 footer ul {
@@ -78,7 +103,7 @@ footer ul {
 }
 
 footer ul li {
-    padding-top: 0.5em;
+    padding-top: 2vw;
 }
 
 footer ul li a {
@@ -86,23 +111,23 @@ footer ul li a {
     color: black;
 }
 
-
 /* Desktop */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
 
-    /* Navbar CSS*/
+    /* Navbar */
     nav {
         display: grid;
-        grid-template-columns: max-content auto none;
-        padding: 1em;
+        grid-template-columns: auto auto none;
+        padding: 2vw;
     }
 
-    #icon {
-        font-size: 3vh;
+    #nav-icon {
+        font-size: 1.6vw;
+        line-height: 1.3vw;
     }
-    
-    #icon-subtext {
-        font-size: 2vh;
+
+    #nav-icon-subtext {
+        font-size: 1vw;
     }
 
     #nav-img-container {
@@ -110,26 +135,21 @@ footer ul li a {
     }
 
     #nav-block {
-        display: block;
+        display: inline-flex;
+        justify-content: flex-end;
     }
 
-    #nav-elements {
-        display: inline;
-        float: right;
-        padding: 0.5em 0 0 1.5em;
+    .nav-elements {
+        padding: 0 0 0 3vw;
         color: white;
         font-weight: bold;
-        font-size: 3vh;
+        font-size: 1.5vw;
         vertical-align: top;
     }
 
-    #nav-elements a {
-        color: white;
-    }
-
-    .active {
+    .nav-active {
         position: initial;
-        display: initial !important;
+        display: inline-flex !important;
         width: 100%;
         font-size: 1em;
         text-align: none;
@@ -138,10 +158,18 @@ footer ul li a {
         -moz-box-shadow: none;
         box-shadow: none;
     }
+
+    /* Footer */
+    footer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        font-size: 1.5vw;
+    }
 }
 
 /* Tablet Portrait */
 @media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+
     /* Navbar CSS*/
     nav {
         display: grid;
@@ -152,7 +180,7 @@ footer ul li a {
     #icon {
         font-size: 1.2em;
     }
-    
+
     #icon-subtext {
         font-size: 0.9em;
     }

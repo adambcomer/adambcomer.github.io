@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/css/navbar-footer.css">
     <link rel="stylesheet" href="/css/index.css">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="canonical" href="https://adambcomer.com/" />
 
@@ -15,22 +18,29 @@
     <meta name="description" content="Adam Comer is a software developer in Toronto, ON. I Co-founded Knowtworthy and am a student at the University of Toronto. I has experience working with Kubernetes, Node.js, Python, and Git. ">
 
     <script type="application/ld+json">
-        {"@context": "http://schema.org",
-          "@type": "Person",
-          "name": "Adam Comer",
-          "url": "https://adambcomer.com/",
-          "sameAs": [
-            "https://www.facebook.com/adam.comer.779",
-            "https://www.linkedin.com/in/adambcomer",
-            "https://twitter.com/adambcomer"
-          ]}
+        {
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "Adam Comer",
+            "url": "https://adambcomer.com/",
+            "sameAs": [
+                "https://www.facebook.com/adam.comer.779",
+                "https://www.linkedin.com/in/adambcomer",
+                "https://twitter.com/adambcomer",
+                "https://github.com/adambcomer",
+                "https://gitlab.com/adambcomer"
+            ]
+        }
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129077573-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-129077573-1');
@@ -38,23 +48,23 @@
 </head>
 
 <body>
-    <div id="block-one">
-        <!-- Navbar -->
-        <nav>
-            <a id="icon" href="/">ADAM COMER <br> <span id="icon-subtext">Software Developer</span></a>
+    <!-- Navbar -->
+    <nav>
+        <a id="nav-icon" href="/">ADAM COMER <br> <span id="nav-icon-subtext">Software Developer</span></a>
 
-            <ul id="nav-block">
-                <li id="nav-elements"><a href="/contact">Contact</a></li>
-                <li id="nav-elements"><a href="/projects">Projects</a></li>
-                <li id="nav-elements"><a href="/blog">Blog</a></li>
-            </ul>
+        <ul id="nav-block">
+            <li class="nav-elements nav-open"><a href="/">Home</a></li>
+            <li class="nav-elements"><a href="/blog/">Blog</a></li>
+            <li class="nav-elements"><a href="/contact/">Contact</a></li>
+        </ul>
 
-            <div id="nav-img-container">
-                <img id="nav-img" alt="Navigation button" src="/assets/navIcon.svg">
-            </div>
-        </nav>
+        <div id="nav-img-container">
+            <img id="nav-img" alt="Navigation button" src="/assets/navIcon.svg">
+        </div>
+    </nav>
 
-        <!-- Landing page box 1 -->
+    <!-- Landing page box 1 -->
+    <!-- <div id="block-one">
         <div id="cta">
             <div>
                 <h1>Ready to work with</h1>
@@ -67,10 +77,10 @@
             </div>
             <div><img id="cloud-img" alt="A cloud with servers within it." src="/assets/cloud.svg"></div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Landing page box 2 -->
-    <div id="block-two">
+    <!-- <div id="block-two">
         <img id="editor-img" alt="A code editor that looks like VSCode" src="/assets/editor.svg">
         <div id="block-two-text">
             <h2 id="block-two-title">Freelance and Startup Experience</h2>
@@ -78,40 +88,35 @@
 
             <a class="button" id="block-two-button" href="/blog">Blog</a>
         </div>
-    </div>
+    </div> -->
 
     <!-- Landing page box 3 -->
-    <div id="block-three">
+    <!-- <div id="block-three">
         <h2 id="block-three-title">2018 commit count on Github: <b><a id="block-three-github-profile" href="https://github.com/adambcomer?tab=overview&from=2018-11-01&to=2018-11-11">358</a></b></h2>
         <p id="block-three-subtitle">Countless lines written and never committed</p>
 
         <a class="button" id="block-three-button" href="/contact">Contact</a>
-    </div>
+    </div> -->
 
     <!-- Footer -->
     <footer>
         <div>
-            <h4>Navigation</h4>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/sitemap.xml">Sitemap</a></li>
-            </ul>
-        </div>
-
-        <div>
             <h4>Social</h4>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/adambcomer/">Linkedin</a></li>
-                <li><a href="https://github.com/adambcomer">Github</a></li>
-                <li><a href="https://gitlab.com/adambcomer">Gitlab</a></li>
-                <li><a href="https://twitter.com/adambcomer">Twitter</a></li>
-                <li><a href="https://www.facebook.com/adam.comer.779">Facebook</a></li>
+            <ul id="footer-social">
+                <li><a href="https://www.linkedin.com/in/adambcomer/"><i class="fab fa-linkedin-in fa-lg"></i></a></li>
+                <li><a href="https://github.com/adambcomer"><i class="fab fa-github fa-lg"></i></a></li>
+                <li><a href="https://gitlab.com/adambcomer"><i class="fab fa-gitlab fa-lg"></i></a></li>
+                <li><a href="https://twitter.com/adambcomer"><i class="fab fa-twitter fa-lg"></i></a></li>
             </ul>
         </div>
-
+        <div>
+            <h4>Navigation</h4>
+            <ul id="footer-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
     </footer>
 
     <script>
@@ -120,7 +125,7 @@
             var drawerIcon = document.getElementById('nav-img')
 
             drawerIcon.addEventListener("click", function (e) {
-                drawer.classList.toggle("active");
+                drawer.classList.toggle("nav-active");
                 e.preventDefault();
             });
         })();

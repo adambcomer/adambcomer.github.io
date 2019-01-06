@@ -20,7 +20,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129077573-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-129077573-1');
@@ -32,12 +35,12 @@
     <div id="block-one">
         <!-- Navbar -->
         <nav>
-            <a id="icon" href="/">ADAM COMER <br> <span id="icon-subtext">Software Developer</span></a>
+            <a id="nav-icon" href="/">ADAM COMER <br> <span id="nav-icon-subtext">Software Developer</span></a>
 
             <ul id="nav-block">
-                <li id="nav-elements"><a href="/contact">Contact</a></li>
-                <li id="nav-elements"><a href="/projects">Projects</a></li>
-                <li id="nav-elements"><a href="/blog">Blog</a></li>
+                <li class="nav-elements nav-open"><a href="/">Home</a></li>
+                <li class="nav-elements"><a href="/blog/">Blog</a></li>
+                <li class="nav-elements"><a href="/contact/">Contact</a></li>
             </ul>
 
             <div id="nav-img-container">
@@ -107,27 +110,22 @@
     <!-- Footer -->
     <footer>
         <div>
-            <h4>Navigation</h4>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/sitemap.xml">Sitemap</a></li>
-            </ul>
-        </div>
-
-        <div>
             <h4>Social</h4>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/adambcomer/">Linkedin</a></li>
-                <li><a href="https://github.com/adambcomer">Github</a></li>
-                <li><a href="https://gitlab.com/adambcomer">Gitlab</a></li>
-                <li><a href="https://twitter.com/adambcomer">Twitter</a></li>
-                <li><a href="https://www.facebook.com/adam.comer.779">Facebook</a></li>
+            <ul id="footer-social">
+                <li><a href="https://www.linkedin.com/in/adambcomer/"><i class="fab fa-linkedin-in fa-lg"></i></a></li>
+                <li><a href="https://github.com/adambcomer"><i class="fab fa-github fa-lg"></i></a></li>
+                <li><a href="https://gitlab.com/adambcomer"><i class="fab fa-gitlab fa-lg"></i></a></li>
+                <li><a href="https://twitter.com/adambcomer"><i class="fab fa-twitter fa-lg"></i></a></li>
             </ul>
         </div>
-
+        <div>
+            <h4>Navigation</h4>
+            <ul id="footer-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
     </footer>
 
     <script>
