@@ -6,268 +6,331 @@ html {
     margin: 0;
 }
 
-/* Classes */
-.button {
-    display: block;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background: #00fff5;
-    /* Old browsers */
-    background: -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00fff5', endColorstr='#0076ff', GradientType=1);
-    /* IE6-9 fallback on horizontal gradient */
-    padding: 1em 3em 1em 3em;
-    border-radius: 1000pt;
-    width: 5em;
-
-    -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 118, 255, 0.33);
-    -moz-box-shadow: 0px 0px 20px 3px rgba(0, 118, 255, 0.33);
-    box-shadow: 0px 0px 20px 3px rgba(0, 118, 255, 0.33);
-}
-
-
-/* Block One */
-#block-one {
-    background: #00fff5;
-    background: -webkit-linear-gradient(120deg, white 70%, transparent 70%), -webkit-linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
-    background: -moz-linear-gradient(120deg, white 70%, transparent 70%), -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
-    background: linear-gradient(120deg, white 70%, transparent 70%), linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
-}
-
 #cta {
-    line-height: 0.9em;
-    margin: 5em 2em 0 2em;
-    padding-bottom: 5em;
+    padding: 0 5vw;
 }
 
-#cloud-img {
-    display: none;
+#cta img {
+    width: 50%;
+    border-radius: 50%;
+    display: block;
+    margin: 15vw auto 0 auto;
 }
 
-h1 {
-    font-weight: normal;
-    font-size: 1.5em;
+#cta h1 {
+    text-align: center;
     font-size: 8vw;
+    margin-bottom: 0;
+}
+
+#cta p {
+    text-align: center;
+    font-size: 4vw;
+    margin: 0;
+}
+
+#cta a {
+    display: block;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 5vw;
+    width: 40vw;
+    border: 3px #FFC400 solid;
+    border-radius: 20px;
+    padding: 1vw;
+    margin: 10vw auto 0 auto;
+}
+
+#top-break {
+    margin: 20vw 5vw;
 }
 
 h2 {
-    font-size: 2.2em;
-    font-size: 10vw;
+    padding: 0 5vw;
+    margin-top: 20vw;
+    font-size: 6.5vw;
 }
 
-#tool1 {
-    font-weight: bold;
+.project {
+    padding: 0 5vw;
 }
 
-#tool2 {
-    font-weight: bold;
-    color: rgba(0, 0, 0, 50%);
+.project img {
+    width: 100%;
 }
 
-#tool3 {
-    font-weight: bold;
-    color: rgba(0, 0, 0, 25%);
+.project h3 {
+    font-size: 5.5vw;
 }
 
-#tool4 {
-    font-weight: bold;
-    color: rgba(0, 0, 0, 12.5%);
+.project p {
+    font-size: 4vw;
 }
 
-#block-one-button {
-    margin-top: 3em;
+.project span {
+    color: grey;
+    font-size: 4.5vw;
 }
 
-/* Block Two */
-#block-two {
-    padding: 2em 0 2em 0;
-    background: #34363A;
-}
-
-#editor-img {
-    margin-left: -2em;
-}
-
-#block-two-text {
-    padding: 2em 2em 0 2em;
-    color: white;
-}
-
-#block-two-title {
-    margin: 0;
-}
-
-#block-two-subtitle {
-    font-size: 1.2em;
-    margin: 0.2em 0 0 0;
-}
-
-#block-two-button {
-    margin-top: 2em;
-}
-
-/* Block Three */
-#block-three {
-    padding: 2em;
-    text-align: right;
-}
-
-#block-three-title {
-    font-weight: normal;
-    margin: 0;
-}
-
-#block-three-github-profile {
+.project a {
     color: black;
     text-decoration: none;
+    font-weight: bold;
+    float: right;
+    font-size: 4.5vw;
 }
 
-#block-three-subtitle {
-    font-size: 1.2em;
-    margin: 0.2em 0 0 0;
-}
-
-#block-three-button {
-    margin: 2em 0 0 auto;
+.project-break {
+    margin: 5vw 0;
 }
 
 /* Desktop */
 @media only screen and (min-width: 1024px) {
-
-    /* Block One */
-    #block-one {
-        background: #00fff5;
-        background: -webkit-linear-gradient(120deg, white 45%, transparent 45%), -webkit-linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
-        background: -moz-linear-gradient(120deg, white 45%, transparent 45%), -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
-        background: linear-gradient(120deg, white 45%, transparent 45%), linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
-    }
-
-    #cloud-img {
-        display: block;
-        float: right;
-    }
-
     #cta {
-        margin: 2em 2em 0 2em;
+        padding: 0 2vw;
         display: grid;
         grid-template-columns: 50% 50%;
     }
 
-    h1 {
-        font-weight: normal;
-        font-size: 2.2em;
+    #cta img {
+        width: 60%;
+        border-radius: 25%;
+        margin: 5vw auto 0 auto;
+    }
+
+    #cta div {
+        margin: auto 0;
+    }
+
+    #cta h1 {
         font-size: 3.5vw;
     }
 
+    #cta p {
+        font-size: 1.8vw;
+    }
+
+    #cta a {
+        padding: 0.2vw;
+        font-size: 2vw;
+        width: 16vw;
+        margin: 5vw auto 0 auto;
+    }
+
+    #top-break {
+        margin: 8vw 2vw;
+    }
+
     h2 {
-        font-size: 2.5em;
-        font-size: 4.5vw;
+        padding: 0 2vw;
+        margin-top: 0vw;
+        font-size: 3vw;
     }
 
-    /* Block Two*/
-    #block-two {
+    .project {
+        padding: 0 2vw;
         display: grid;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 50% 50%;
     }
 
-    #editor-img {
-        background: transparent;
-        width: 100%;
-        margin: 5em 0 -15em -2em;
+    .project div {
+        position: relative;
+        padding: 0 2vw;
     }
 
-    #block-two-text {
-        margin-top: 5em;
-        margin-bottom: 5em;
-        text-align: right;
+    .project h3 {
+        font-size: 2.75vw;
+        margin: 0;
     }
 
-    #block-two-button {
-        float: right;
+    .project p {
+        font-size: 1.5vw;
+        margin: 2vw 0 0 0;
     }
 
-    /* Block Three */
-    #block-three {
-        margin: 12em 1em 4em 1em;
-        text-align: left;
+    .project span {
+        position: absolute;
+        bottom: 0;
+        font-size: 1.75vw;
+        margin: 0;
     }
 
-    #block-three-button {
-        margin: 2em auto 0 0;
+    .project a {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 1.75vw;
+    }
+
+    .project-break {
+        margin: 3vw 2vw;
     }
 }
 
-
-/* Tablets */
-@media only screen and (min-width : 768px) and (max-width : 1024px) {
-
-    /* Block One */
-    #block-one {
-        background: #00fff5;
-        background: -webkit-linear-gradient(120deg, white 45%, transparent 45%), -webkit-linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
-        background: -moz-linear-gradient(120deg, white 45%, transparent 45%), -moz-linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
-        background: linear-gradient(120deg, white 45%, transparent 45%), linear-gradient(45deg, #00fff5 0%, #0076ff 100%);
-    }
-
-    #cloud-img {
-        display: block;
-        float: right;
-    }
-
+/* Tablet Landscape */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
     #cta {
-        margin: 2em 2em 0 2em;
+        padding: 0 2.5vw;
         display: grid;
         grid-template-columns: 50% 50%;
     }
 
-    h1 {
-        font-weight: normal;
-        font-size: 2.2em;
+    #cta img {
+        width: 60%;
+        border-radius: 25%;
+        margin: 5vw auto 0 auto;
+    }
+
+    #cta div {
+        margin: auto 0;
+    }
+
+    #cta h1 {
         font-size: 3.5vw;
     }
 
+    #cta p {
+        font-size: 1.8vw;
+    }
+
+    #cta a {
+        padding: 0.2vw;
+        font-size: 2vw;
+        width: 16vw;
+        margin: 5vw auto 0 auto;
+    }
+
+    #top-break {
+        margin: 8vw 2.5vw;
+    }
+
     h2 {
-        font-size: 2.5em;
-        font-size: 4.5vw;
+        padding: 0 2.5vw;
+        margin-top: 0vw;
+        font-size: 3vw;
     }
 
-    /* Block Two*/
-    #block-two {
+    .project {
+        padding: 0 2.5vw;
         display: grid;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 50% 50%;
     }
 
-    #editor-img {
-        background: transparent;
-        width: 100%;
-        margin: 5em 0 -10em -2em;
+    .project div {
+        position: relative;
+        padding: 0 2vw;
     }
 
-    #block-two-text {
-        margin-top: 2em;
-        margin-bottom: 2em;
-        text-align: right;
+    .project h3 {
+        font-size: 2.75vw;
+        margin: 0;
     }
 
-    #block-two-button {
-        float: right;
+    .project p {
+        font-size: 1.5vw;
+        margin: 2vw 0 0 0;
     }
 
-    /* Block Three */
-    #block-three {
-        margin: 8em 1em 2em 1em;
-        text-align: left;
+    .project span {
+        position: absolute;
+        bottom: 0;
+        font-size: 1.75vw;
+        margin: 0;
     }
 
-    #block-three-button {
-        margin: 2em auto 0 0;
+    .project a {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 1.75vw;
+    }
+
+    .project-break {
+        margin: 3vw 2vw;
+    }
+}
+
+/* Tablet Portrait */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+    #cta {
+        padding: 0 3vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #cta img {
+        width: 60%;
+        border-radius: 25%;
+        margin: 5vw auto 0 auto;
+    }
+
+    #cta div {
+        margin: auto 0;
+    }
+
+    #cta h1 {
+        font-size: 3.5vw;
+    }
+
+    #cta p {
+        font-size: 1.8vw;
+    }
+
+    #cta a {
+        padding: 0.2vw;
+        font-size: 2vw;
+        width: 16vw;
+        margin: 5vw auto 0 auto;
+    }
+
+    #top-break {
+        margin: 8vw 3vw;
+    }
+
+    h2 {
+        padding: 0 3vw;
+        margin-top: 0vw;
+        font-size: 3vw;
+    }
+
+    .project {
+        padding: 0 3vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .project div {
+        position: relative;
+        padding: 0 2vw;
+    }
+
+    .project h3 {
+        font-size: 2.75vw;
+        margin: 0;
+    }
+
+    .project p {
+        font-size: 1.5vw;
+        margin: 2vw 0 0 0;
+    }
+
+    .project span {
+        position: absolute;
+        bottom: 0;
+        font-size: 1.75vw;
+        margin: 0;
+    }
+
+    .project a {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 1.75vw;
+    }
+
+    .project-break {
+        margin: 3vw 2vw;
     }
 }
