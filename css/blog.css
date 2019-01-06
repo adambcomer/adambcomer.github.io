@@ -7,7 +7,7 @@ body, html {
 
 /* Block One */
 #block-one {
-    background: #00fff5;
+    background: #FF6F6F;
     background: -webkit-linear-gradient(45deg, #FF6F6F 0%,#FF9140 100%);
     background: -moz-linear-gradient(45deg, #FF6F6F 0%, #FF9140 100%);
     background: linear-gradient(45deg, #FF6F6F 0%,#FF9140 100%);
@@ -15,29 +15,17 @@ body, html {
     padding-bottom: 2em;
 }
 
-/* Navbar changes */
-#icon {
-    color: white;
-}
-
-#icon-subtext {
-    color: white;
-}
-
-#nav-img {
-    fill: white;
-}
-
 /* Call to Action */
 #cta {
     text-align: center;
     color: white;
-    margin: 1em;
+    margin: 0;
 }
 
 #cta h1 {
     font-size: 2.5em;
     margin: 0;
+    padding: 5vw 0;
 }
 
 /* Blog Article */
@@ -66,6 +54,7 @@ body, html {
 @media only screen and (min-width: 1024px) {
     #cta h1 {
         font-size: 5vh;
+        padding: 2vw 0;
     }
 
     #cta h3 {
