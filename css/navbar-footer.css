@@ -167,22 +167,24 @@ footer ul li a {
     }
 }
 
-/* Tablet Portrait */
-@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
 
-    /* Navbar CSS*/
+/* Tablet Landscape */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+
+    /* Navbar */
     nav {
         display: grid;
-        grid-template-columns: max-content auto none;
-        padding: 1em;
+        grid-template-columns: auto auto none;
+        padding: 2.5vw;
     }
 
-    #icon {
-        font-size: 1.2em;
+    #nav-icon {
+        font-size: 2.1vw;
+        line-height: 1.9vw;
     }
 
-    #icon-subtext {
-        font-size: 0.9em;
+    #nav-icon-subtext {
+        font-size: 1.4vw;
     }
 
     #nav-img-container {
@@ -190,26 +192,21 @@ footer ul li a {
     }
 
     #nav-block {
-        display: block;
+        display: inline-flex;
+        justify-content: flex-end;
     }
 
-    #nav-elements {
-        display: inline;
-        float: right;
-        padding: 0.5em 0 0 1.5em;
+    .nav-elements {
+        padding: 0 0 0 4vw;
         color: white;
         font-weight: bold;
-        font-size: 1em;
+        font-size: 1.8vw;
         vertical-align: top;
     }
 
-    #nav-elements a {
-        color: white;
-    }
-
-    .active {
+    .nav-active {
         position: initial;
-        display: initial !important;
+        display: inline-flex !important;
         width: 100%;
         font-size: 1em;
         text-align: none;
@@ -217,5 +214,68 @@ footer ul li a {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
+    }
+
+    /* Footer */
+    footer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        font-size: 2vw;
+    }
+}
+
+/* Tablet Portrait */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+
+    /* Navbar */
+    nav {
+        display: grid;
+        grid-template-columns: auto auto none;
+        padding: 3vw;
+    }
+
+    #nav-icon {
+        font-size: 2.3vw;
+        line-height: 2.2vw;
+    }
+
+    #nav-icon-subtext {
+        font-size: 1.7vw;
+    }
+
+    #nav-img-container {
+        display: none;
+    }
+
+    #nav-block {
+        display: inline-flex;
+        justify-content: flex-end;
+    }
+
+    .nav-elements {
+        padding: 0 0 0 4vw;
+        color: white;
+        font-weight: bold;
+        font-size: 2vw;
+        vertical-align: top;
+    }
+
+    .nav-active {
+        position: initial;
+        display: inline-flex !important;
+        width: 100%;
+        font-size: 1em;
+        text-align: none;
+        background: transparent;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    /* Footer */
+    footer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        font-size: 2vw;
     }
 }
