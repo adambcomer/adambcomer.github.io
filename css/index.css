@@ -37,10 +37,15 @@ html {
     font-weight: bold;
     font-size: 5vw;
     width: 40vw;
-    border: 3px #FFC400 solid;
+    border: 3px #ff8f00 solid;
     border-radius: 20px;
     padding: 1vw;
     margin: 10vw auto 0 auto;
+}
+
+#cta a:hover {
+    background: #ff8f00;
+    color: white;
 }
 
 #top-break {
