@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
-body,
-html {
+body,html {
     font-family: Montserrat;
     margin: 0;
+}
+
+body {
+    font-size: 62.5%;
 }
 
 #cta {
@@ -19,13 +22,13 @@ html {
 
 #cta h1 {
     text-align: center;
-    font-size: 8vw;
+    font-size: 3em;
     margin-bottom: 0;
 }
 
 #cta p {
     text-align: center;
-    font-size: 4vw;
+    font-size: 1.4em;
     margin: 0;
 }
 
@@ -35,7 +38,7 @@ html {
     color: black;
     text-decoration: none;
     font-weight: bold;
-    font-size: 5vw;
+    font-size: 2em;
     width: 40vw;
     border: 3px #ff8f00 solid;
     border-radius: 20px;
@@ -55,7 +58,7 @@ html {
 h2 {
     padding: 0 5vw;
     margin-top: 20vw;
-    font-size: 6.5vw;
+    font-size: 2.25em;
 }
 
 .project {
@@ -67,16 +70,16 @@ h2 {
 }
 
 .project h3 {
-    font-size: 5.5vw;
+    font-size: 1.66em;
 }
 
 .project p {
-    font-size: 4vw;
+    font-size: 1.5em;
 }
 
 .project span {
     color: grey;
-    font-size: 4.5vw;
+    font-size: 1.5em;
 }
 
 .project a {
@@ -84,98 +87,15 @@ h2 {
     text-decoration: none;
     font-weight: bold;
     float: right;
-    font-size: 4.5vw;
+    font-size: 1.5em;
 }
 
 .project-break {
     margin: 5vw 0;
 }
 
-/* Desktop */
-@media only screen and (min-width: 1024px) {
-    #cta {
-        padding: 0 2vw;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-
-    #cta img {
-        width: 60%;
-        border-radius: 25%;
-        margin: 5vw auto 0 auto;
-    }
-
-    #cta div {
-        margin: auto 0;
-    }
-
-    #cta h1 {
-        font-size: 3.5vw;
-    }
-
-    #cta p {
-        font-size: 1.8vw;
-    }
-
-    #cta a {
-        padding: 0.2vw;
-        font-size: 2vw;
-        width: 16vw;
-        margin: 5vw auto 0 auto;
-    }
-
-    #top-break {
-        margin: 8vw 2vw;
-    }
-
-    h2 {
-        padding: 0 2vw;
-        margin-top: 0vw;
-        font-size: 3vw;
-    }
-
-    .project {
-        padding: 0 2vw;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-
-    .project div {
-        position: relative;
-        padding: 0 2vw;
-    }
-
-    .project h3 {
-        font-size: 2.75vw;
-        margin: 0;
-    }
-
-    .project p {
-        font-size: 1.5vw;
-        margin: 2vw 0 0 0;
-    }
-
-    .project span {
-        position: absolute;
-        bottom: 0;
-        font-size: 1.75vw;
-        margin: 0;
-    }
-
-    .project a {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        font-size: 1.75vw;
-    }
-
-    .project-break {
-        margin: 3vw 2vw;
-    }
-}
-
 /* Tablet Landscape */
-@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+@media only screen and (min-width : 768px) and (max-width : 1224px) and (orientation : landscape) {
     #cta {
         padding: 0 2.5vw;
         display: grid;
@@ -192,17 +112,8 @@ h2 {
         margin: auto 0;
     }
 
-    #cta h1 {
-        font-size: 3.5vw;
-    }
-
-    #cta p {
-        font-size: 1.8vw;
-    }
-
     #cta a {
         padding: 0.2vw;
-        font-size: 2vw;
         width: 16vw;
         margin: 5vw auto 0 auto;
     }
@@ -214,7 +125,6 @@ h2 {
     h2 {
         padding: 0 2.5vw;
         margin-top: 0vw;
-        font-size: 3vw;
     }
 
     .project {
@@ -229,19 +139,16 @@ h2 {
     }
 
     .project h3 {
-        font-size: 2.75vw;
         margin: 0;
     }
 
     .project p {
-        font-size: 1.5vw;
         margin: 2vw 0 0 0;
     }
 
     .project span {
         position: absolute;
         bottom: 0;
-        font-size: 1.75vw;
         margin: 0;
     }
 
@@ -249,7 +156,6 @@ h2 {
         position: absolute;
         bottom: 0;
         right: 0;
-        font-size: 1.75vw;
     }
 
     .project-break {
@@ -258,7 +164,7 @@ h2 {
 }
 
 /* Tablet Portrait */
-@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+@media only screen and (min-width : 768px) and (max-width : 1224px) and (orientation : portrait) {
     #cta {
         padding: 0 3vw;
         display: grid;
@@ -275,17 +181,8 @@ h2 {
         margin: auto 0;
     }
 
-    #cta h1 {
-        font-size: 3.5vw;
-    }
-
-    #cta p {
-        font-size: 1.8vw;
-    }
-
     #cta a {
         padding: 0.2vw;
-        font-size: 2vw;
         width: 16vw;
         margin: 5vw auto 0 auto;
     }
@@ -297,7 +194,6 @@ h2 {
     h2 {
         padding: 0 3vw;
         margin-top: 0vw;
-        font-size: 3vw;
     }
 
     .project {
@@ -312,19 +208,16 @@ h2 {
     }
 
     .project h3 {
-        font-size: 2.75vw;
         margin: 0;
     }
 
     .project p {
-        font-size: 1.5vw;
         margin: 2vw 0 0 0;
     }
 
     .project span {
         position: absolute;
         bottom: 0;
-        font-size: 1.75vw;
         margin: 0;
     }
 
@@ -332,7 +225,172 @@ h2 {
         position: absolute;
         bottom: 0;
         right: 0;
-        font-size: 1.75vw;
+    }
+
+    .project-break {
+        margin: 3vw 2vw;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1224px) and (max-width : 1824px) {
+    #cta {
+        padding: 0 2vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #cta img {
+        width: 60%;
+        border-radius: 25%;
+        margin: 5vw auto 0 auto;
+    }
+
+    #cta div {
+        margin: auto 0;
+    }
+
+    #cta h1 {
+        font-size: 5em;
+    }
+
+    #cta p {
+        font-size: 1.75em;
+    }
+
+    #cta a {
+        padding: 0.2vw;
+        font-size: 2em;
+        width: 30%;
+        margin: 5vw auto 0 auto;
+    }
+
+    #top-break {
+        margin: 8vw 2vw;
+    }
+
+    h2 {
+        padding: 0 2vw;
+        margin-top: 0vw;
+        font-size: 2.75em;
+    }
+
+    .project {
+        padding: 0 2vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .project div {
+        position: relative;
+        padding: 0 2vw;
+    }
+
+    .project h3 {
+        font-size: 2.25em;
+        margin: 0;
+    }
+
+    .project p {
+        margin: 2vw 0 0 0;
+        font-size: 1.66em;
+    }
+
+    .project span {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        font-size: 1.75em;
+    }
+
+    .project a {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 1.75em;
+    }
+
+    .project-break {
+        margin: 3vw 2vw;
+    }
+}
+
+/* Desktop Large */
+@media only screen  and (min-width : 1824px) {
+    #cta {
+        padding: 0 2vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #cta img {
+        width: 60%;
+        border-radius: 25%;
+        margin: 5vw auto 0 auto;
+    }
+
+    #cta div {
+        margin: auto 0;
+    }
+
+    #cta h1 {
+        font-size: 6em;
+    }
+
+    #cta p {
+        font-size: 2.25em;
+    }
+
+    #cta a {
+        padding: 0.2vw;
+        font-size: 2.1em;
+        width: 30%;
+        margin: 5vw auto 0 auto;
+    }
+
+    #top-break {
+        margin: 8vw 2vw;
+    }
+
+    h2 {
+        padding: 0 2vw;
+        margin-top: 0vw;
+        font-size: 3.5em;
+    }
+
+    .project {
+        padding: 0 2vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .project div {
+        position: relative;
+        padding: 0 2vw;
+    }
+
+    .project h3 {
+        font-size: 2.75em;
+        margin: 0;
+    }
+
+    .project p {
+        margin: 2vw 0 0 0;
+        font-size: 2em;
+    }
+
+    .project span {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        font-size: 2.25em;
+    }
+
+    .project a {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 2.25em;
     }
 
     .project-break {
