@@ -6,9 +6,9 @@ nav {
 }
 
 #nav-icon {
-    font-size: 5vw;
+    font-size: 2em;
     font-weight: bold;
-    line-height: 4.5vw;
+    line-height: 0.8em;
     color: #000000;
     text-decoration: none;
     overflow: hidden;
@@ -16,7 +16,7 @@ nav {
 }
 
 #nav-icon-subtext {
-    font-size: 3.5vw;
+    font-size: 0.85rem;
     font-weight: normal;
     color: #000000;
 }
@@ -58,7 +58,7 @@ nav {
     height: 100%;
     left: 0;
     top: 0;
-    font-size: 5.5vw;
+    font-size: 1.5rem;
     text-align: center;
     -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
@@ -73,7 +73,7 @@ nav {
 footer {
     background: #EFEFEF;
     padding: 5vw;
-    font-size: 5.5vw;
+    font-size: 1.75em;
 }
 
 #footer-social {
@@ -111,23 +111,137 @@ footer ul li a {
     color: black;
 }
 
-/* Desktop */
-@media only screen and (min-width: 1024px) {
+/* Tablet Landscape */
+@media only screen and (min-width : 768px) and (max-width : 1224px) and (orientation : landscape) {
 
     /* Navbar */
     nav {
+        padding: 2.5vw;
+    }
+
+    #nav-icon {
+        font-size: 2em;
+        line-height: 0.7em;
+    }
+
+    #nav-icon-subtext {
+        font-size: 0.6em;
+    }
+
+    #nav-img-container {
+        display: none;
+    }
+
+    #nav-block {
+        display: inline-flex;
+        justify-content: flex-end;
+    }
+
+    .nav-elements {
+        padding: 0 0 0 4vw;
+        color: white;
+        font-weight: bold;
+        font-size: 1.75em;
+        vertical-align: top;
+    }
+
+    .nav-active {
+        position: initial;
+        display: inline-flex !important;
+        width: 100%;
+        font-size: 1.5em;
+        text-align: none;
+        background: transparent;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    /* Footer */
+    footer {
         display: grid;
-        grid-template-columns: auto auto none;
+        grid-template-columns: 50% 50%;
+        font-size: 1.75em;
+    }
+
+    #footer-social li {
+        padding: 0 3vw 0 0;
+    }
+}
+
+/* Tablet Portrait */
+@media only screen and (min-width : 768px) and (max-width : 1224px) and (orientation : portrait) {
+
+     /* Navbar */
+     nav {
+        padding: 2.5vw;
+    }
+
+    #nav-icon {
+        font-size: 2em;
+        line-height: 0.7em;
+    }
+
+    #nav-icon-subtext {
+        font-size: 0.6em;
+    }
+
+    #nav-img-container {
+        display: none;
+    }
+
+    #nav-block {
+        display: inline-flex;
+        justify-content: flex-end;
+    }
+
+    .nav-elements {
+        padding: 0 0 0 4vw;
+        color: white;
+        font-weight: bold;
+        font-size: 1.5em;
+        vertical-align: top;
+    }
+
+    .nav-active {
+        position: initial;
+        display: inline-flex !important;
+        width: 100%;
+        font-size: 1.5em;
+        text-align: none;
+        background: transparent;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    /* Footer */
+    footer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        font-size: 1.5em;
+    }
+
+    #footer-social li {
+        padding: 0 3vw 0 0;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1224px) and (max-width : 1824px) {
+
+    /* Navbar */
+    nav {
         padding: 2vw;
     }
 
     #nav-icon {
-        font-size: 1.6vw;
-        line-height: 1.3vw;
+        font-size: 2em;
+        line-height: 0.8em;
     }
 
     #nav-icon-subtext {
-        font-size: 1vw;
+        font-size: 0.6em;
     }
 
     #nav-img-container {
@@ -143,7 +257,7 @@ footer ul li a {
         padding: 0 0 0 3vw;
         color: white;
         font-weight: bold;
-        font-size: 1.5vw;
+        font-size: 1.75em;
         vertical-align: top;
     }
 
@@ -163,7 +277,7 @@ footer ul li a {
     footer {
         display: grid;
         grid-template-columns: 50% 50%;
-        font-size: 1.5vw;
+        font-size: 1.66em;
     }
 
     #footer-social li {
@@ -171,24 +285,21 @@ footer ul li a {
     }
 }
 
-
-/* Tablet Landscape */
-@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+/* Desktop Large */
+@media only screen  and (min-width : 1824px) {
 
     /* Navbar */
     nav {
-        display: grid;
-        grid-template-columns: auto auto none;
-        padding: 2.5vw;
+        padding: 2vw;
     }
 
     #nav-icon {
-        font-size: 2.1vw;
-        line-height: 1.9vw;
+        font-size: 2.5em;
+        line-height: 0.8em;
     }
 
     #nav-icon-subtext {
-        font-size: 1.4vw;
+        font-size: 0.6em;
     }
 
     #nav-img-container {
@@ -201,10 +312,10 @@ footer ul li a {
     }
 
     .nav-elements {
-        padding: 0 0 0 4vw;
+        padding: 0 0 0 3vw;
         color: white;
         font-weight: bold;
-        font-size: 1.8vw;
+        font-size: 2em;
         vertical-align: top;
     }
 
@@ -224,70 +335,10 @@ footer ul li a {
     footer {
         display: grid;
         grid-template-columns: 50% 50%;
-        font-size: 2vw;
+        font-size: 2em;
     }
 
     #footer-social li {
         padding: 0 3vw 0 0;
-    }
-}
-
-/* Tablet Portrait */
-@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
-
-    /* Navbar */
-    nav {
-        display: grid;
-        grid-template-columns: auto auto none;
-        padding: 3vw;
-    }
-
-    #nav-icon {
-        font-size: 2.3vw;
-        line-height: 2.2vw;
-    }
-
-    #nav-icon-subtext {
-        font-size: 1.7vw;
-    }
-
-    #nav-img-container {
-        display: none;
-    }
-
-    #nav-block {
-        display: inline-flex;
-        justify-content: flex-end;
-    }
-
-    .nav-elements {
-        padding: 0 0 0 4vw;
-        color: white;
-        font-weight: bold;
-        font-size: 2vw;
-        vertical-align: top;
-    }
-
-    .nav-active {
-        position: initial;
-        display: inline-flex !important;
-        width: 100%;
-        font-size: 1em;
-        text-align: none;
-        background: transparent;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
-    }
-
-    /* Footer */
-    footer {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        font-size: 2vw;
-    }
-
-    #footer-social li {
-        padding: 0 4vw 0 0;
     }
 }
