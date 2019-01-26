@@ -5,6 +5,10 @@ body, html {
     margin: 0;
 }
 
+body {
+    font-size: 62.5%;
+}
+
 /* Call To Action */
 #cta {
     margin: 1em;
@@ -12,10 +16,11 @@ body, html {
 
 #contact-info-header {
     text-align: center;
+    font-size: 3em;
 }
 
 #headshot-img {
-    max-width: 80%;
+    max-width: 70%;
     border-radius: 50%;
     display: block;
     margin-left: auto;
@@ -31,11 +36,12 @@ body, html {
 }
 
 #contact-list li {
-    margin: 1em;
+    margin: 1.5em;
 }
 
 #contact-list li a {
     color: black;
+    font-size: 1.5em;
 }
 
 #contact-email{
@@ -44,7 +50,7 @@ body, html {
     text-align: center;
     display: block;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.66em;
     margin-bottom: 2em;
 }
 
@@ -53,12 +59,14 @@ body, html {
 }
 
 #history-header {
-    margin: 2em 0 0 1em;
+    margin: 4vw 2vw;
+    font-size: 2em;
 }
 
 /* Block Two */
 #block-two {
-    margin: 1em;
+    margin: 0 2vw 10vw 2vw;
+    font-size: 1.4em;
 }
 
 #block-two-img {
@@ -67,7 +75,8 @@ body, html {
 
 /* Block Three */
 #block-three {
-    margin: 5em 1em 1em 1em;
+    margin: 10vw 2vw;
+    font-size: 1.4em;
 }
 
 #block-three-img {
@@ -76,7 +85,8 @@ body, html {
 
 /* Block Four */
 #block-four {
-    margin: 5em 1em 1em 1em;
+    margin: 10vw 2vw;
+    font-size: 1.4em;
 }
 
 #block-four-img {
@@ -85,118 +95,11 @@ body, html {
 
 #to-be-continued {
     text-align: center;
-}
-
-
-/* Desktop */
-@media only screen and (min-width: 1024px) {
-    /* Header Changes */
-    #nav-elements a {
-        color: black;
-        text-decoration: none;
-    }
-
-    /* Call To Action */
-    #cta {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        margin-top: 2em;
-    }
-
-    #contact-info-header {
-        display: none;
-    }
-
-    #headshot-img {
-        max-width: 50%;
-    }
-
-    #contact-email{
-        font-size: 2.5vh
-    }
-
-    #short-about-me {
-        display: block;
-        width: 70%;
-        margin: 0 auto 0 auto;
-    }
-
-    #short-about-me-header {
-        margin: 0;
-        font-size: 4vh;
-    }
-
-    #short-about-me-content {
-        margin: 0;
-        font-size: 3vh;
-    }
-
-    #history-header {
-        margin: 1em 0 1em 1em;
-        font-size: 4vh;
-    }
-
-    .history-text {
-        width: 80%;
-        align-self: center;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 3vh;
-    }
-
-    /* Block Two */
-    #block-two {
-        margin: 1em;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-
-    #block-two-img {
-        width: 100%;
-    }
-
-    /* Block Three */
-    #block-three {
-        margin: 12em 1em 1em 1em;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas: "text img"
-    }
-
-    #block-three-img {
-        width: 100%;
-        grid-area: img;
-    }
-
-    #block-three-text {
-        grid-area: text;
-    }
-
-    /* Block Four */
-    #block-four {
-        margin: 12em 1em 1em 1em;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-
-    #block-four-img {
-        width: 100%;
-    }
-
-    #to-be-continued {
-        margin: 2em;
-        font-size: 4vh;
-    }
+    font-size: 2em;
 }
 
 /* Tablet Landscape */
-@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
-    /* Header Changes */
-    #nav-elements a {
-        color: black;
-        text-decoration: none;
-    }
-
+@media only screen and (min-width : 768px) and (max-width : 1224px) and (orientation : landscape) {
     /* Call To Action */
     #cta {
         display: grid;
@@ -212,129 +115,33 @@ body, html {
         max-width: 50%;
     }
 
-    #contact-email{
-        font-size: 2.5vh
-    }
-
-    #short-about-me {
-        display: block;
-        width: 70%;
-        margin: 0 auto 0 auto;
-    }
-
-    #short-about-me-header {
-        margin: 0;
-        font-size: 3.5vh;
-    }
-
-    #short-about-me-content {
-        margin: 0;
-        font-size: 2.5vh;
-    }
-
-    #history-header {
-        margin: 1em 0 1em 1em;
-        font-size: 4vh;
-    }
-
-    .history-text {
-        width: 80%;
-        align-self: center;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 2.5vh;
-    }
-
-    /* Block Two */
-    #block-two {
-        margin: 1em;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-
-    #block-two-img {
-        width: 100%;
-    }
-
-    /* Block Three */
-    #block-three {
-        margin: 12em 1em 1em 1em;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas: "text img"
-    }
-
-    #block-three-img {
-        width: 100%;
-        grid-area: img;
-    }
-
-    #block-three-text {
-        grid-area: text;
-    }
-
-    /* Block Four */
-    #block-four {
-        margin: 12em 1em 1em 1em;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-
-    #block-four-img {
-        width: 100%;
-    }
-
-    #to-be-continued {
-        margin: 2em;
-        font-size: 4vh;
-    }
-}
-
-/* Tablet Portrait */
-@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
-    /* Header Changes */
-    #nav-elements a {
+    #contact-list li a {
         color: black;
-        text-decoration: none;
-    }
-
-    /* Call To Action */
-    #cta {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        margin-top: 2em;
-    }
-
-    #contact-info-header {
-        display: none;
-    }
-
-    #headshot-img {
-        max-width: 50%;
+        font-size: 1.25em;
     }
 
     #contact-email{
-        font-size: 2.5vh
+        font-size: 1.5em
     }
 
     #short-about-me {
         display: block;
         width: 70%;
-        margin: 0 auto 0 auto;
+        margin: auto;
     }
 
     #short-about-me-header {
         margin: 0;
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     #short-about-me-content {
         margin: 0;
-        font-size: 1.1em;
+        font-size: 1.33em;
     }
 
     #history-header {
-        margin: 1em 0 1em 1em;
+        margin: 3vw 2.5vw;
         font-size: 2em;
     }
 
@@ -343,12 +150,12 @@ body, html {
         align-self: center;
         margin-left: auto;
         margin-right: auto;
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     /* Block Two */
     #block-two {
-        margin: 1em;
+        margin: 1em 2.5vw 2.5vw 2.5vw;
         display: grid;
         grid-template-columns: 50% 50%;
     }
@@ -359,7 +166,7 @@ body, html {
 
     /* Block Three */
     #block-three {
-        margin: 12em 1em 1em 1em;
+        margin: 8em 2.5vw 2.5vw 2.5vw;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-areas: "text img"
@@ -372,11 +179,320 @@ body, html {
 
     #block-three-text {
         grid-area: text;
+        width: 100%;
+        padding-right: 20vw; 
     }
 
     /* Block Four */
     #block-four {
-        margin: 12em 1em 1em 1em;
+        margin: 8em 2.5vw 2.5vw 2.5vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #block-four-img {
+        width: 100%;
+    }
+
+    #to-be-continued {
+        margin: 4em;
+        font-size: 1.75em;
+    }
+}
+
+/* Tablet Portrait */
+@media only screen and (min-width : 768px) and (max-width : 1224px) and (orientation : portrait) {
+
+    /* Call To Action */
+    #cta {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 2em;
+    }
+
+    #contact-info-header {
+        display: none;
+    }
+
+    #headshot-img {
+        max-width: 50%;
+    }
+
+    #contact-list li a {
+        color: black;
+        font-size: 1.25em;
+    }
+
+    #contact-email{
+        font-size: 1.5em
+    }
+
+    #short-about-me {
+        display: block;
+        width: 70%;
+        margin: auto;
+    }
+
+    #short-about-me-header {
+        margin: 0;
+        font-size: 2em;
+    }
+
+    #short-about-me-content {
+        margin: 0;
+        font-size: 1.33em;
+    }
+
+    #history-header {
+        margin: 3vw 3vw;
+        font-size: 2em;
+    }
+
+    .history-text {
+        width: 90%;
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1em;
+    }
+
+    /* Block Two */
+    #block-two {
+        margin: 3vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #block-two-img {
+        width: 100%;
+    }
+
+    /* Block Three */
+    #block-three {
+        margin: 8em 3vw 3vw 3vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "text img"
+    }
+
+    #block-three-img {
+        width: 100%;
+        grid-area: img;
+    }
+
+    #block-three-text {
+        grid-area: text;
+        width: 100%;
+        padding-right: 20vw; 
+    }
+
+    /* Block Four */
+    #block-four {
+        margin: 8em 3vw 3vw 3vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #block-four-img {
+        width: 100%;
+    }
+
+    #to-be-continued {
+        margin: 4em;
+        font-size: 1.75em;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1224px) and (max-width : 1824px) {
+    /* Call To Action */
+    #cta {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 2em;
+    }
+
+    #contact-info-header {
+        display: none;
+    }
+
+    #headshot-img {
+        max-width: 50%;
+    }
+
+    #contact-list li a {
+        color: black;
+        font-size: 1.5em;
+    }
+
+    #contact-email{
+        font-size: 1.75em
+    }
+
+    #short-about-me {
+        display: block;
+        width: 70%;
+        margin: auto;
+    }
+
+    #short-about-me-header {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    #short-about-me-content {
+        margin: 0;
+        font-size: 1.66em;
+    }
+
+    #history-header {
+        margin: 3vw 2vw;
+        font-size: 2.5em;
+    }
+
+    .history-text {
+        width: 90%;
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.25em;
+    }
+
+    /* Block Two */
+    #block-two {
+        margin: 2vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #block-two-img {
+        width: 100%;
+    }
+
+    /* Block Three */
+    #block-three {
+        margin: 8em 2vw 2vw 2vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "text img"
+    }
+
+    #block-three-img {
+        width: 100%;
+        grid-area: img;
+    }
+
+    #block-three-text {
+        grid-area: text;
+        width: 100%;
+        padding-right: 20vw; 
+    }
+
+    /* Block Four */
+    #block-four {
+        margin: 8em 2vw 2vw 2vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #block-four-img {
+        width: 100%;
+    }
+
+    #to-be-continued {
+        margin: 1.5em;
+        font-size: 2.5em;
+    }
+}
+
+/* Desktop Large */
+@media only screen  and (min-width : 1824px) {
+    /* Call To Action */
+    #cta {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 2em;
+    }
+
+    #contact-info-header {
+        display: none;
+    }
+
+    #headshot-img {
+        max-width: 50%;
+    }
+
+    #contact-list li a {
+        color: black;
+        font-size: 2em;
+    }
+
+    #contact-email{
+        font-size: 2em
+    }
+
+    #short-about-me {
+        display: block;
+        width: 70%;
+        margin: auto;
+    }
+
+    #short-about-me-header {
+        margin: 0;
+        font-size: 3em;
+    }
+
+    #short-about-me-content {
+        margin: 0;
+        font-size: 2em;
+    }
+
+    #history-header {
+        margin: 2vw 2vw;
+        font-size: 3em;
+    }
+
+    .history-text {
+        width: 90%;
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.5em;
+    }
+
+    /* Block Two */
+    #block-two {
+        margin: 2vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #block-two-img {
+        width: 100%;
+    }
+
+    /* Block Three */
+    #block-three {
+        margin: 8em 2vw 2vw 2vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "text img"
+    }
+
+    #block-three-img {
+        width: 100%;
+        grid-area: img;
+    }
+
+    #block-three-text {
+        grid-area: text;
+        width: 100%;
+        padding-right: 20vw; 
+    }
+
+    /* Block Four */
+    #block-four {
+        margin: 8em 2vw 2vw 2vw;
         display: grid;
         grid-template-columns: 50% 50%;
     }
@@ -387,6 +503,6 @@ body, html {
 
     #to-be-continued {
         margin: 2em;
-        font-size: 1.5em;
+        font-size: 2.75em;
     }
 }
