@@ -5,6 +5,10 @@ body, html {
     margin: 0;
 }
 
+body {
+    font-size: 62.5%;
+}
+
 /* Block One */
 #block-one {
     background: #FF6F6F;
