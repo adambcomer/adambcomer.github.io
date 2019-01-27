@@ -3,19 +3,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
       <loc>https://adambcomer.com/</loc>
-      <lastmod>2019-01-13</lastmod>
+      <lastmod>2019-01-25</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
       <loc>https://adambcomer.com/contact/</loc>
-      <lastmod>2019-01-13</lastmod>
+      <lastmod>2019-01-25</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
       <loc>https://adambcomer.com/blog/</loc>
-      <lastmod>2019-01-13</lastmod>
+      <lastmod>2019-01-25</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
@@ -23,7 +23,61 @@
    <!-- COG250 Search Project  -->
    <url>
       <loc>https://adambcomer.com/cog250-search/</loc>
-      <lastmod>2019-01-13</lastmod>
+      <lastmod>2019-01-27</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://adambcomer.com/cog250-search/#/lecture/5629499534213120</loc>
+      <lastmod>2019-01-27</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://adambcomer.com/cog250-search/#/lecture/5639445604728832</loc>
+      <lastmod>2019-01-27</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+      <url>
+      <loc>https://adambcomer.com/cog250-search/#/lecture/5707702298738688</loc>
+      <lastmod>2019-01-27</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://adambcomer.com/cog250-search/#/lecture/5634472569470976</loc>
+      <lastmod>2019-01-27</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://adambcomer.com/cog250-search/#/lecture/5644406560391168</loc>
+      <lastmod>2019-01-27</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://adambcomer.com/cog250-search/#/lecture/5631986051842048</loc>
+      <lastmod>2019-01-27</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://adambcomer.com/cog250-search/#/lecture/5641906755207168</loc>
+      <lastmod>2019-01-27</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://adambcomer.com/cog250-search/#/lecture/5636953047302144</loc>
+      <lastmod>2019-01-27</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://adambcomer.com/cog250-search/#/lecture/5646874153320448</loc>
+      <lastmod>2019-01-27</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
