@@ -19,6 +19,12 @@
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
+      <url>
+      <loc>https://adambcomer.com/resume.pdf</loc>
+      <lastmod>2019-09-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
 
    <!-- Blog Posts -->
       <url>
