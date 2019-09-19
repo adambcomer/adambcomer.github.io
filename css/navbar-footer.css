@@ -1,35 +1,27 @@
 /* Navbar */
 nav {
-    display: grid;
-    grid-template-columns: max-content auto;
-    padding: 5vw;
+    display: flex;
+    padding: 1rem 1rem;
 }
 
 #nav-icon {
-    font-size: 2em;
-    font-weight: bold;
-    line-height: 0.8em;
-    color: #000000;
+    font-size: 1.5rem;
+    color: #f7f7f7;
     text-decoration: none;
-    overflow: hidden;
-    display: block;
-}
-
-#nav-icon-subtext {
-    font-size: 0.85rem;
-    font-weight: normal;
-    color: #000000;
+    white-space: nowrap;
 }
 
 #nav-img {
     background: no-repeat;
     cursor: pointer;
-    width: 30px;
-    float: right;
+    width: 2rem;
+    fill: #f7f7f7;
 }
 
 #nav-img-container {
-    width: 100%;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
 }
 
 #nav-block {
@@ -42,24 +34,30 @@ nav {
 }
 
 .nav-elements {
-    padding: 8vh 0 0 0;
+    padding: 2rem 0 0 1.5rem;
+}
+
+#nav-block h3 {
+    color: #f3f3f3;
+    text-decoration: none;
+    padding-left: 1rem;
+    margin-bottom: 0;
 }
 
 .nav-elements a {
-    color: black;
+    color: #f3f3f3;
     text-decoration: none;
 }
 
 .nav-active {
     position: fixed;
     display: block !important;
-    background: #ffffff;
+    background: #565656;
     width: 50%;
     height: 100%;
     left: 0;
     top: 0;
     font-size: 1.5rem;
-    text-align: center;
     -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
@@ -71,7 +69,7 @@ nav {
 
 /* Footer */
 footer {
-    background: #EFEFEF;
+    background: #3D3D3D;
     padding: 5vw;
     font-size: 1.75em;
 }
@@ -94,6 +92,11 @@ footer {
 
 footer h4 {
     margin: 5vh 0 1vh 0;
+    font-size: 1.55rem;
+    line-height: 36px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #bebebe;
 }
 
 footer ul {
@@ -108,7 +111,11 @@ footer ul li {
 
 footer ul li a {
     text-decoration: none;
-    color: black;
+    font-size: 1.25rem;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #f3f3f3;
 }
 
 /* Tablet Landscape */

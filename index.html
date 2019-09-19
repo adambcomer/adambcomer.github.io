@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="/css/navbar-footer.css">
     <link rel="stylesheet" href="/css/index.css">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="canonical" href="https://adambcomer.com/" />
 
-    <title>Adam Comer | Software Developer | Toronto</title>
-    <meta name="description" content="Adam Comer is a software developer in Toronto, ON. I Co-founded Knowtworthy and am a student at the University of Toronto. I've worked with Node.js, Kubernetes, Python, and AWS.">
+    <title>Adam Comer | Software Developer | Toronto, ON</title>
+    <meta name="description"
+        content="Adam Comer is a software developer in Toronto, ON. He Co-founded Knowtworthy and is a student at the University of Toronto. He has experience working with Node.js, Kubernetes, Python, and AWS.">
 
     <script type="application/ld+json">
         {
@@ -45,117 +46,120 @@
         }
         gtag('js', new Date());
 
-        gtag('config', 'UA-129077573-1', {'use_amp_client_id': true});
+        gtag('config', 'UA-129077573-1', { 'use_amp_client_id': true });
     </script>
 </head>
 
 <body>
     <!-- Navbar -->
     <nav>
-        <a id="nav-icon" href="/">ADAM COMER <br> <span id="nav-icon-subtext">Software Developer</span></a>
+        <a id="nav-icon" href="/">ADAM COMER</a>
 
         <ul id="nav-block">
-            <li class="nav-elements nav-open"><a href="/">Home</a></li>
+            <h3>Navigation</h3>
             <li class="nav-elements"><a href="/blog/">Blog</a></li>
             <li class="nav-elements"><a href="/contact/">Contact</a></li>
         </ul>
 
         <div id="nav-img-container">
-            <img id="nav-img" alt="Navigation button" src="/assets/navIcon.svg">
+            <svg id="nav-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.75 28.063">
+                <path d="M604-1383.937h35.75v-4.677H604Zm0-11.693h35.75v-4.677H604Zm0-16.37v4.677h35.75V-1412Z"
+                    transform="translate(-604 1412)" /></svg>
         </div>
     </nav>
 
     <div id="cta">
-        <img src="/assets/headshot.jpeg" alt="A picture of Adam Comer">
         <div>
-            <h1>I'm Adam Comer</h1>
-            <p>Software developer and Student at UofT</p>
-            <a href="/contact/">Contact Me</a>
+            <h1 class="cta-header-1">Hello, I’m Adam Comer, Software Developer at BMO and Student @ UofT</h1>
+            <p class="cta-header-2">I live in Toronto, ON and below is some stuff about me. </p>
+            <a href="mailto:adambcomer@gmail.com" class="cta-link">adambcomer@gmail.com</a>
         </div>
     </div>
 
-    <hr id="top-break">
-
-    <h2>Experience and projects:</h2>
+    <h2>Experience</h2>
 
     <div class="project">
-        <img src="/assets/project-knowtworthy.png" alt="Knowtworthy landing page">
+        <img class="project-img" src="/assets/project-knowtworthy.png" alt="Knowtworthy landing page">
         <div>
-            <h3>Knowtworthy</h3>
-            <p>We all know that meetings suck! Hours are spent on minutes and organizing the meeting only for everyone
+            <h3 class="project-title">Knowtworthy</h3>
+            <p class="project-time">Nov 2017 - Present</p>
+            <p class="project-description">We all know that meetings suck! Hours are spent on minutes and organizing the
+                meeting only for everyone
                 to leave on a different page. Knowtworthy aims to change this by creating easy to use templates and
-                real-time transcription to make your meetings move smoothly.</p>
-            <span>Nov 2017 - Present</span>
-            <a href="https://knowtworthy.com/" target="_blank">Read More</a>
+                real-time transcription to make your meetings move smoothly. You can <a class="project-description-link"
+                    href="https://knowtworthy.com/" target="_blank">try Knowtworthy here</a>.</p>
         </div>
     </div>
 
-    <hr class="project-break">
-
     <div class="project">
-        <img src="/assets/project-sentiment.png" alt="Screenshot of the sentiment program">
+        <img class="project-img" src="/assets/project-bdm.png" alt="A screenshot of BDM Trucks">
         <div>
-            <h3>Sentiment</h3>
-            <p>This was a Hackathon project made at Hack The 6ix. Sentiment tracks a conversation and finds the
-                sentiment of a conversation with the voice transcript of the meeting. After 36 hours of coding, we gave
-                our presentation to the judges and won <b>first place</b>.</p>
-            <span>Aug 2018</span>
-            <a href="https://devpost.com/software/knowtworthy-sentiment" target="_blank">Read More</a>
+            <h3 class="project-title">BDM Trucks</h3>
+            <p class="project-time">Sep 2017 - Nov 2017</p>
+            <p class="project-description">A good family friend wanted re-build his webpage to give it a modern feel. I
+                took his website from
+                concept all the way to implementation. I used Bootstrap 4 to give a clean modern feel to the site. <a
+                    class="project-description-link" href="http://www.bdmtrucks.com/" target="_blank">View the webiste
+                    here.</a></p>
         </div>
     </div>
 
-    <hr class="project-break">
-
     <div class="project">
-        <img src="/assets/project-bdm.png" alt="A screenshot of BDM Trucks">
+        <img class="project-img" src="/assets/project-sbirt.png" alt="A screenshot of the SBIRT app on a iPhone">
         <div>
-            <h3>BDM Trucks</h3>
-            <p>A good family friend wanted re-build his webpage to give it a modern feel. I took his website from
-                concept all the way to implementation. I used Bootstrap 4 to give a clean modern feel to the site.</p>
-            <span>Sep 2017 - Nov 2017</span>
-            <a href="http://www.bdmtrucks.com/" target="_blank">Read More</a>
-        </div>
-    </div>
-
-    <hr class="project-break">
-
-    <div class="project">
-        <img src="/assets/project-chatbot.png" alt="A graphic of a text conversation">
-        <div>
-            <h3>AI Chatbot using Tensorflow</h3>
-            <p>AI Chatbots have been around for a while, but have been traditionally based on keywords. This project
-                aims to have the chatbot try and “understand” the messages it is given by processing the messages with
-                a neural network. It was moderately successful at the task, but most importantly I had fun building it.</p>
-            <span>Aug 2016 - Dec 2016</span>
-            <a href="https://github.com/adambcomer/Tensorflow-Seq2Seq-Dialogs" target="_blank">Read More</a>
-        </div>
-    </div>
-
-    <hr class="project-break">
-
-    <div class="project">
-        <img src="/assets/project-sbirt.png" alt="A screenshot of the SBIRT app on a iPhone">
-        <div>
-            <h3>SBIRT Interventions</h3>
-            <p>Shenandoah University’s School of Pharmacy needed a tool to collect data on
-                drug abuse in Northern Virginia area with the help of local clinics and students in the field. I built an
+            <h3 class="project-title">SBIRT Interventions</h3>
+            <p class="project-time">Oct 2015 - Dec 2016</p>
+            <p class="project-description">Shenandoah University’s School of Pharmacy needed a tool to collect data on
+                drug abuse in Northern Virginia area with the help of local clinics and students in the field. I built
+                an
                 iOS and Android app to assist them in collecting this data from doctors and students.</p>
-            <span>Oct 2015 - Dec 2016</span>
         </div>
     </div>
 
-    <hr class="project-break">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <img class="project-img" src="/assets/project-sentiment.png" alt="Screenshot of the sentiment program">
+        <div>
+            <h3 class="project-title">Sentiment</h3>
+            <p class="project-time">Aug 2018</p>
+            <p class="project-description">This was a Hackathon project made at Hack The 6ix. Sentiment tracks a
+                conversation and finds the
+                sentiment of a conversation with the voice transcript of the meeting. After 36 hours of coding, we gave
+                our presentation to the judges and won <b>first place</b>. You can see the <a
+                    class="project-description-link" href="https://www.devpost.com/software/knowtworthy-sentiment"
+                    target="_blank">DevPost submission here</a>.</p>
+        </div>
+    </div>
+
+    <div class="project">
+        <img class="project-img" src="/assets/project-chatbot.png" alt="A graphic of a text conversation">
+        <div>
+            <h3 class="project-title">AI Chatbot using Tensorflow</h3>
+            <p class="project-time">Aug 2016 - Dec 2016</p>
+            <p class="project-description">AI Chatbots have been around for a while, but have been traditionally based
+                on keywords. This project
+                aims to have the chatbot try and “understand” the messages it is given by processing the messages with
+                a neural network. It was moderately successful at the task, but most importantly I had fun building
+                it. <a class="project-description-link" href="https://github.com/adambcomer/Tensorflow-Seq2Seq-Dialogs"
+                    target="_blank">View the github
+                    repository here.</a></p>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
         <div>
             <h4>Social</h4>
             <ul id="footer-social">
-                <li><a href="https://www.linkedin.com/in/adambcomer/" target="_blank"><i class="fab fa-linkedin-in fa-lg"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/adambcomer/" target="_blank"><i
+                            class="fab fa-linkedin-in fa-lg"></i></a></li>
                 <li><a href="https://github.com/adambcomer" target="_blank"><i class="fab fa-github fa-lg"></i></a></li>
                 <li><a href="https://gitlab.com/adambcomer" target="_blank"><i class="fab fa-gitlab fa-lg"></i></a></li>
-                <li><a href="https://twitter.com/adambcomer" target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
-                <li><a href="https://www.instagram.com/adamcomer/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
+                <li><a href="https://twitter.com/adambcomer" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+                </li>
+                <li><a href="https://www.instagram.com/adamcomer/" target="_blank"><i
+                            class="fab fa-instagram fa-lg"></i></a></li>
             </ul>
         </div>
         <div>
