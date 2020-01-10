@@ -1,0 +1,93 @@
+@use '_header-footer';
+@import '_globals';
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600&display=swap');
+}
+
+$font-stack: 'IBM Plex Sans', sans-serif;;
+
+body {
+  font-family: $font-stack;
+  background-color: $ui-background;
+  padding: 0.5rem 1rem;
+}
+
+#cta-dots-1 {
+  position: absolute;
+  left: 20vw;
+  top: 20vh;
+}
+
+#cta-dots-2 {
+  position: absolute;
+  right: 10vw;
+  top: 50vh;
+}
+
+#cta-dots-3 {
+  position: absolute;
+  left: 5vw;
+  top: 80vh;
+}
+
+.cta {
+  .cta-header {
+    @include heading-5;
+    font-size: 3rem;
+    line-height: 3.75rem;
+    margin-top: 30vh;
+
+    .cta-header-highlight {
+      color: $link-01
+    }
+  }
+}
+
+.section-header {
+  @include heading-5;
+  color: $text-02;
+}
+
+.first-section-header {
+  margin-top: 60vh;
+  margin-bottom: 0;
+}
+
+.experience {
+  width: 50%;
+  margin-top: 4rem;
+
+  .experience-header {
+    @include heading-3;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+  }
+
+  .experience-label {
+    @include label-1;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .experience-value {
+    @include body-2;
+    margin: 0;
+  }
+
+  .experience-tools {
+    display: flex;
+    flex-wrap: wrap;
+    .experience-tool {
+      @include body-1;
+      background-color: $ui-1;
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+      padding: 0.125rem 0.75rem;
+      border-radius: 1rem;
+    }
+  }
+}

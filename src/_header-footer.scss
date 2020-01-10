@@ -1,0 +1,25 @@
+@import '_globals';
+
+nav {
+  display: flex;
+  
+  .nav-icon-block {
+    flex: 1;
+    .nav-icon {
+      @include heading-3;
+      text-decoration: none;
+    }
+  }
+
+  .nav-block {
+    margin: 0;
+
+    .nav-element {
+      list-style-type: none;
+      a {
+        @include heading-2;
+        text-decoration: none;
+      }
+    }
+  }
+}
