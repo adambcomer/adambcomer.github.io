@@ -9,7 +9,7 @@ sass.compiler = require('sass');
 
 function html() {
   return src('src/**/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
+    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true, minifyJS: true, minifyURLs: true, processScripts: ['application/ld+json'] }))
     .pipe(dest('build'))
 }
 

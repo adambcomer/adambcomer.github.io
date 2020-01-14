@@ -13,9 +13,11 @@ nav {
 
   .nav-block {
     margin: 0;
+    display: flex;
 
     .nav-element {
       list-style-type: none;
+      margin-right: 1rem;
       a {
         @include heading-2;
         text-decoration: none;
