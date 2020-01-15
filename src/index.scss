@@ -28,6 +28,10 @@
 
 $font-stack: 'IBM Plex Sans', sans-serif;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-stack;
   background-color: $ui-background;
