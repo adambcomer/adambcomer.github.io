@@ -30,16 +30,23 @@ function copy() {
     .pipe(dest('build'))
 }
 
+function copyImages() {
+  return src(['src/images/**'])
+    .pipe(dest('build/images'))
+}
+
 exports.css = css;
 exports.html = html;
 exports.copy = copy;
+exports.copyImages = copyImages;
 exports.sitemap_build = sitemap_build;
 
 exports.default = function () {
-  parallel([css, sitemap_build, copy, html])()
+  parallel([css, sitemap_build, copy, html, copyImages])()
 
   watch('src/**/*.scss', css);
   watch(['src/**/*.html', 'src/**/*.pdf'], sitemap_build);
   watch(['src/**/*.pdf', 'src/**/*.ico', 'src/**/*.xml', 'src/**/*.txt', 'src/**/CNAME'], copy);
+  watch(['src/images/**'], copyImages);
   watch('src/**/*.html', html)
 };

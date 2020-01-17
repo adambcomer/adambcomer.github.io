@@ -38,30 +38,17 @@ body {
   padding: 0.5rem 1rem;
 }
 
-#cta-dots-1 {
-  position: absolute;
-  left: 20vw;
-  top: 20vh;
-}
-
-#cta-dots-2 {
-  position: absolute;
-  right: 10vw;
-  top: 50vh;
-}
-
-#cta-dots-3 {
-  position: absolute;
-  left: 5vw;
-  top: 80vh;
-}
-
 .cta {
+  background-image: url('../images/landingBackground.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
   .cta-header {
     @include heading-5;
     font-size: 3rem;
     line-height: 3.75rem;
-    margin-top: 30vh;
+    padding-top: 40vh;
+    padding-bottom: 60vh;
 
     .cta-header-highlight {
       color: $link-01
@@ -75,13 +62,16 @@ body {
 }
 
 .first-section-header {
-  margin-top: 60vh;
   margin-bottom: 0;
 }
 
 .experience {
   width: 50%;
   margin-top: 4rem;
+
+  @media (max-width: $small-breakpoint) {
+    width: 100%;
+  }
 
   .experience-header {
     @include heading-3;
@@ -99,6 +89,10 @@ body {
   .experience-value {
     @include body-2;
     margin: 0;
+
+    a {
+      @include link-1;
+    }
   }
 
   .experience-tools {

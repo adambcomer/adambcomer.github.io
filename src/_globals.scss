@@ -52,3 +52,18 @@ $link-01: #6EA6FF;
   font-weight: 400;
   letter-spacing: 0px;
 }
+
+@mixin link-1 {
+  color: $link-01;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+$small-breakpoint: 600px;
