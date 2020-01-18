@@ -30,24 +30,28 @@ $font-stack: 'IBM Plex Sans', sans-serif;
 
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: $font-stack;
   background-color: $ui-background;
-  padding: 0.5rem 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 .cta {
   background-image: url('../images/landingBackground.svg');
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0.5rem 1rem;
 
   .cta-header {
     @include heading-5;
     font-size: 3rem;
     line-height: 3.75rem;
-    padding-top: 40vh;
+    padding-top: 30vh;
     padding-bottom: 60vh;
 
     .cta-header-highlight {
@@ -59,15 +63,22 @@ body {
 .section-header {
   @include heading-5;
   color: $text-02;
+  padding: 0 1rem;
 }
 
 .first-section-header {
   margin-bottom: 0;
 }
 
+.second-section-header {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
 .experience {
   width: 50%;
   margin-top: 4rem;
+  padding: 0 1rem;
 
   @media (max-width: $small-breakpoint) {
     width: 100%;
@@ -108,4 +119,53 @@ body {
       border-radius: 1rem;
     }
   }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .button-link {
+    display: inline-block;
+    text-decoration: none;
+  
+    .button-container {
+      display: flex;
+      height: 3rem;
+  
+      padding-left: 1rem;
+      background-color: $button-background;
+  
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+      letter-spacing: 0.16px;
+      color: #FFF;
+  
+      div {
+        margin: auto 0;
+      }
+  
+      .button-svg {
+        width: 4rem;
+  
+        svg {
+          float: right;
+          padding-right: 1rem;
+          fill: #FFF;
+        }
+      }
+    }
+  }
+}
+
+.resume-button {
+  margin-top: 1rem;
+}
+
+.resume-header {
+  text-align: center;
+  color: $text-01;
+  margin-top: 3rem;
 }

@@ -2,6 +2,7 @@
 
 nav {
   display: flex;
+  padding: 1rem 1rem 0 1rem;
   
   .nav-icon-block {
     flex: 1;
@@ -21,6 +22,31 @@ nav {
       a {
         @include heading-2;
         text-decoration: none;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $ui-1;
+  margin-top: 5rem;
+
+  .footer-social-header {
+    @include heading-2;
+    padding: 1rem 0 0 1rem;
+  }
+
+  .footer-social {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 1rem 1rem;
+    margin: 0;
+
+    .footer-social-icon {
+      padding: 1rem;
+
+      a {
+        color: $text-01;
       }
     }
   }
