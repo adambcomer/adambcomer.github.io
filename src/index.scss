@@ -54,6 +54,10 @@ body {
     padding-top: 30vh;
     padding-bottom: 60vh;
 
+    @media (max-width: $small-breakpoint) {
+      padding-top: 15vh;
+    }
+
     .cta-header-highlight {
       color: $link-01
     }
@@ -81,7 +85,7 @@ body {
   padding: 0 1rem;
 
   @media (max-width: $small-breakpoint) {
-    width: 100%;
+    width: auto;
   }
 
   .experience-header {

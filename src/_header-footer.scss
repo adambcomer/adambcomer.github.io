@@ -6,6 +6,7 @@ nav {
   
   .nav-icon-block {
     flex: 1;
+
     .nav-icon {
       @include heading-3;
       text-decoration: none;
@@ -14,11 +15,17 @@ nav {
 
   .nav-block {
     margin: 0;
+    padding: 0;
     display: flex;
+
+    .nav-element:first-child {
+      margin-left: 0;
+    }
 
     .nav-element {
       list-style-type: none;
-      margin-right: 1rem;
+      margin-left: 1rem;
+
       a {
         @include heading-2;
         text-decoration: none;
