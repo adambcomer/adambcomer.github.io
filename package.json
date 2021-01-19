@@ -22,7 +22,7 @@
     "gulp-cli": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-sass": "^4.1.0",
-    "gulp-sitemap": "^7.6.0",
-    "sass": "^1.26.8"
+    "gulp-sitemap": "^7.7.0",
+    "sass": "^1.32.4"
   }
 }
