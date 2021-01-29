@@ -1,0 +1,13 @@
+.nav-items {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon {
+  fill: #F4F4F4;
+}
+
+.mobile-nav {
+  background: #161616; 
+  top: 80px;
+}
