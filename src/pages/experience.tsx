@@ -9,7 +9,7 @@ const ExperiencePage = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: 'en' }}>
         <link rel="canonical" href="https://adambcomer.com/experience" />
 
         <title>Experience | Adam Comer | Software Developer</title>

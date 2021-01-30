@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet'
 const BlogPostTemplate = ({ data }) => {
   return (
     <>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: 'en' }}>
         <link rel="canonical" href={`https://adambcomer.com${data.markdownRemark.frontmatter.slug}`} />
 
         <title>{data.markdownRemark.frontmatter.title} | Adam Comer</title>

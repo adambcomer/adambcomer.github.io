@@ -36,9 +36,7 @@ const IndexPage = () => {
 
   return (
     <>
-      <Helmet>
-        <link rel="canonical" href="https://adambcomer.com/" />
-
+      <Helmet htmlAttributes={{ lang: 'en' }}>
         <title>Adam Comer | Software Developer</title>
         <meta name="description" content="Adam Comer is a Software Developer, Co-Founder Knowtworthy, and Student at the University of Toronto. He is proficient with Node.js, Kubernetes, Python, and AWS." />
 
@@ -82,7 +80,7 @@ const IndexPage = () => {
         <hr />
 
         <div className='grid grid-cols-1 lg:grid-cols-2 block'>
-          <Img className='hidden lg:block' fluid={data.bmo.childImageSharp.fluid} alt='Gatsby Docs are awesome' />
+          <Img className='hidden lg:block' fluid={data.bmo.childImageSharp.fluid} alt='Toronto Skyline with the Bank of Montreal HQ in the center.' />
           <div className='w-100 px-6 py-24'>
             <h2 className='text-3xl'>I’m a <span className='color-1'>Software Developer</span>.</h2>
             <p className='mt-8'>
@@ -128,7 +126,7 @@ const IndexPage = () => {
 
 
         <div className='grid grid-cols-1 lg:grid-cols-2 block'>
-          <Img className='hidden lg:block' fluid={data.uoft.childImageSharp.fluid} alt='Gatsby Docs are awesome' />
+          <Img className='hidden lg:block' fluid={data.uoft.childImageSharp.fluid} alt='Convocation Hall at the University of Toronto.' />
           <div className='px-6 py-24'>
             <h2 className='text-3xl'>I’m a <span className='color-2'>Student</span>.</h2>
             <p className='mt-8'>
@@ -179,11 +177,11 @@ const IndexPage = () => {
         <hr />
 
         <div className='grid grid-cols-1 lg:grid-cols-2 block'>
-          <Img className='hidden lg:block' fluid={data.knowtworthy.childImageSharp.fluid} alt='Gatsby Docs are awesome' />
+          <Img className='hidden lg:block' fluid={data.knowtworthy.childImageSharp.fluid} alt='Knowtworthy meeting minutes editor and transcription.' />
           <div className='px-6 py-24'>
             <h2 className='text-3xl'>I’m a <span className='color-3'>Co-Founder</span>.</h2>
             <p className='mt-8'>
-              After my first year in university, my co-founders and I were given the opportunity to join the UofT’s Hatchery's NEST Program to build out our company: Knowtworthy.        
+              After my first year in university, my co-founders and I were given the opportunity to join the UofT’s Hatchery's NEST Program to build out our company: Knowtworthy.
               Our vision is to increase the efficiency of office meetings with software that implements meeting best practices in conjunction with automatic speech transcription.
               So far, Knowtworthy has successfully launched an Alpha and Beta and is not available to individuals and businesses.
             </p>

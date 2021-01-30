@@ -24,7 +24,7 @@ const SimpleDatabasePage = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: 'en' }}>
         <link rel="canonical" href="https://adambcomer.com/blog/simple-database" />
 
         <title>Build a Simple Database | Adam Comer</title>

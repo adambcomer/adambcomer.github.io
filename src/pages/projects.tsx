@@ -10,7 +10,7 @@ const ProjectsPage = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: 'en' }}>
         <link rel="canonical" href="https://adambcomer.com/projects" />
 
         <title>Projects | Adam Comer | Software Developer</title>

@@ -24,7 +24,7 @@ const BlogPage = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: 'en' }}>
         <link rel="canonical" href="https://adambcomer.com/blog" />
 
         <title>Blog | Adam Comer | Software Developer</title>
