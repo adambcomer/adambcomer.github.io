@@ -169,7 +169,7 @@ const ProjectsPage = () => {
           <div className='mt-8 lg:mt-0 lg:col-span-2 relative h-64 lg:h-full'>
             <Link to='/blog/install-gitlab-runner-kubernetes'>
               <div className='p-8 h-full hover:underline ui-1-color'>
-                <h4 className='text-4xl'>How to Install a GitLab Runner on Kubernetes</h4>
+                <h4 className='text-4xl font-thin'>How to Install a GitLab Runner on Kubernetes</h4>
                 <svg className='absolute bottom-8 right-8 svg-fill' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                   <polygon points="18 6 16.57 7.393 24.15 15 4 15 4 17 24.15 17 16.57 24.573 18 26 28 16 18 6" />
                 </svg>
