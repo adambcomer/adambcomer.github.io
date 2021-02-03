@@ -64,7 +64,7 @@ const ProjectsPage = () => {
             <p>Dec 2020 - Jan 2021</p>
 
             <h3 className='text-sm text-1-color mt-4'>About</h3>
-            <p>This <OutboundLink href='https://adambcomer.com/lin-tree-solver/#/' className='link-0-color hover:underline'>Linguistics Tree Solver</OutboundLink> automatically builds linguistics syntax trees. After taking a syntax course at the University of Toronto, I wanted to make a tool that applied the theory we learned in class. Unlike the tree builders we used in class, this tool is able to parse an annotated sentence and display every tree that satisfies the syntax rules.</p>
+            <p>This <OutboundLink href='https://adambcomer.com/lin-tree-solver/' className='link-0-color hover:underline'>Linguistics Tree Solver</OutboundLink> automatically builds linguistics syntax trees. After taking a syntax course at the University of Toronto, I wanted to make a tool that applied the theory we learned in class. Unlike the tree builders we used in class, this tool is able to parse an annotated sentence and display every tree that satisfies the syntax rules.</p>
 
             <h3 className='text-sm text-1-color mt-4'>Tools and Frameworks</h3>
             <div className='flex flex-wrap'>
@@ -81,7 +81,7 @@ const ProjectsPage = () => {
               <OutboundLink className='text-xl hover:underline arrow-link ml-6' href='https://github.com/adambcomer/lin-tree-solver'>Repository</OutboundLink>
             </div>
             <div className='mt-4'>
-              <OutboundLink className='text-xl hover:underline arrow-link ml-6' href='https://adambcomer.com/lin-tree-solver/#/'>Demo</OutboundLink>
+              <OutboundLink className='text-xl hover:underline arrow-link ml-6' href='https://adambcomer.com/lin-tree-solver/'>Demo</OutboundLink>
             </div>
           </div>
         </div>
