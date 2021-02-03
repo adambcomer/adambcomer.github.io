@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/lin-tree-solver"
+  to = "https://eager-wescoff-8fd2b7.netlify.app"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
