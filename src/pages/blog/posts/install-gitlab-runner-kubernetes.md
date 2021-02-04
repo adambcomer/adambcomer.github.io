@@ -6,7 +6,7 @@ image: "post-1-cover.jpeg"
 imageAlt: "Gitlab logo on purple background"
 author: "Adam Comer"
 date: 2020-07-19T05:20:54+0000
-postDate: 2019-02-01T21:57:00-0500
+postDate: 2019-02-02T02:57:00+0000
 ---
 
 Using [CI/CD Systems](https://en.wikipedia.org/wiki/Continuous_integration) to quickly build and deploy software has become the norm in professional software development and open source. Teams that use CI/CD Systems can build, test, and deploy every commit from their codebase. Along with CI/CD Systems, automated deployment and orchestration tools, like [Kubernetes](https://kubernetes.io/), have taken over data-centers with fully containerized workloads. A automated pipeline to build, test, and deploy your code is realizable by integrating a CI/CD System with Kubernetes. Building this system is easy with [Gitlab's CI/CD Runner](https://docs.gitlab.com/ee/ci/) and [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine). In this tutorial, I will demonstrate how to set up Gitlab's CI/CD System and launch it on a Kubernetes cluster — for releases that are 100% automated.
