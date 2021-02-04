@@ -54,9 +54,9 @@ const Footer = () => {
         <div className='lg:col-span-4 mt-12 lg:mt-0'>
           <div className='text-lg font-semibold'>Directory</div>
           <div className='mt-2 text-lg hover:underline'><Link to='/'>Home</Link></div>
-          <div className='mt-2 text-lg hover:underline'><Link to='/blog'>Blog</Link></div>
-          <div className='mt-2 text-lg hover:underline'><Link to='/projects'>Projects</Link></div>
-          <div className='mt-2 text-lg hover:underline'><Link to='/experience'>Experience</Link></div>
+          <div className='mt-2 text-lg hover:underline'><Link to='/blog/'>Blog</Link></div>
+          <div className='mt-2 text-lg hover:underline'><Link to='/projects/'>Projects</Link></div>
+          <div className='mt-2 text-lg hover:underline'><Link to='/experience/'>Experience</Link></div>
         </div>
 
         <div className='lg:col-span-12 mt-12 lg:mt-0'>© 2021 Adam Comer — All rights reserved</div>
