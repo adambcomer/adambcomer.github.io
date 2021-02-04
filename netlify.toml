@@ -7,25 +7,25 @@
 
 [[redirects]]
   from = "/blog/setup-gitlab-cicd-on-kubernetes.html"
-  to = "/blog/install-gitlab-runner-kubernetes"
+  to = "/blog/install-gitlab-runner-kubernetes/"
   status = 301
 
 [[redirects]]
   from = "/blog/simple-database.html"
-  to = "/blog/simple-database"
+  to = "/blog/simple-database/"
   status = 301
 
 [[redirects]]
   from = "/blog/simple-database/motivation-design.html"
-  to = "/blog/simple-database/motivation-design"
+  to = "/blog/simple-database/motivation-design/"
   status = 301
 
 [[redirects]]
   from = "/blog/simple-database/memtable.html"
-  to = "/blog/simple-database/memtable"
+  to = "/blog/simple-database/memtable/"
   status = 301
 
 [[redirects]]
   from = "/blog/simple-database/wal.html"
-  to = "/blog/simple-database/wal"
+  to = "/blog/simple-database/wal/"
   status = 301
