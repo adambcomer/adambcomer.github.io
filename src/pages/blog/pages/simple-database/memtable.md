@@ -1,5 +1,5 @@
 ---
-slug: "/blog/simple-database/memtable"
+slug: "/blog/simple-database/memtable/"
 title: "Build a Database Pt. 2: MemTable"
 description: "Build the first component of an LSM-Tree database, the MemTable. We look at how RocksDB designed their MemTable and build our own."
 image: "/assets/img/simple-database-memtable-cover.jpg"

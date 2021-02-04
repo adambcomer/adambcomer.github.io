@@ -1,5 +1,5 @@
 ---
-slug: "/blog/install-gitlab-runner-kubernetes"
+slug: "/blog/install-gitlab-runner-kubernetes/"
 title: "How to Install GitLab Runner on Kubernetes"
 description: "Learn how to install Gitlab CI/CD Runner on Kubernetes and grant access to the Docker Daemon to build containers."
 image: "post-1-cover.jpeg"

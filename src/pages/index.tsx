@@ -37,6 +37,8 @@ const IndexPage = () => {
   return (
     <>
       <Helmet htmlAttributes={{ lang: 'en' }}>
+        <link rel="canonical" href="https://adambcomer.com/" />
+
         <title>Adam Comer | Software Developer</title>
         <meta name="description" content="Adam Comer is a Software Developer, Co-Founder Knowtworthy, and Student at the University of Toronto. He is proficient with Node.js, Kubernetes, Python, and AWS." />
 

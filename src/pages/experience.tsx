@@ -10,7 +10,7 @@ const ExperiencePage = () => {
   return (
     <>
       <Helmet htmlAttributes={{ lang: 'en' }}>
-        <link rel="canonical" href="https://adambcomer.com/experience" />
+        <link rel="canonical" href="https://adambcomer.com/experience/" />
 
         <title>Experience | Adam Comer | Software Developer</title>
         <meta name="description" content="The places and people I've worked for." />
@@ -18,7 +18,7 @@ const ExperiencePage = () => {
         <meta property="og:title" content="Adam Comer | Software Developer" />
         <meta property="og:description" content="The places and people I've worked for." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://adambcomer.com/experience" />
+        <meta property="og:url" content="https://adambcomer.com/experience/" />
         <meta property="og:image" content="https://adambcomer.com/portrait.png" />
         <meta property="og:image:width" content="720" />
         <meta property="og:image:height" content="720" />

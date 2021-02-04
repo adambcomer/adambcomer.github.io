@@ -25,7 +25,7 @@ const BlogPage = () => {
   return (
     <>
       <Helmet htmlAttributes={{ lang: 'en' }}>
-        <link rel="canonical" href="https://adambcomer.com/blog" />
+        <link rel="canonical" href="https://adambcomer.com/blog/" />
 
         <title>Blog | Adam Comer | Software Developer</title>
         <meta name="description" content="My personal blog. I write about projects I'm working on, tools I'm using, and things I find interesting." />
@@ -33,7 +33,7 @@ const BlogPage = () => {
         <meta property="og:title" content="Adam Comer | Software Developer" />
         <meta property="og:description" content="My personal blog. I write about projects I'm working on, tools I'm using, and things I find interesting." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://adambcomer.com/blog" />
+        <meta property="og:url" content="https://adambcomer.com/blog/" />
         <meta property="og:image" content="https://adambcomer.com/portrait.png" />
         <meta property="og:image:width" content="720" />
         <meta property="og:image:height" content="720" />
@@ -55,13 +55,13 @@ const BlogPage = () => {
 
             <div className='grid grid-cols-1 lg:grid-cols-4'>
               <div className='col-span-3'>
-                <Link className='hover:underline' to='/blog/simple-database'>
+                <Link className='hover:underline' to='/blog/simple-database/'>
                   <h3 className='text-3xl font-light mb-6'>Build a Simple Database</h3>
                 </Link>
               </div>
               <div className='col-span-1'>
                 <p className='text-sm font-light text-1-color'>Introductory tutorial to designing and building a LSM-Tree based Key-Value Store like RocksDB</p>
-                <Link to='/blog/simple-database'>
+                <Link to='/blog/simple-database/'>
                   <div className='flex items-center mt-4'>
                     <svg className='link-svg-fill' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                       <polygon points="18 6 16.57 7.393 24.15 15 4 15 4 17 24.15 17 16.57 24.573 18 26 28 16 18 6" />

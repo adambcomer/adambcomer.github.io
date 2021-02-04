@@ -25,7 +25,7 @@ const SimpleDatabasePage = () => {
   return (
     <>
       <Helmet htmlAttributes={{ lang: 'en' }}>
-        <link rel="canonical" href="https://adambcomer.com/blog/simple-database" />
+        <link rel="canonical" href="https://adambcomer.com/blog/simple-database/" />
 
         <title>Build a Simple Database | Adam Comer</title>
         <meta name="description" content="Introductory tutorial to designing and building a LSM-Tree based Key-Value Store like RocksDB." />
@@ -33,7 +33,7 @@ const SimpleDatabasePage = () => {
         <meta property="og:title" content="Adam Comer | Software Developer" />
         <meta property="og:description" content="Introductory tutorial to designing and building a LSM-Tree based Key-Value Store like RocksDB." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://adambcomer.com/blog/simple-database" />
+        <meta property="og:url" content="https://adambcomer.com/blog/simple-database/" />
         <meta property="og:image" content="https://adambcomer.com/assets/img/simple-database-motivation-design-cover.jpg" />
         <meta property="og:image:width" content="1920" />
         <meta property="og:image:height" content="1080" />

@@ -1,5 +1,5 @@
 ---
-slug: "/blog/simple-database/motivation-design"
+slug: "/blog/simple-database/motivation-design/"
 title: "Build a Database Pt. 1: Motivation & Design"
 description: "Learn the motivations and designs behind building a simple LSM-Tree based Key-Value Store style database, similar to RocksDB."
 image: "/assets/img/simple-database-motivation-design-cover.jpg"
