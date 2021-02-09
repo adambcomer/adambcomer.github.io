@@ -88,7 +88,7 @@ const IndexPage = () => {
             <p className='mt-8'>
               I started writing code in early high school and haven’t stopped since.
               I used to be a freelance developer for small businesses and universities in the Northern Virginia area.
-              Since starting University, I've had the opportunity to work for the Bank of Montreal(BMO) and eventually start my own company.
+              Since starting University, I’ve had the opportunity to work for the Bank of Montreal(BMO) and eventually start my own company.
               </p>
 
             <div className='mt-16'>
@@ -133,8 +133,8 @@ const IndexPage = () => {
             <h2 className='text-3xl'>I’m a <span className='color-2'>Student</span>.</h2>
             <p className='mt-8'>
               I study Statistics and Cognitive Science at the University of Toronto. In other words, I study data and the mind.
-              Theses disciplines have allowed me to explore other departments such as Computer Science, Linguistics, and Psychology.
-              With broad exposure to many domains, I've been able to integrate many outside ideas into my projects and work.
+              These disciplines have allowed me to explore other departments such as Computer Science, Linguistics, and Psychology.
+              With broad exposure to many domains, I’ve been able to integrate many outside ideas into my projects and work.
               </p>
 
             <div className='mt-16'>
@@ -151,7 +151,7 @@ const IndexPage = () => {
         <div className='grid grid-cols-1 lg:grid-cols-5 block px-6 py-16 gap-x-12'>
           <div>
             <h3 className='text-xl font-semibold'>Blog</h3>
-            <p className='mt-2 lg:mt-4 text-sm text-1-color'>Read about some stuff I'm working on</p>
+            <p className='mt-2 lg:mt-4 text-sm text-1-color'>Read about some stuff I’m working on</p>
           </div>
 
           <div className='mt-8 lg:mt-0 lg:col-span-2 relative h-64 lg:h-full'>
@@ -185,7 +185,7 @@ const IndexPage = () => {
             <p className='mt-8'>
               After my first year in university, my co-founders and I were given the opportunity to join the UofT’s Hatchery's NEST Program to build out our company: Knowtworthy.
               Our vision is to increase the efficiency of office meetings with software that implements meeting best practices in conjunction with automatic speech transcription.
-              So far, Knowtworthy has successfully launched an Alpha and Beta and is not available to individuals and businesses.
+              So far, Knowtworthy has successfully launched an Alpha and Beta and is now available to individuals and businesses.
             </p>
 
             <div className='mt-16'>

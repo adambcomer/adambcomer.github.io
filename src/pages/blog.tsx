@@ -28,10 +28,10 @@ const BlogPage = () => {
         <link rel="canonical" href="https://adambcomer.com/blog/" />
 
         <title>Blog | Adam Comer | Software Developer</title>
-        <meta name="description" content="My personal blog. I write about projects I'm working on, tools I'm using, and things I find interesting." />
+        <meta name="description" content="My personal blog. I write about projects I’m working on, tools I’m using, and things I find interesting." />
 
         <meta property="og:title" content="Adam Comer | Software Developer" />
-        <meta property="og:description" content="My personal blog. I write about projects I'm working on, tools I'm using, and things I find interesting." />
+        <meta property="og:description" content="My personal blog. I write about projects I’m working on, tools I’m using, and things I find interesting." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://adambcomer.com/blog/" />
         <meta property="og:image" content="https://adambcomer.com/portrait.png" />

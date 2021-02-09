@@ -13,10 +13,10 @@ const ExperiencePage = () => {
         <link rel="canonical" href="https://adambcomer.com/experience/" />
 
         <title>Experience | Adam Comer | Software Developer</title>
-        <meta name="description" content="The places and people I've worked for." />
+        <meta name="description" content="The companies and people I’ve worked for." />
 
         <meta property="og:title" content="Adam Comer | Software Developer" />
-        <meta property="og:description" content="The places and people I've worked for." />
+        <meta property="og:description" content="The companies and people I’ve worked for." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://adambcomer.com/experience/" />
         <meta property="og:image" content="https://adambcomer.com/portrait.png" />
@@ -47,7 +47,7 @@ const ExperiencePage = () => {
       <main className='w-100'>
         <div className='mx-6 my-64'>
           <h1 className='text-6xl font-light'>Experience</h1>
-          <p className='mt-6 text-lg text-1-color'>The places and people I've worked for</p>
+          <p className='mt-6 text-lg text-1-color'>The companies and people I’ve worked for</p>
         </div>
 
         <hr />
@@ -66,8 +66,8 @@ const ExperiencePage = () => {
             <p>May 2019 - Aug 2019</p>
 
             <h3 className='text-sm text-1-color mt-4'>About</h3>
-            <p>During my summer internship at <OutboundLink href='https://www.bmo.com/' className='link-0-color hover:underline'>BMO</OutboundLink>, I was tasked with designing and building the web frontend for a new Business Intelligence(BI) tool at the Bank. The tool was targeted at non-technical employees to help them draw up reports and better understand their data. Using the <OutboundLink href='https://www.carbondesignsystem.com/' className='link-0-color hover:underline'>Carbon Design System</OutboundLink>, I built the UI prototypes and pitched the design to management. Additionally, I built the web frontend with HTML, CSS, and jQuery on Microsoft's C# MVC.</p>
-            <p className='mt-4'>When I wasn't working on the BI tool, I helped the Business Associates automate tedious tasks with Python scripts. My most impactful effort was a <OutboundLink href='https://en.wikipedia.org/wiki/Regression_testing' className='link-0-color hover:underline'>regression analysis</OutboundLink> tool to verify that new code changes to a legacy system were backwards compatible.</p>
+            <p>During my summer internship at <OutboundLink href='https://www.bmo.com/' className='link-0-color hover:underline'>BMO</OutboundLink>, I was tasked with designing and building the web frontend for a new Business Intelligence(BI) tool at the Bank. The tool was targeted at non-technical employees to help them draw up reports and better understand their data. Using the <OutboundLink href='https://www.carbondesignsystem.com/' className='link-0-color hover:underline'>Carbon Design System</OutboundLink>, I built the UI prototypes and pitched the design to management. Additionally, I built the web frontend with HTML, CSS, and jQuery on Microsoft’s C# MVC.</p>
+            <p className='mt-4'>When I wasn’t working on the BI tool, I helped the Business Associates automate tedious tasks with Python scripts. My most impactful effort was a <OutboundLink href='https://en.wikipedia.org/wiki/Regression_testing' className='link-0-color hover:underline'>regression analysis</OutboundLink> tool to verify that new code changes to a legacy system were backwards compatible.</p>
 
             <h3 className='text-sm text-1-color mt-4'>Tools and Frameworks</h3>
             <div className='flex flex-wrap'>
@@ -101,7 +101,7 @@ const ExperiencePage = () => {
             <p>Nov 2017 - Present</p>
 
             <h3 className='text-sm text-1-color mt-4'>About</h3>
-            <p><OutboundLink href='https://knowtworthy.com/' className='link-0-color hover:underline'>Knowtworthy</OutboundLink> is a meetings communication tool to help organize meetings for teams of all sizes. At Knowtworthy, I designed, built, and currently maintain the entire software stack. On top of that, I built our backend API, web app, and server infrastructure on AWS. I founded the company with my co-founders <OutboundLink href='http://alexgordienko.com/' className='link-0-color hover:underline'>Alex</OutboundLink> and <OutboundLink href='https://sidguptacode.github.io/' className='link-0-color hover:underline'>Sid</OutboundLink>. During the summer after our first year in university, Knowtworthy was part <OutboundLink href='https://hatchery.engineering.utoronto.ca/nest-info-page/' className='link-0-color hover:underline'>UofT’s Hatchery's NEST Program</OutboundLink> and won second place at the <OutboundLink href='https://news.engineering.utoronto.ca/startups-to-watch-from-hatchery-demo-day-2018/' className='link-0-color hover:underline'>Hatchery's Demo Day</OutboundLink>, fetching in $10,000 for the company.</p>
+            <p><OutboundLink href='https://knowtworthy.com/' className='link-0-color hover:underline'>Knowtworthy</OutboundLink> is a meetings communication tool to help organize meetings for teams of all sizes. At Knowtworthy, I designed, built, and currently maintain the entire software stack. On top of that, I built our backend API, web app, and server infrastructure on AWS. I founded the company with my co-founders <OutboundLink href='http://alexgordienko.com/' className='link-0-color hover:underline'>Alex</OutboundLink> and <OutboundLink href='https://sidguptacode.github.io/' className='link-0-color hover:underline'>Sid</OutboundLink>. During the summer after our first year in university, Knowtworthy was part <OutboundLink href='https://hatchery.engineering.utoronto.ca/nest-info-page/' className='link-0-color hover:underline'>UofT’s Hatchery’s NEST Program</OutboundLink> and won second place at the <OutboundLink href='https://news.engineering.utoronto.ca/startups-to-watch-from-hatchery-demo-day-2018/' className='link-0-color hover:underline'>Hatchery’s Demo Day</OutboundLink>, fetching in $10,000 for the company.</p>
 
             <h3 className='text-sm text-1-color mt-4'>Tools and Frameworks</h3>
             <div className='flex flex-wrap'>

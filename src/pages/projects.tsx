@@ -100,7 +100,7 @@ const ProjectsPage = () => {
             <p>Aug 2018</p>
 
             <h3 className='text-sm text-1-color mt-4'>About</h3>
-            <p><OutboundLink href='https://www.devpost.com/software/knowtworthy-sentiment' className='link-0-color hover:underline'>Sentiment</OutboundLink> was a Hackathon project made at <OutboundLink href='https://hackthe6ix.com/' className='link-0-color hover:underline'>Hack The 6ix</OutboundLink>. The project's goal was to tracks a meeting conversation and find its sentiment. Using the transcripts of the meeting and an open source linguistic analysis tool, we were able to successfully build the project in React and Node.js. After 36 hours of coding, we gave our presentation to the judges and won first place.</p>
+            <p><OutboundLink href='https://www.devpost.com/software/knowtworthy-sentiment' className='link-0-color hover:underline'>Sentiment</OutboundLink> was a Hackathon project made at <OutboundLink href='https://hackthe6ix.com/' className='link-0-color hover:underline'>Hack The 6ix</OutboundLink>. The project’s goal was to tracks a meeting conversation and find its sentiment. Using the transcripts of the meeting and an open source linguistic analysis tool, we were able to successfully build the project in React and Node.js. After 36 hours of coding, we gave our presentation to the judges and won first place.</p>
 
             <h3 className='text-sm text-1-color mt-4'>Tools and Frameworks</h3>
             <div className='flex flex-wrap'>
