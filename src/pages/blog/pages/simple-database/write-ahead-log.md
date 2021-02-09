@@ -9,12 +9,12 @@ date: 2021-01-24T19:45:04+0000
 postDate: 2020-06-19T04:55:44+0000
 ---
 
-Last article, [we created our MemTable for in-memory record storage](/blog/simple-database/memtable). To recover our data after the database restarts, we need our first layer of on-disk persistence, the WAL. Looking at RocksDB, we will discuss the design and structure of its WAL. After analyzing the standard, we will design a specification for our WAL. Furthermore, we will debate the tradeoffs of Buffered vs Unbuffered I/O in the context of data integrity and disk speed. Lastly, we will build our variant of the WAL in Rust.
+Last article, [we created our MemTable for in-memory record storage](/blog/simple-database/memtable/). To recover our data after the database restarts, we need our first layer of on-disk persistence, the WAL. Looking at RocksDB, we will discuss the design and structure of its WAL. After analyzing the standard, we will design a specification for our WAL. Furthermore, we will debate the tradeoffs of Buffered vs Unbuffered I/O in the context of data integrity and disk speed. Lastly, we will build our variant of the WAL in Rust.
 
 ## What is a Write Ahead Log(WAL)?
 When a record is written to our database, it is stored in two palaces: the MemTable and the WAL. The WAL acts as an on-disk backup for the MemTable by keeping a running record of all of the database operations. In the event of a restart, the MemTable can be fully recovered by replaying the operations in the WAL. When a MemTable reaches capacity and is transformed into a SSTable, the WAL is wiped from the disk to make room for a new WAL.
 
-As mentioned in [part two](/blog/simple-database/memtable), the key insight of a LSM-Tree database is that sequential I/O is faster than random I/O, and databases should match this reality. The WAL uses exclusively sequential I/O to store data on disk; but, there are drawbacks to not using random I/O. The WAL pays for its improved write speed with lost disk space. Every time a record is updated, old versions of the record are kept, eating away at disk space. This is known as [Space Amplification](http://smalldatum.blogspot.com/2015/11/read-write-space-amplification-pick-2_23.html) in database design theory. Space Amplification is a multiple of how much storage space is used for a given dataset size. For example, a 1GB dataset with a 2X Space Amplification factor would result in 2GB of disk usage. Although not important for our project, it is something that database designers are cognizant of and optimize for.
+As mentioned in [part two](/blog/simple-database/memtable/), the key insight of a LSM-Tree database is that sequential I/O is faster than random I/O, and databases should match this reality. The WAL uses exclusively sequential I/O to store data on disk; but, there are drawbacks to not using random I/O. The WAL pays for its improved write speed with lost disk space. Every time a record is updated, old versions of the record are kept, eating away at disk space. This is known as [Space Amplification](http://smalldatum.blogspot.com/2015/11/read-write-space-amplification-pick-2_23.html) in database design theory. Space Amplification is a multiple of how much storage space is used for a given dataset size. For example, a 1GB dataset with a 2X Space Amplification factor would result in 2GB of disk usage. Although not important for our project, it is something that database designers are cognizant of and optimize for.
 
 ## Buffered vs Unbuffered I/O
 A hot topic for debate in database design is Buffered vs Unbuffered I/O. Today, applications are demanding more from databases while the underlying disks aren’t keeping pace. To make disks appear faster, the OS maps sections of disk to memory. Changes to the disk happen only in memory, and periodically, the OS writes the changes to the physical disk. This is known as Buffered I/O — which writes data to a buffer that is eventually flushed to disk. Buffered I/O can be avoided by using Unbuffered I/O — which writes data directly to the physical disk. 
@@ -64,7 +64,7 @@ Like RocksDB, and LevelDB before it, we will use the Buffered I/O model, and flu
 The code for the WAL will exist in two parts, the `WAL` itself and the `WALIterator`. At a high level, the `WAL` is the struct that our database will interface with. The `WALIterator` is a consumable iterator that reads all of the entries of a WAL file. We will build the `WALIterator` first because the `WAL` uses the `WALIterator` in its recovery method.
 
 ### WALEntry Struct
-First, we need to define the structure of our WAL entries. This will mirror the [MemTableEntry in the prior article](/blog/simple-database/memtable). 
+First, we need to define the structure of our WAL entries. This will mirror the [MemTableEntry in the prior article](/blog/simple-database/memtable/). 
 
 ```rust
 pub struct WALEntry {
@@ -334,6 +334,6 @@ Simply, this function iterates over every WAL file and entry, reconstructing the
 Now that we have completed the WAL, our database has its first level of persistence down. Comparing the designs of the RocksDB WAL and our WAL, we see that they are not very different. RocksDB, being a professional database, uses data integrity features like checksums and a block model for its disk layout. But, the main principle of a running log of operations is maintained between the two variants. When writing data to disk, we ran into the problem that the OS doesn’t immediately propagate those writes. Therein lies a tradeoff of speed and data integrity. Buffered I/O chooses speed over data integrity. Although there are risks, many production databases use this method because the probability of a machine crashing is low compared to the process crashing; and with a sufficient replication strategy — these problems vanish. [The complete WAL component can be found in this repository along with unit tests](https://github.com/adambcomer/database-engine/blob/master/src/wal.rs). Next, we will implement the SSTable component of our database so our database can hold more than a single MemTables worth of data.
 
 ## Index
-- [Build a Database Pt. 1: Motivation & Design](/blog/simple-database/motivation-design)
-- [Build a Database Pt. 2: MemTable](/blog/simple-database/memtable)
+- [Build a Database Pt. 1: Motivation & Design](/blog/simple-database/motivation-design/)
+- [Build a Database Pt. 2: MemTable](/blog/simple-database/memtable/)
 - Build a Database Pt. 3: Write Ahead Log(WAL)

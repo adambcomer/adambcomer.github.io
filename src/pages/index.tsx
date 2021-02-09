@@ -92,10 +92,10 @@ const IndexPage = () => {
               </p>
 
             <div className='mt-16'>
-              <Link className='text-xl hover:underline arrow-link ml-6' to='/experience'>Experience</Link>
+              <Link className='text-xl hover:underline arrow-link ml-6' to='/experience/'>Experience</Link>
             </div>
             <div className='mt-4'>
-              <Link className='text-xl hover:underline arrow-link ml-6' to='/projects'>Projects</Link>
+              <Link className='text-xl hover:underline arrow-link ml-6' to='/projects/'>Projects</Link>
             </div>
           </div>
         </div>
@@ -138,10 +138,10 @@ const IndexPage = () => {
               </p>
 
             <div className='mt-16'>
-              <Link className='text-xl hover:underline arrow-link ml-6' to='/experience'>Experience</Link>
+              <Link className='text-xl hover:underline arrow-link ml-6' to='/experience/'>Experience</Link>
             </div>
             <div className='mt-4'>
-              <Link className='text-xl hover:underline arrow-link ml-6' to='/projects'>Projects</Link>
+              <Link className='text-xl hover:underline arrow-link ml-6' to='/projects/'>Projects</Link>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ date:	2021-01-24T19:45:04+0000
 postDate: 2020-06-12T00:18:28+0000
 ---
 
-Now that we have finished [outlining our motivations and designs of our database](/blog/simple-database/motivation-design), we will start by building our first component, the MemTable. The MemTable is the first layer in our database and where records are immediately stored. We will discuss the design choices RocksDB made for their database and what benefits came with those choices. Additionally, we will look at the benefits and drawbacks of our MemTable. Finally, we will implement our MemTable in Rust.
+Now that we have finished [outlining our motivations and designs of our database](/blog/simple-database/motivation-design/), we will start by building our first component, the MemTable. The MemTable is the first layer in our database and where records are immediately stored. We will discuss the design choices RocksDB made for their database and what benefits came with those choices. Additionally, we will look at the benefits and drawbacks of our MemTable. Finally, we will implement our MemTable in Rust.
 
 ## What is the MemTable?
 The MemTable (aka. Memory Table) is the in-memory cache of the latest set of record writes applied to the database. Simply, it is a container, whether that be a [Vector](https://en.wikipedia.org/wiki/Dynamic_array), [Linked-List](https://en.wikipedia.org/wiki/Linked_list), or any other container, that holds the written records sorted, in total order, by key. By sorting the records, lookups and scans in the MemTable can be done efficiently using a data structure that supports a `O(Log N)` access pattern.
@@ -33,7 +33,7 @@ Assuming Rust and Cargo are installed on your machine, we can commence building 
 $ cargo new database-engine --lib
 ```
 
-In the [Motivations section](/blog/simple-database/motivation-design) of this series, I mentioned one of the reasons I’m doing this is to learn Rust. I could spend a lot of time and explain how Rust does ownership, but I don’t feel this is the venue to do that. If you are still trying to learn the basics of Rust and its ownership rules, read [The Book](https://doc.rust-lang.org/book/) first to get a better understanding before embarking on building a database. While I expect a basic understanding of Rust, I will mention ownership decisions when they appear to be ambiguous or have effects on other components. 
+In the [Motivations section](/blog/simple-database/motivation-design/) of this series, I mentioned one of the reasons I’m doing this is to learn Rust. I could spend a lot of time and explain how Rust does ownership, but I don’t feel this is the venue to do that. If you are still trying to learn the basics of Rust and its ownership rules, read [The Book](https://doc.rust-lang.org/book/) first to get a better understanding before embarking on building a database. While I expect a basic understanding of Rust, I will mention ownership decisions when they appear to be ambiguous or have effects on other components. 
 
 ### MemTable Struct
 Getting started, the first struct for our MemTable is self explanatory. Our MemTable needs to satisfy two needs: a container of our write operations and a counter for its size.
@@ -191,6 +191,6 @@ Once we get the result from `rust›get_index()`, we wrap the response in an `Op
 The MemTable, the first component of our database, is simple on the surface but disguises many design tradeoffs. RocksDB — in its drive to deliver consistency performance with SkipLists — shows us the lengths that production databases designers go to. Although we weren’t shooting for performance, our MemTable delivered `O(Log N)` searches and `O(N)` inserts using a Vector. [The complete MemTable component can be found in this repository along with a set of unit tests](https://github.com/adambcomer/database-engine/blob/master/src/mem_table.rs). Next, we will implement the WAL component of our database so we can recover the MemTable when our database restarts.
 
 ## Index
-- [Build a Database Pt. 1: Motivation & Design](/blog/simple-database/motivation-design)
+- [Build a Database Pt. 1: Motivation & Design](/blog/simple-database/motivation-design/)
 - Build a Database Pt. 2: MemTable
-- [Build a Database Pt. 3: Write Ahead Log(WAL)](/blog/simple-database/wal)
+- [Build a Database Pt. 3: Write Ahead Log(WAL)](/blog/simple-database/wal/)
