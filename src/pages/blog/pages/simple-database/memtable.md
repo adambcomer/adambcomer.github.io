@@ -53,7 +53,7 @@ pub struct MemTable {
 }
 ```
 
-The MemTable struct fits our requirements with a `Vec<MemTableEntry>` and a simple size counter. In the docs, I mention why a HashMap isn’t used. Lookups and edits would be constant time, but scans would involve extracting and sorting the entries of the table, an unacceptable tradeoff.
+The MemTable struct fits our requirements with a `rust›Vec<MemTableEntry> ` and a simple size counter. In the docs, I mention why a HashMap isn’t used. Lookups and edits would be constant time, but scans would involve extracting and sorting the entries of the table, an unacceptable tradeoff.
 
 ### MemTableEntry Struct
 Inside the Vector are `MemTableEntry`s with the modified record information.   
@@ -104,7 +104,7 @@ fn get_index(&self, key: &[u8]) -> Result<usize, usize> {
 This helper function reduces the amount of code maintenance necessary if we want to change the sort field. 
 
 #### set()
-To set a Key-Value pair in the database, we need to find the entry in the MemTable with the same key to overwrite it or find the position where we can insert a new entry. Here, we can see how our helper function, `get_index(&self, key: &[u8])`, simplifies this process.
+To set a Key-Value pair in the database, we need to find the entry in the MemTable with the same key to overwrite it or find the position where we can insert a new entry. Here, we can see how our helper function, `rust›get_index(&self, key: &[u8])`, simplifies this process.
 
 ```rust
 /// Sets a Key-Value pair in the MemTable.
@@ -185,7 +185,7 @@ pub fn get(&self, key: &[u8]) -> Option<&MemTableEntry> {
 }
 ```
 
-Once we get the result from `get_index()`, we wrap the response in an `Option`. In this case, we return a reference because we don’t want other parts of the database modifying the data inside the MemTable.
+Once we get the result from `rust›get_index()`, we wrap the response in an `Option`. In this case, we return a reference because we don’t want other parts of the database modifying the data inside the MemTable.
 
 ## Conclusion
 The MemTable, the first component of our database, is simple on the surface but disguises many design tradeoffs. RocksDB — in its drive to deliver consistency performance with SkipLists — shows us the lengths that production databases designers go to. Although we weren’t shooting for performance, our MemTable delivered `O(Log N)` searches and `O(N)` inserts using a Vector. [The complete MemTable component can be found in this repository along with a set of unit tests](https://github.com/adambcomer/database-engine/blob/master/src/mem_table.rs). Next, we will implement the WAL component of our database so we can recover the MemTable when our database restarts.

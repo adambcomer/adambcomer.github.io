@@ -105,7 +105,7 @@ pub fn new(path: PathBuf) -> io::Result<WALIterator> {
 ```
 
 #### next()
-To implement the `Iterator` trait, a `Item` type and `next()` method need to be defined. The Item type of the iterator will be the WALEntry that was defined before. The `next()` method will deserialize the next entry from a WAL file with the format from our specification. 
+To implement the `Iterator` trait, a `Item` type and `rust›next()` method need to be defined. The Item type of the iterator will be the WALEntry that was defined before. The `rust›next()` method will deserialize the next entry from a WAL file with the format from our specification. 
 
 ```rust
 impl Iterator for WALIterator {
@@ -270,7 +270,7 @@ pub fn flush(&mut self) -> io::Result<()> {
 
 Luckily, the `BufWriter` knows this is a common design pattern and has a built-in flush method.
 
-#### load_from_dir()
+#### load\_from\_dir()
 In most of my coding projects, I include a [utilities file for all miscellaneous functions](https://github.com/adambcomer/database-engine/blob/master/src/utils.rs) that are used repeatedly throughout the application. One common task our database does is searching for files with an extension. Given a folder, this function will do just that. 
 
 ```rust
