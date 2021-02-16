@@ -1,5 +1,5 @@
 ---
-slug: "/blog/chess-analysis"
+slug: "/blog/chess-analysis/"
 title: "Opening Knowledge vs. Rating Analysis with Lichess Data"
 description: "How does knowledge of Chess Openings relate to player rating? In this analysis, I investigate the use Book Openings and Master Games with 20,000 public Lichess Games."
 image: "/assets/img/post-2-cover.jpg"
