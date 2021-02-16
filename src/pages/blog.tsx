@@ -105,7 +105,7 @@ const BlogPage = () => {
                     </div>
                   </div>
                   {i !== result.posts.edges.length - 1 &&
-                    <hr className='mt-8' style={{ borderColor: '#6f6f6f' }} />
+                    <hr className='my-8' style={{ borderColor: '#6f6f6f' }} />
                   }
                 </>
               )
