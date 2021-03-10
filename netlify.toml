@@ -6,6 +6,11 @@
   headers = {X-From = "Netlify"}
 
 [[redirects]]
+  from = "/contact/"
+  to = "/"
+  status = 301
+
+[[redirects]]
   from = "/blog/setup-gitlab-cicd-on-kubernetes.html"
   to = "/blog/install-gitlab-runner-kubernetes/"
   status = 301
