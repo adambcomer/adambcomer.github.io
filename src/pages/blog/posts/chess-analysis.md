@@ -2,7 +2,7 @@
 slug: "/blog/chess-analysis/"
 title: "Chess Opening Analysis with a Lichess Dataset"
 description: "How does knowledge of Chess Openings relate to player rating? In this analysis, I investigate the use Book Openings and Master Games with 20,000 public Lichess Games."
-image: "/assets/img/post-2-cover.jpg"
+image: "post-2-cover.jpg"
 imageAlt: "Pawns on a Chess board"
 author: "Adam Comer"
 date: 2021-02-16T03:30:17+0000

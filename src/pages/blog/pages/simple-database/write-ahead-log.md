@@ -2,7 +2,7 @@
 slug: "/blog/simple-database/wal/"
 title: "Build a Database Pt. 3: Write Ahead Log(WAL)"
 description: "Guild to building a Write Ahead Log(WAL) for a LSM-Tree database. We look at how RocksDB designed their WAL and build our own for our database."
-image: "/assets/img/simple-database-write-ahead-log-cover.jpg"
+image: "simple-database-write-ahead-log-cover.jpg"
 imageAlt: "Pile of wood logs"
 author: "Adam Comer"
 date: 2021-01-24T19:45:04+0000
