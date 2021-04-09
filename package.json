@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/adambcomer/adambcomer.github.io",
   "dependencies": {
+    "@fontsource/ibm-plex-mono": "^4.2.2",
+    "@fontsource/ibm-plex-sans": "^4.2.2",
     "gatsby": "^3.0.4",
     "gatsby-image": "^3.0.0",
     "gatsby-plugin-google-analytics": "^3.0.0",
