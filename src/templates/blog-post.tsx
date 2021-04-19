@@ -53,7 +53,7 @@ const BlogPostTemplate = ({ data }) => {
                 "name": "Adam Comer’s Blog",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "https://adambcomer.com/blog/assets/img/publisherLogo.png",
+                    "url": "https://adambcomer.com/assets/img/publisherLogo.png",
                     "width": 283,
                     "height": 60
                 }
