@@ -1,39 +1,13 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import '../styles/index.css'
 import Footer from '../components/Footer'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { Helmet } from 'react-helmet'
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      uoft: file(relativePath: { eq: "con-hall.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      },
-      bmo: file(relativePath: { eq: "bmo.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      },
-      knowtworthy: file(relativePath: { eq: "knowtworthy.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <>
       <Helmet htmlAttributes={{ lang: 'en' }}>
@@ -82,7 +56,7 @@ const IndexPage = () => {
         <hr />
 
         <div className='grid grid-cols-1 lg:grid-cols-2 block'>
-          <Img className='hidden lg:block' fluid={data.bmo.childImageSharp.fluid} alt='Toronto Skyline with the Bank of Montreal HQ in the center.' />
+          <StaticImage className='hidden lg:block' src='../images/bmo.jpg' alt='Toronto Skyline with the Bank of Montreal HQ in the center.' />
           <div className='w-100 px-6 py-24'>
             <h2 className='text-3xl'>I’m a <span className='color-1'>Software Developer</span>.</h2>
             <p className='mt-8'>
@@ -128,7 +102,7 @@ const IndexPage = () => {
 
 
         <div className='grid grid-cols-1 lg:grid-cols-2 block'>
-          <Img className='hidden lg:block' fluid={data.uoft.childImageSharp.fluid} alt='Convocation Hall at the University of Toronto.' />
+          <StaticImage className='hidden lg:block' src='../images/con-hall.jpg' alt='Convocation Hall at the University of Toronto.' />
           <div className='px-6 py-24'>
             <h2 className='text-3xl'>I’m a <span className='color-2'>Student</span>.</h2>
             <p className='mt-8'>
@@ -179,7 +153,7 @@ const IndexPage = () => {
         <hr />
 
         <div className='grid grid-cols-1 lg:grid-cols-2 block'>
-          <Img className='hidden lg:block' fluid={data.knowtworthy.childImageSharp.fluid} alt='Knowtworthy meeting minutes editor and transcription.' />
+          <StaticImage className='hidden lg:block' src='../images/knowtworthy.jpg' alt='Knowtworthy meeting minutes editor and transcription.' />
           <div className='px-6 py-24'>
             <h2 className='text-3xl'>I’m a <span className='color-3'>Co-Founder</span>.</h2>
             <p className='mt-8'>

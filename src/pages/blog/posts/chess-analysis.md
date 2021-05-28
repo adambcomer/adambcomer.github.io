@@ -75,7 +75,7 @@ ax.set_ylabel('Games')
 
 plot.show()
 ```
-![Histogram of ELO with the White Pieces for Blitz games](/assets/img/chess-analysis/BlitzWhiteElo.jpeg)
+![Histogram of ELO with the White Pieces for Blitz games](../../../images/blog/chess-analysis/BlitzWhiteElo.jpeg)
 
 For the player with the white pieces, this sample of games looks representative.
 
@@ -89,7 +89,7 @@ ax.set_ylabel('Games')
 
 plot.show()
 ```
-![Histogram of ELO with the Black Pieces for Blitz games](/assets/img/chess-analysis/BlitzBlackElo.jpeg)
+![Histogram of ELO with the Black Pieces for Blitz games](../../../images/blog/chess-analysis/BlitzBlackElo.jpeg)
 
 Again, for the player with the black pieces, this sample of games looks representative.
 
@@ -105,7 +105,7 @@ ax.set_ylabel('Games')
 
 plot.show()
 ```
-![Histogram of of the ELO Difference between the Players for Blitz games](/assets/img/chess-analysis/BlitzPlayerDifference.jpeg)
+![Histogram of of the ELO Difference between the Players for Blitz games](../../../images/blog/chess-analysis/BlitzPlayerDifference.jpeg)
 
 Most of the games fall in the fair range of ±200 rating points. There are a few outliers bleeding into the ±500 point range.
 
@@ -131,7 +131,7 @@ ax.set_ylabel('Games')
 
 plot.show()
 ```
-![Bar graph of the number of games played grouped by the number of Book moves featured for Blitz games](/assets/img/chess-analysis/BlitzBookMoves.jpeg)
+![Bar graph of the number of games played grouped by the number of Book moves featured for Blitz games](../../../images/blog/chess-analysis/BlitzBookMoves.jpeg)
 
 Grouping by the number of Book Moves featured, a nice gradually descending distribution is apparent.
 
@@ -164,7 +164,7 @@ plot.plot(blitz_games['OpeningMoves'], res.intercept + res.slope * blitz_games['
 
 plot.show()
 ```
-![Scatter plot of Average Player ELO vs number of Book moves featured for Blitz games](/assets/img/chess-analysis/BlitzBookMovesELO.jpeg)
+![Scatter plot of Average Player ELO vs number of Book moves featured for Blitz games](../../../images/blog/chess-analysis/BlitzBookMovesELO.jpeg)
 
 Looking at our regression, there is a slight positive relationship that is significant (p < 0.05) but has a small R^2 of 0.00662. I expected the variance to be high but not this high.
 
@@ -180,7 +180,7 @@ ax.set_ylabel('Games')
 
 plot.show()
 ```
-![Bar graph of the number of games played grouped by the number of Master moves featured for Blitz games](/assets/img/chess-analysis/BlitzMasterMoves.jpeg)
+![Bar graph of the number of games played grouped by the number of Master moves featured for Blitz games](../../../images/blog/chess-analysis/BlitzMasterMoves.jpeg)
 
 Comparing this bar chart with the previous, players are using longer lines and more ideas from Master games than just Book moves alone. This gives us good evidence that “Opening Theory” consists of more than a 2-6 move Opening Book.
 
@@ -209,7 +209,7 @@ plot.plot(blitz_games['MasterMoves'], res.intercept + res.slope * blitz_games['M
 
 plot.show()
 ```
-![Scatter plot of Average Player ELO vs number of Master moves featured for Blitz games](/assets/img/chess-analysis/BlitzMasterMovesELO.jpeg)
+![Scatter plot of Average Player ELO vs number of Master moves featured for Blitz games](../../../images/blog/chess-analysis/BlitzMasterMovesELO.jpeg)
 
 Looking at our second regression, there is a positive relationship that is significant (p < 0.05) but has a modest R^2 of 0.13919. This was the relationship I hypothesized in the introduction. 
 
@@ -255,7 +255,7 @@ plot.plot(bullet_games['OpeningMoves'], res.intercept + res.slope * bullet_games
 
 plot.show()
 ```
-![Scatter plot of Average Player ELO vs number of Book moves featured for Bullet games](/assets/img/chess-analysis/BulletBookMovesELO.jpeg)
+![Scatter plot of Average Player ELO vs number of Book moves featured for Bullet games](../../../images/blog/chess-analysis/BulletBookMovesELO.jpeg)
 
 Initially, this regression and graph caught me off guard. Why would playing fewer book moves correlate with a higher rating? To verify this this relationship, I did a second regression of player rating and Master moves.
 
@@ -285,7 +285,7 @@ plot.plot(bullet_games['MasterMoves'], res.intercept + res.slope * bullet_games[
 
 plot.show()
 ```
-![Scatter plot of Average Player ELO vs number of Master moves featured for Bullet games](/assets/img/chess-analysis/BulletMasterMovesELO.jpeg)
+![Scatter plot of Average Player ELO vs number of Master moves featured for Bullet games](../../../images/blog/chess-analysis/BulletMasterMovesELO.jpeg)
 
 When looking at the number of master moves played and player rating, the relationship is greatly diminished compared to the Blitz section. This confirms the trend in the prior regression. 
 
@@ -301,7 +301,11 @@ In the Bullet regression analysis, a weak negative negative connection between t
 
 In the recent [IM not a GM tournament](https://www.chess.com/article/view/2021-im-not-a-gm-speed-chess-championship), [International Master(IM) Levy Rozman recounts his opening preparation for the bullet section consisted of the unusual move 1.b3](https://youtu.be/C3QlcE55VUo?t=794), featured below. 
 
-<img src='/assets/img/chess-analysis/board.jpeg' alt='Chessboard with 1. b3 played' style='width:50%;margin: auto; margin-top: 2rem;'>
+<div style='width:50%;margin:auto;'>
+
+![Chessboard with 1. b3 played](../../../images/blog/chess-analysis/board.jpeg)
+
+</div>
 
 In the [Chess.com Move Database](https://www.chess.com/explorer), 1.b3 is the 6th most common first move with 12,327 of 2,785,695 games or 0.44% of the games. IM Rozman argues his move was a tactic to confuse his opponent in the Bullet section. And it was probably the reason he won the match.
 
@@ -487,7 +491,7 @@ if __name__ == '__main__':
 ### Graphs
 
 #### Blitz
-- [Histogram of ELO with the White Pieces](/assets/img/chess-analysis/BlitzWhiteElo.jpeg)
+- [Histogram of ELO with the White Pieces](/assets/img/chess-analysis/chess-analysis/BlitzWhiteElo.jpeg)
 - [Histogram of ELO with the Black Pieces](/assets/img/chess-analysis/BlitzBlackElo.jpeg)
 - [Histogram of of the ELO Difference between the Players](/assets/img/chess-analysis/BlitzPlayerDifference.jpeg)
 - [Bar graph of the number of games played grouped by the number of Book moves featured](/assets/img/chess-analysis/BlitzBookMoves.jpeg)

@@ -4,6 +4,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -12,6 +13,7 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
+    `gatsby-plugin-image`,
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
@@ -37,6 +39,14 @@ module.exports = {
             options: {
               inlineCodeMarker: '›',
             }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 896,
+              quality: 90,
+              withWebp: true
+            },
           }
         ],
       },
