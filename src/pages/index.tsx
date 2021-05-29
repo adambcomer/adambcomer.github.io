@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import '../styles/index.css'
 import Footer from '../components/Footer'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { Helmet } from 'react-helmet'
 
 const IndexPage = () => {

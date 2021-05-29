@@ -16,9 +16,11 @@ module.exports = {
     `gatsby-plugin-image`,
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingId: 'UA-129077573-1',
+        trackingIds: [
+          'G-NPWF2XR6L3'
+        ],
       },
     },
     'gatsby-plugin-sitemap',

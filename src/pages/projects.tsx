@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import '../styles/projects.css'
 import Footer from '../components/Footer'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
