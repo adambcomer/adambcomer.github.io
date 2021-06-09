@@ -5,7 +5,7 @@ description: "Guild to building a Write Ahead Log(WAL) for a LSM-Tree database. 
 image: "simple-database-write-ahead-log-cover.jpg"
 imageAlt: "Pile of wood logs"
 author: "Adam Comer"
-date: 2021-01-24T19:45:04+0000
+date: 2021-06-09T02:28:03+0000
 postDate: 2020-06-19T04:55:44+0000
 ---
 
@@ -188,7 +188,7 @@ Like always, a constructor is necessary to instantiate a new `WAL`. Given a dire
 
 ```rust
 /// Creates a new WAL in a given directory.
-pub fn new(dir: &str) -> io::Result<WAL> {
+pub fn new(dir: &Path) -> io::Result<WAL> {
   let timestamp = SystemTime::now()
     .duration_since(UNIX_EPOCH)
     .unwrap()
@@ -207,12 +207,12 @@ If a WAL file already exists, we want to instantiate it from the file’s path.
 
 ```rust
 /// Creates a WAL from an existing file path.
-pub fn from_path(path: &str) -> io::Result<WAL> {
+pub fn from_path(path: &Path) -> io::Result<WAL> {
   let file = OpenOptions::new().append(true).create(true).open(&path)?;
   let file = BufWriter::new(file);
 
   Ok(WAL {
-    path: PathBuf::from(path),
+    path: path.to_owned(),
     file,
   })
 }
@@ -275,16 +275,16 @@ In most of my coding projects, I include a [utilities file for all miscellaneous
 
 ```rust
 /// Gets the set of files with an extension for a given directory.
-pub fn files_with_ext(dir: &str, ext: &str) -> Vec<PathBuf> {
- let mut files = Vec::new();
- for file in read_dir(Path::new(dir)).unwrap() {
-   let path = file.unwrap().path();
-   if path.extension().unwrap() == ext {
-     files.push(path);
-   }
- }
+pub fn files_with_ext(dir: &Path, ext: &str) -> Vec<PathBuf> {
+  let mut files = Vec::new();
+  for file in read_dir(dir).unwrap() {
+    let path = file.unwrap().path();
+    if path.extension().unwrap() == ext {
+      files.push(path);
+    }
+  }
 
- files
+  files
 }
 ```
 
@@ -294,14 +294,14 @@ To restore our `MemTable` and `WAL`, we need to load the operations from the WAL
 /// Loads the WAL(s) within a directory, returning a new WAL and the recovered MemTable.
 ///
 /// If multiple WALs exist in a directory, they are merged by file date.
-pub fn load_from_dir(dir: &str) -> io::Result<(WAL, MemTable)> {
+pub fn load_from_dir(dir: &Path) -> io::Result<(WAL, MemTable)> {
   let mut wal_files = files_with_ext(dir, "wal");
   wal_files.sort();
 
   let mut new_mem_table = MemTable::new();
   let mut new_wal = WAL::new(dir)?;
-  for w_f in wal_files.iter() {
-    if let Ok(wal) = WAL::from_path(w_f.to_str().unwrap()) {
+  for wal_file in wal_files.iter() {
+    if let Ok(wal) = WAL::from_path(wal_file) {
       for entry in wal.into_iter() {
         if entry.deleted {
           new_mem_table.delete(entry.key.as_slice(), entry.timestamp);
