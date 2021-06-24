@@ -6,6 +6,13 @@
   headers = {X-From = "Netlify"}
 
 [[redirects]]
+  from = "/sat-dashboard/*"
+  to = "https://sleepy-kirch-6a23b9.netlify.app/:splat"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+
+[[redirects]]
   from = "/contact/"
   to = "/"
   status = 301
