@@ -85,7 +85,7 @@ const BlogPage = () => {
           <div className='mt-8 lg:mt-0 lg:col-span-4'>
             {result.posts.edges.map(({ node }, i) => {
               return (
-                <>
+                <React.Fragment key={i}>
                   <div className='grid grid-cols-1 lg:grid-cols-4'>
                     <div className='col-span-3'>
                       <Link className='hover:underline' to={node.frontmatter.slug}>
@@ -107,7 +107,7 @@ const BlogPage = () => {
                   {i !== result.posts.edges.length - 1 &&
                     <hr className='my-8' style={{ borderColor: '#6f6f6f' }} />
                   }
-                </>
+                </React.Fragment>
               )
             })}
           </div>
