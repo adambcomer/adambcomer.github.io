@@ -491,7 +491,7 @@ if __name__ == '__main__':
 ### Graphs
 
 #### Blitz
-- [Histogram of ELO with the White Pieces](/assets/img/chess-analysis/chess-analysis/BlitzWhiteElo.jpeg)
+- [Histogram of ELO with the White Pieces](/assets/img/chess-analysis/BlitzWhiteElo.jpeg)
 - [Histogram of ELO with the Black Pieces](/assets/img/chess-analysis/BlitzBlackElo.jpeg)
 - [Histogram of of the ELO Difference between the Players](/assets/img/chess-analysis/BlitzPlayerDifference.jpeg)
 - [Bar graph of the number of games played grouped by the number of Book moves featured](/assets/img/chess-analysis/BlitzBookMoves.jpeg)
