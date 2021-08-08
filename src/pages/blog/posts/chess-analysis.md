@@ -1,35 +1,35 @@
 ---
 slug: "/blog/chess-analysis/"
-title: "Chess Opening Analysis with a Lichess Dataset"
-description: "How does knowledge of Chess Openings relate to player rating? In this analysis, I investigate the use Book Openings and Master Games with 20,000 public Lichess Games."
+title: "Relationship Between Chess Opening Knowledge and Player Rating"
+description: "How does knowledge of Chess Openings relate to player rating? In this analysis, I investigate the use Book Openings and Master Games with a sample of 20,000 public Lichess Games."
 image: "post-2-cover.jpg"
 imageAlt: "Pawns on a Chess board"
 author: "Adam Comer"
-date: 2021-02-16T03:30:17+0000
+date: 2021-08-08T18:36:55+0000
 postDate: 2021-02-16T03:30:17+0000
 ---
 
 ## Introduction
-Since the start of the pandemic, I found a new interest in the game Chess and have been an avid player online in my free time. As a student in statistics, I’ve always wanted to apply techniques I’ve learned in class to the game. Luckily, I’ve been assigned a “Professional Development” assignment from my STA303 Professor to build or write something to enhance my image as a statistician. 
+At the start of the pandemic, I picked up a new hobby: Chess. I've become an avid online player in the evenings and puzzle solver in all of my free time. When I'm not having fun with my hobby, I'm studying Statistics and Cognitive Science at the University of Toronto. My courses have introduced me to a plethora of statistical tools that I'm eager to apply to the game. This post is the result of my “Professional Development” assignment for the class STA303, where I am to build/write something to enhance my image as a statistician.
 
-For this project, I am going to look at the relationship between knowledge in the opening phase of the game and rating of players. Many chess players will refer to this as “Opening Theory” or “Theory.” Before starting this project, my hypothesis was players memorize more Opening Theory to give themselves an advantage as they leave the opening phase of the game. As a player, this felt intuitive to me because I found myself memorizing moves after checking my games with a Chess Engine or searching a database for similar games played by Master level players. This project will test if players online are doing the same thing with real chess game data from Lichess.
+For this project, I will analyze the relationship between knowledge in the opening phase of chess games and rating of players. Many chess players refer to known sequences of moves in the opening as _Opening Theory_ or simply _Theory_. Furthermore, players will refer to a known board position that has been analyzed beforehand as being _In Book_. My initial hypothesis was that players memorize deeper lines of Opening Theory as they progress up the rating ladder to give themselves an advantage when the game transitions to the middlegame. As a player, this felt intuitive because I found myself automatically memorizing moves after checking my games with a Chess Engine and/or searching a database for a similar position. This project will test how long players at every level stay in book using a dataset of public games from Lichess.
 
-**Disclaimer:** I’m not a strong Chess player. And you can verify this by looking at [my Chess.com profile and games](https://www.chess.com/member/adambcomer). That being said, I’m not going to be analyzing individual games or positions here. Instead, I’m going to base my analysis on public games from Lichess and games played by Masters. 
+**Disclaimer:** I’m not a strong Chess player. And you can verify this by looking at [my Chess.com profile and games](https://www.chess.com/member/adambcomer). That being said, I’m not going to be analyzing individual games or positions in this article. Instead, I’m going to base my analysis on the similarity of play from the Lichess games to an opening book and games played by Masters. 
 
 
 ## Data
 
-First, I need to get some chess games data. For this type of analysis, I need games from players of all rating ranges. [Lichess](https://lichess.org/), a open source Chess server, is nice enough to give [their data](https://database.lichess.org/#standard_games) back to the community. I used the set of games from April 2017 because it was the smallest dataset with timestamps(Although, I never used them). 
+For this type of analysis, I need games from players of all rating ranges. [Lichess](https://lichess.org/), a open source Chess server, provides [public datasets of chess games](https://database.lichess.org/#standard_games) played on their site. I used the dataset from April 2017 because it was the smallest dataset with timestamps.
 
-To analyzing openings, I needed an Opening Book to compare with my games. This was a lot harder than I thought it was going to be. Many books are proprietary or only come in physical form. After searching for a few days, I eventually found some [opening books in a nice machine readable format](https://github.com/niklasf/eco). Unfortunately, the names were all different but I worked around that by matching the moves from the game to the moves in the book.
+To analyzing openings, I needed an Opening Book to compare with my games. This was a lot harder than I thought it was going to be. Many books are copyedited or only come in physical form. After searching for a few days, I eventually found some [opening books in a nice machine readable format](https://github.com/niklasf/eco).
 
-Initially, I stopped my data collection here. But as did the further analysis, I realized my definition of “Opening Theory” was extremely limited. Most if not all strong players have opening preparations that extend far beyond the 4-6 moves in a standard opening book. In the recent Opera Euro Rapid Finals, [Wesley So attributes his loss in round 2 to missing the move 21. Qxe4](https://www.chess.com/news/view/opera-euro-rapid-chess-finals-day-1). I wanted to look deeper into these online games and see how players at every level are copying these Masters. To do this, I used a [dataset of Master Level games](https://rebel13.nl/download/data.html) to check for similarities.
+Initially, I stopped my data collection here. But as did the further analysis, I realized my definition of Opening Theory was extremely limited. Most, if not all, strong players prepare opening lines that extend far beyond the 4-6 moves in a standard opening book. In the recent Opera Euro Rapid Finals, [Wesley So attributes his loss in round 2 to not looking at the move 21. Qxe4](https://www.chess.com/news/view/opera-euro-rapid-chess-finals-day-1). I wanted to look deeper into these online games and see how players at every level are copying these Masters. To do this, I used a [dataset of Master Level games](https://rebel13.nl/download/data.html) to check for similarities.
 
-Due to computational limits of my laptop, I used the first 200,000 master games to construct a [Trie](https://en.wikipedia.org/wiki/Trie) of all of the moves. Effectivity, I was treating the search of opening moves as substring search. This tree of games and their moves is referred to as the Master Game Index.
+Due to the limits of my laptop's hardware, I used the first 200,000 master games to construct a [Trie](https://en.wikipedia.org/wiki/Trie) of all of the moves. Effectivity, I was treating the search of opening moves as substring search. This tree of games and their moves is referred to as the Master Game Index.
 
-To build my nice DataFrame, I extracted the first 20,000 Blitz and Bullet games from the Lichess Dataset and counted the number of moves that matched the Opening Book and the Master Game Index. I took the header information in from the games, fields such as player rating or time format, and made them into columns. A small preview can be seen below and the full dataset link can be found in the Appendix.
+To build a DataFrame, I extracted the first 20,000 Blitz and Bullet games from the Lichess Dataset and counted the number of moves that matched the Opening Book and the Master Game Index. I took the header information from the games, fields such as player rating or time format, and made them into columns. A small preview can be found below.
 
-**Aside:** This project involved a lot more Data Engineering then I anticipated. As a student, I seldomly come across projects that force you efficiently index and search these large dataset. If you teach a 300+ level statistics class, try giving an assignment that has Data Engineering sections. Most data that is public or in the workplace was not formatted for your specific use case. And teaching students how to process, index, and integrate multiple data sources with varying formats will pay dividends in future careers.
+**Aside:** This project involved a lot more Data Engineering then I anticipated. As a student, I seldomly come across projects that force you efficiently index and search these large dataset. If you teach a 300+ level statistics class, I recommend giving an assignment that has a Data Engineering section of non-table like data. Many useful datasets not formatted as tables for statisticians. And teaching students how to process, index, and format these data sources will help them in their future careers.
 
 ```python
 games = pd.read_csv('data/games.csv', index_col='ID', delimiter=',')
@@ -93,7 +93,7 @@ plot.show()
 
 Again, for the player with the black pieces, this sample of games looks representative.
 
-Next, the games should be balanced. That is, the ratings between the players should be similar. Games where the difference is too large will guarantee one side will win, potentially breaking future analysis. 
+Next, the games should be balanced. That is, the ratings between the players should be similar. Games where the difference is too large will guarantee one side will win, potentially biasing downstream analysis. 
 
 ```python
 fig, ax = plot.subplots()
@@ -115,9 +115,9 @@ Most of the games fall in the fair range of ±200 rating points. There are a few
 blitz_games = blitz_games[abs(blitz_games['WhiteElo'] - blitz_games['BlackElo']) < 200]
 ```
 
-After clearing out the games with a wide rating differential, there are 11,562 games remaining in this dataset.
+After clearing out the games with a wide rating difference, there are 11,562 games remaining in this dataset.
 
-Now, I will look at the relationship between Opening Knowledge and player rating.
+Next, to get a better understanding of the number of Book Moves featured in the dataset, a simple distribution of the counts will suffice.
 
 ```python
 agg = blitz_games.groupby(['OpeningMoves']).agg(['count'])
@@ -133,9 +133,9 @@ plot.show()
 ```
 ![Bar graph of the number of games played grouped by the number of Book moves featured for Blitz games](../../../images/blog/chess-analysis/BlitzBookMoves.jpeg)
 
-Grouping by the number of Book Moves featured, a nice gradually descending distribution is apparent.
+Grouping by the number of Book Moves featured, a nice gradually descending distribution is apparent. Clearly, the majority of games have 2-6 Book Moves played.
 
-Next, I will do a regression analysis of the rating of the players and the number of Book moves featured in a game.
+Next, I made a simple regression to quantify the relationship between the rating of the players and the number of Book Moves featured in a game.
 
 ```python
 blitz_games['ELOAverage'] = (blitz_games['WhiteElo'] + blitz_games['BlackElo']) / 2
@@ -168,7 +168,7 @@ plot.show()
 
 Looking at our regression, there is a slight positive relationship that is significant (p < 0.05) but has a small R^2 of 0.00662. I expected the variance to be high but not this high.
 
-The first version of my analysis stopped here. After sitting on it for a few days, I realized that players don’t look at the Encyclopedia of Chess Openings for ideas, they use a database of games from Master level players. After adding this extra field, I will do a second regression on the player ratings and the number of moves from Master games featured. 
+The first version of my analysis stopped here. After sitting on it for a few days, I realized that players don’t stop memorizing lines when the Encyclopedia of Chess Openings line ends, they often follow a game played by Masters before entering a novelty. After adding this extra field, I made a second regression of the player ratings and the number of moves followe from a Master game. 
 
 ```python
 fig, ax = plot.subplots()
@@ -182,7 +182,7 @@ plot.show()
 ```
 ![Bar graph of the number of games played grouped by the number of Master moves featured for Blitz games](../../../images/blog/chess-analysis/BlitzMasterMoves.jpeg)
 
-Comparing this bar chart with the previous, players are using longer lines and more ideas from Master games than just Book moves alone. This gives us good evidence that “Opening Theory” consists of more than a 2-6 move Opening Book.
+Comparing this bar chart with the previous, players are sticking to Master games for longer than Book Moves alone. This gives us good evidence that _Opening Theory_ consists of more than a 2-6 move Opening Book.
 
 ```python
 res = stats.linregress(blitz_games['MasterMoves'], blitz_games['ELOAverage'])
@@ -289,15 +289,20 @@ plot.show()
 
 When looking at the number of master moves played and player rating, the relationship is greatly diminished compared to the Blitz section. This confirms the trend in the prior regression. 
 
-To a non-chess player this relationship might be very unexpected. If opening moves are typically memorized, why are players have trouble playing Book moves or Master moves? In the Discussion section, I will explore this finding more.
+To a non-chess player this relationship might be very unexpected. If opening moves are typically memorized, why are players not playing Book moves or Master moves just like in blitz? In the Discussion section, I will explore this finding more.
 
 ## Discussion
 
-In the Analysis, I looked at relationship of moves played from an Opening Book and Master Games and player rating for Blitz and Bullet time formats. I verified that player ratings were representative and normally distributed, matching what I expected. Additionally, I verified that there was a downward trend of Book and Master moves featured past the limited set of first moves. 
+In the Analysis, I looked at relationship of moves played from an Opening Book and Master Games and player rating for Blitz and Bullet time formats. I verified that player ratings were representative and normally distributed, matching what I expected. Additionally, I verified that there was a downward trend of Book and Master moves featured past the limited set of first moves, as expected. 
 
-In the Blitz regression analysis, a weak positive connection between the number of Book moves and rating was present. And a strong positive connection existed between the number of Master moves and rating. There are two possible ways to interpret this result. 1. Strong players can generally find the top moves that Masters play. 2. Strong players are using moves from a database of Master games to improve. There is probably a mix of both going here. Good moves are objectively good in perfect information game like Chess and players are looking at what others are doing to improve their game. 
+In the Blitz regression analysis, a weak positive relationship between the number of Book moves and rating was present. And a strong positive relationship existed between the number of Master moves and rating. There are two possible ways to interpret this result. 
 
-In the Bullet regression analysis, a weak negative negative connection between the number of Book moves and rating was present. And a weak positive connection existed between the number of Master moves and rating. This was an unexpected result. Avid online chess players will tell you that Bullet Chess is a fundamentally different game than Blitz Chess. Many games are won or lost on time, not checkmate. This favors the player who can play faster, not better. To increase the amount of time your opponent consumes per move, players try to complicate the position and throw unusual moves at their opponent. 
+1. Strong players can generally find the top moves that Masters play. 
+2. Strong players are using moves from a database of Master games to improve. 
+
+There is probably a mix of both going here. Good moves are objectively good in perfect information game like Chess and players are looking at what others are doing to improve their game. 
+
+In the Bullet regression analysis, a weak negative negative relationship between the number of Book moves and rating was present. And a weak positive relationship existed between the number of Master moves and rating. This was an unexpected result. Many online chess players will tell you that Bullet Chess is a fundamentally different game than Blitz Chess. Many games are won or lost on time, not checkmate. This favors the player who can play faster, not better. To increase the amount of time your opponent consumes per move, players try to complicate the position and throw unusual moves at their opponent. 
 
 In the recent [IM not a GM tournament](https://www.chess.com/article/view/2021-im-not-a-gm-speed-chess-championship), [International Master(IM) Levy Rozman recounts his opening preparation for the bullet section consisted of the unusual move 1.b3](https://youtu.be/C3QlcE55VUo?t=794), featured below. 
 
@@ -307,13 +312,13 @@ In the recent [IM not a GM tournament](https://www.chess.com/article/view/2021-i
 
 </div>
 
-In the [Chess.com Move Database](https://www.chess.com/explorer), 1.b3 is the 6th most common first move with 12,327 of 2,785,695 games or 0.44% of the games. IM Rozman argues his move was a tactic to confuse his opponent in the Bullet section. And it was probably the reason he won the match.
+In the [Chess.com Move Database](https://www.chess.com/explorer), 1.b3 is the 6th most common first move with 12,327 of 2,785,695 games or 0.44% of the games. IM Rozman argues his move was a tactic to confuse his opponent in the Bullet section. And could plausibly be the reason he made it to the final.
 
 The lack of time means an opponent doesn’t have time to think about how a strange move might affect the position long term, they need to keep moving just to not lose on time. The data is revealing this common understanding of the time control. Players are playing sub-optimal moves designed to make their opponent think and put them into time trouble.
 
 ## Conclusion
 
-Overall, I analyzed 20,000 Lichess Bullet and Blitz games to compare opening knowledge and player rating. In the Blitz section, my hypothesized positive relationship of Book and Master moves compared to player rating was found. In the Bullet section, my analysis found the opposite relationship with Book moves and a small positive relationship with Master moves. In the Discussion section, I brought in an analysis from a professional Blitz and Bullet tournament player, IM Levy Rozman, to show how throwing odd moves at your opponent can cause them to burn time on their clock for a winning advantage. For me, this whole project is good motivation to study the Master games from a Chess Book I recently picked up.
+Overall, I analyzed 20,000 Lichess Bullet and Blitz games to compare opening knowledge and player rating. In the Blitz section, my hypothesized positive relationship of Book and Master moves compared to player rating was found. In the Bullet section, my analysis found the opposite relationship with Book moves and a small positive relationship with Master moves. In the Discussion section, I brought in an analysis from a professional Blitz and Bullet tournament player, IM Levy Rozman, to show how throwing odd moves at your opponent can cause them to burn time on their clock for a winning time advantage. For me, this whole project is good motivation to study the Master games from a Chess Book I recently picked up.
 
 ## Appendix
 

@@ -42,6 +42,12 @@
   font-weight: 600;
 }
 
+#blog-content ol {
+	margin-top: 16px;
+	list-style-type: decimal;
+	list-style-position: inside;
+}
+
 #blog-content pre {  
   margin-top: 24px;
   padding: 8px 16px;
