@@ -14,15 +14,21 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     `gatsby-plugin-image`,
-    'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-plugin-google-gtag',
+      resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        trackingIds: [
-          'G-NPWF2XR6L3'
-        ],
-      },
+        id: 'GTM-522Q5TZ'
+      }
     },
+    'gatsby-plugin-sharp',
+    // {
+    //   resolve: 'gatsby-plugin-google-gtag',
+    //   options: {
+    //     trackingIds: [
+    //       'G-NPWF2XR6L3'
+    //     ],
+    //   },
+    // },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-postcss',
     {
