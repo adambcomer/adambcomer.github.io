@@ -7,8 +7,7 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "deploy": "gh-pages -d public --branch master"
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",

@@ -19,8 +19,7 @@ module.exports = {
       resolve: 'gatsby-plugin-google-gtag',
       options: {
         trackingIds: [
-          'G-NPWF2XR6L3',
-          'UA-129077573-1'
+          'G-NPWF2XR6L3'
         ],
       },
     },
