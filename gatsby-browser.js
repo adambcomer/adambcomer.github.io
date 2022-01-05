@@ -9,6 +9,9 @@ import '@fontsource/ibm-plex-mono/latin-400.css'
 import '@fontsource/ibm-plex-mono/latin-400-italic.css'
 import '@fontsource/ibm-plex-mono/latin-600.css'
 
+import '@fontsource/noto-sans-sc/400.css'
+import '@fontsource/noto-sans-sc/700.css'
+
 import { getCLS, getFID, getLCP } from 'web-vitals'
 
 function sendToGoogleAnalytics({ name, delta, value, id }) {

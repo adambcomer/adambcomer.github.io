@@ -2,18 +2,19 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import '../styles/index.css'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer/index'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { Helmet } from 'react-helmet'
+
+import '../styles/index.css'
 
 const IndexPage = () => {
   return (
     <>
-      <Helmet htmlAttributes={{ lang: 'en' }}>
-        <link rel="canonical" href="https://adambcomer.com/" />
+      <Helmet htmlAttributes={{ lang: 'zh-cn' }}>
+        <link rel="canonical" href="https://adambcomer.com/zh-cn/" />
 
-        <title>Adam Comer | Software Developer</title>
+        <title>Adam Comer | 软件开发师</title>
         <meta name="description" content="Adam Comer is a Software Developer, Co-Founder Knowtworthy, and Student at the University of Toronto. He is proficient with Node.js, Kubernetes, Python, and AWS." />
 
         <meta property="og:title" content="Adam Comer | Software Developer" />
@@ -45,11 +46,11 @@ const IndexPage = () => {
         </script>
       </Helmet>
       <Navbar />
-      <main className='w-100'>
+      <main className='w-100 font-sc'>
         <div className='mx-6 my-64'>
-          <h1 className='text-4xl'>
-            Hello! My name is Adam. <br />
-            I’m a <span className='color-1'>Software Developer</span> living in Toronto.
+          <h1 className='text-4xl font-sc'>
+            你好！我叫 Adam。<br />
+            我是在多伦多的<span className='color-1'>软件开发师</span>。
           </h1>
         </div>
 
@@ -58,7 +59,7 @@ const IndexPage = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2 block'>
           <StaticImage className='hidden lg:block' src='../images/bmo.jpg' alt='Toronto Skyline with the Bank of Montreal HQ in the center.' />
           <div className='w-100 px-6 py-24'>
-            <h2 className='text-3xl'>I’m a <span className='color-1'>Software Developer</span>.</h2>
+            <h2 className='text-3xl'>我是<span className='color-1'>软件开发师</span>。</h2>
             <p className='mt-8'>
               I started writing code in early high school and haven’t stopped since.
               I used to be a freelance developer for small businesses and universities in the Northern Virginia area.
@@ -78,12 +79,12 @@ const IndexPage = () => {
 
         <div className='block flex items-center'>
           <div className='px-6'>
-            <h3 className='text-3xl'>Looking for my Resume?</h3>
-            <p className='mt-2 text-1-color'>Get it here.</p>
+            <h3 className='text-3xl'>你想看我的简历吗？</h3>
+            <p className='mt-2 text-1-color'>看这里</p>
             <div className='mt-8'>
               <a className='' href='/resume.pdf'>
                 <div className='px-6 py-4 button-color inline-flex flex-row items-center'>
-                  <div className='mr-6'>Resume</div>
+                  <div className='mr-6'>简历</div>
                   <div className='svg-fill'>
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="14px" height="16px" viewBox="0 0 14 16">
                       <g>
@@ -104,9 +105,9 @@ const IndexPage = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2 block'>
           <StaticImage className='hidden lg:block' src='../images/con-hall.jpg' alt='Convocation Hall at the University of Toronto.' />
           <div className='px-6 py-24'>
-            <h2 className='text-3xl'>I’m a <span className='color-2'>Student</span>.</h2>
+            <h2 className='text-3xl'>我是<span className='color-2'>学生</span>。</h2>
             <p className='mt-8'>
-              I study Statistics and Cognitive Science at the University of Toronto. In other words, I study data and the mind.
+              我学习 Statistics 和 Cognitive Science at the University of Toronto. In other words, I study data and the mind.
               These disciplines have allowed me to explore other departments such as Computer Science, Linguistics, and Psychology.
               With broad exposure to many domains, I’ve been able to integrate many outside ideas into my projects and work.
               </p>
@@ -155,7 +156,7 @@ const IndexPage = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2 block'>
           <StaticImage className='hidden lg:block' src='../images/knowtworthy.jpg' alt='Knowtworthy meeting minutes editor and transcription.' />
           <div className='px-6 py-24'>
-            <h2 className='text-3xl'>I’m a <span className='color-3'>Co-Founder</span>.</h2>
+            <h2 className='text-3xl'>我是<span className='color-3'>Co-Founder</span>。</h2>
             <p className='mt-8'>
               After my first year in university, my co-founders and I were given the opportunity to join the UofT’s Hatchery's NEST Program to build out our company: Knowtworthy.
               Our vision is to increase the efficiency of office meetings with software that implements meeting best practices in conjunction with automatic speech transcription.
@@ -217,7 +218,7 @@ const IndexPage = () => {
         </div>
       </main >
 
-      <Footer />
+      <Footer lang='zh-cn' />
     </>
   )
 }

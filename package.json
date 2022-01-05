@@ -22,10 +22,12 @@
   "dependencies": {
     "@fontsource/ibm-plex-mono": "^4.4.5",
     "@fontsource/ibm-plex-sans": "^4.4.5",
+    "@fontsource/noto-sans-sc": "^4.5.2",
     "gatsby": "^4.0.2",
     "gatsby-image": "^3.7.0",
     "gatsby-plugin-catch-links": "^4.0.0",
     "gatsby-plugin-google-gtag": "^4.1.0",
+    "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-image": "^2.0.0",
     "gatsby-plugin-manifest": "^4.0.0",
     "gatsby-plugin-offline": "^5.0.0",
