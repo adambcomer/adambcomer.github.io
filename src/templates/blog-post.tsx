@@ -45,6 +45,7 @@ const BlogPostTemplate = ({ data }) => {
                     "https://twitter.com/adambcomer",
                     "https://github.com/adambcomer",
                     "https://gitlab.com/adambcomer",
+                    "https://stackoverflow.com/users/17834001/adambcomer",
                     "https://knowtworthy.com/blog/author/adambcomer/"
                 ]
             },
