@@ -11,7 +11,7 @@ import '@fontsource/ibm-plex-mono/latin-600.css'
 
 import { getCLS, getFID, getLCP } from 'web-vitals'
 
-function sendToGoogleAnalytics({ name, delta, value, id }) {
+function sendToGoogleAnalytics ({ name, delta, value, id }) {
   console.log(`${name} matching ID ${id} changed by ${delta}`)
 
   // Assumes the global `gtag()` function exists, see:
@@ -23,7 +23,7 @@ function sendToGoogleAnalytics({ name, delta, value, id }) {
     // Custom params:
     metric_id: id, // Needed to aggregate events.
     metric_value: value, // Optional.
-    metric_delta: delta, // Optional.
+    metric_delta: delta // Optional.
 
     // OPTIONAL: any additional params or debug info here.
     // See: https://web.dev/debug-web-vitals-in-the-field/

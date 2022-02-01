@@ -1,29 +1,28 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Navbar from '../components/Navbar'
 import '../styles/projects.css'
 import Footer from '../components/Footer'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { Helmet } from 'react-helmet'
 
-const ExperiencePage = () => {
-
+const ExperiencePage: FC = () => {
   return (
     <>
       <Helmet htmlAttributes={{ lang: 'en' }}>
-        <link rel="canonical" href="https://adambcomer.com/experience/" />
+        <link rel='canonical' href='https://adambcomer.com/experience/' />
 
         <title>Experience | Adam Comer | Software Developer</title>
-        <meta name="description" content="The companies and people I’ve worked for." />
+        <meta name='description' content='The companies and people I’ve worked for.' />
 
-        <meta property="og:title" content="Adam Comer | Software Developer" />
-        <meta property="og:description" content="The companies and people I’ve worked for." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://adambcomer.com/experience/" />
-        <meta property="og:image" content="https://adambcomer.com/portrait.png" />
-        <meta property="og:image:width" content="720" />
-        <meta property="og:image:height" content="720" />
+        <meta property='og:title' content='Adam Comer | Software Developer' />
+        <meta property='og:description' content='The companies and people I’ve worked for.' />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://adambcomer.com/experience/' />
+        <meta property='og:image' content='https://adambcomer.com/portrait.png' />
+        <meta property='og:image:width' content='720' />
+        <meta property='og:image:height' content='720' />
 
-        <script type="application/ld+json">{`
+        <script type='application/ld+json'>{`
           {
             "@context": "http://schema.org",
             "@type": "Person",
@@ -84,7 +83,6 @@ const ExperiencePage = () => {
             </div>
           </div>
         </div>
-
 
         <hr />
 
@@ -192,10 +190,10 @@ const ExperiencePage = () => {
                 <div className='px-6 py-4 button-color inline-flex flex-row items-center'>
                   <div className='mr-6'>Resume</div>
                   <div className='svg-fill'>
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="14px" height="16px" viewBox="0 0 14 16">
+                    <svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='14px' height='16px' viewBox='0 0 14 16'>
                       <g>
-                        <path id="arrow" d="M7.5,11l4.1-4.4l0.7,0.7L7,13L1.6,7.3l0.7-0.7L6.5,11V0h1V11z" />
-                        <path id="bottom" d="M13,15v-2h1v2c0,0.6-0.4,1-1,1H1c-0.6,0-1-0.4-1-1v-2h1v2H13z" />
+                        <path id='arrow' d='M7.5,11l4.1-4.4l0.7,0.7L7,13L1.6,7.3l0.7-0.7L6.5,11V0h1V11z' />
+                        <path id='bottom' d='M13,15v-2h1v2c0,0.6-0.4,1-1,1H1c-0.6,0-1-0.4-1-1v-2h1v2H13z' />
                       </g>
                     </svg>
                   </div>
@@ -205,7 +203,7 @@ const ExperiencePage = () => {
           </div>
         </div>
 
-      </main >
+      </main>
 
       <Footer />
     </>

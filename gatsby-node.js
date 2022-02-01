@@ -1,7 +1,7 @@
 'use strict'
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createRedirect, createPage } = actions;
+  const { createPage } = actions
 
   const blogPostTemplate = require.resolve('./src/templates/blog-post.tsx')
   const result = await graphql(`
@@ -18,9 +18,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     `)
-    
+
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    reporter.panicOnBuild('Error while running GraphQL query.')
     return
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
@@ -29,8 +29,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: blogPostTemplate,
       context: {
         slug: node.frontmatter.slug,
-        image: node.frontmatter.image,
-      },
+        image: node.frontmatter.image
+      }
     })
   })
 }
