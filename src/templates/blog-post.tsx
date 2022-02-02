@@ -1,28 +1,33 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { graphql } from 'gatsby'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import '../styles/blog-template.css'
 import { Helmet } from 'react-helmet'
+import { BlogPostQuery } from '../types/blog-post'
 
-const BlogPostTemplate = ({ data }) => {
+interface BlogPostTemplateProps {
+  data: BlogPostQuery
+}
+
+const BlogPostTemplate: FC<BlogPostTemplateProps> = ({ data }) => {
   return (
     <>
       <Helmet htmlAttributes={{ lang: 'en' }}>
-        <link rel="canonical" href={`https://adambcomer.com${data.markdownRemark.frontmatter.slug}`} />
+        <link rel='canonical' href={`https://adambcomer.com${data.markdownRemark.frontmatter.slug}`} />
 
         <title>{data.markdownRemark.frontmatter.title} | Adam Comer</title>
-        <meta name="description" content={data.markdownRemark.frontmatter.description} />
+        <meta name='description' content={data.markdownRemark.frontmatter.description} />
 
-        <meta property="og:title" content={`${data.markdownRemark.frontmatter.title} | Adam Comer`} />
-        <meta property="og:description" content={data.markdownRemark.frontmatter.description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://adambcomer.com${data.markdownRemark.frontmatter.slug}`} />
-        <meta property="og:image" content={`https://adambcomer.com/assets/img/${data.markdownRemark.frontmatter.image}`} />
-        <meta property="og:image:width" content="1920" />
-        <meta property="og:image:height" content="1080" />
+        <meta property='og:title' content={`${data.markdownRemark.frontmatter.title} | Adam Comer`} />
+        <meta property='og:description' content={data.markdownRemark.frontmatter.description} />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content={`https://adambcomer.com${data.markdownRemark.frontmatter.slug}`} />
+        <meta property='og:image' content={`https://adambcomer.com/assets/img/${data.markdownRemark.frontmatter.image}`} />
+        <meta property='og:image:width' content='1920' />
+        <meta property='og:image:height' content='1080' />
 
-        <script type="application/ld+json">{`
+        <script type='application/ld+json'>{`
         {
             "@context": "https://schema.org",
             "@type": "BlogPosting",

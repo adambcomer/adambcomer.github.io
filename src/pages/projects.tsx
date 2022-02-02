@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Navbar from '../components/Navbar'
 import '../styles/projects.css'
 import Footer from '../components/Footer'
@@ -6,25 +6,24 @@ import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
-const ProjectsPage = () => {
-
+const ProjectsPage: FC = () => {
   return (
     <>
       <Helmet htmlAttributes={{ lang: 'en' }}>
-        <link rel="canonical" href="https://adambcomer.com/projects/" />
+        <link rel='canonical' href='https://adambcomer.com/projects/' />
 
         <title>Projects | Adam Comer | Software Developer</title>
-        <meta name="description" content="Things I built for fun to learn something new." />
+        <meta name='description' content='Things I built for fun to learn something new.' />
 
-        <meta property="og:title" content="Adam Comer | Software Developer" />
-        <meta property="og:description" content="Things I built for fun to learn something new." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://adambcomer.com/projects/" />
-        <meta property="og:image" content="https://adambcomer.com/portrait.png" />
-        <meta property="og:image:width" content="720" />
-        <meta property="og:image:height" content="720" />
+        <meta property='og:title' content='Adam Comer | Software Developer' />
+        <meta property='og:description' content='Things I built for fun to learn something new.' />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://adambcomer.com/projects/' />
+        <meta property='og:image' content='https://adambcomer.com/portrait.png' />
+        <meta property='og:image:width' content='720' />
+        <meta property='og:image:height' content='720' />
 
-        <script type="application/ld+json">{`
+        <script type='application/ld+json'>{`
           {
             "@context": "http://schema.org",
             "@type": "Person",
@@ -86,7 +85,6 @@ const ProjectsPage = () => {
             </div>
           </div>
         </div>
-
 
         <hr />
 
@@ -161,8 +159,8 @@ const ProjectsPage = () => {
             <Link to='/blog/simple-database/'>
               <div className='p-8 h-full hover:underline ui-1-color'>
                 <h4 className='text-4xl font-thin'>Build a Simple Database</h4>
-                <svg className='absolute bottom-8 right-8 svg-fill' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                  <polygon points="18 6 16.57 7.393 24.15 15 4 15 4 17 24.15 17 16.57 24.573 18 26 28 16 18 6" />
+                <svg className='absolute bottom-8 right-8 svg-fill' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'>
+                  <polygon points='18 6 16.57 7.393 24.15 15 4 15 4 17 24.15 17 16.57 24.573 18 26 28 16 18 6' />
                 </svg>
               </div>
             </Link>
@@ -171,15 +169,15 @@ const ProjectsPage = () => {
             <Link to='/blog/install-gitlab-runner-kubernetes/'>
               <div className='p-8 h-full hover:underline ui-1-color'>
                 <h4 className='text-4xl font-thin'>How to Install a GitLab Runner on Kubernetes</h4>
-                <svg className='absolute bottom-8 right-8 svg-fill' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                  <polygon points="18 6 16.57 7.393 24.15 15 4 15 4 17 24.15 17 16.57 24.573 18 26 28 16 18 6" />
+                <svg className='absolute bottom-8 right-8 svg-fill' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'>
+                  <polygon points='18 6 16.57 7.393 24.15 15 4 15 4 17 24.15 17 16.57 24.573 18 26 28 16 18 6' />
                 </svg>
               </div>
             </Link>
           </div>
         </div>
 
-      </main >
+      </main>
 
       <Footer />
     </>
