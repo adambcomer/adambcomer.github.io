@@ -1,20 +1,19 @@
-import React from 'react'
+import React, { FC } from 'react'
 import FooterEN from './index.en'
-import FooterZH_CN from './index.zh-cn'
+import FooterZHCN from './index.zh-cn'
 
 import './footer.css'
 
 interface FooterProps {
-    lang?: 'en' | 'zh-cn'
+  lang?: 'en' | 'zh-cn'
 }
 
-const Footer = ({ lang = 'en' }: FooterProps) => {
+const Footer: FC<FooterProps> = ({ lang = 'en' }) => {
+  if (lang === 'zh-cn') {
+    return (<FooterZHCN />)
+  }
 
-    if (lang == 'zh-cn') {
-        return (<FooterZH_CN />)
-    }
-
-    return (<FooterEN />)
+  return (<FooterEN />)
 }
 
 export default Footer

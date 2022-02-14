@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet'
 
 import '../styles/index.css'
 
-const IndexPage = () => {
+const IndexPage: FC = () => {
   return (
     <>
       <Helmet htmlAttributes={{ lang: 'en' }}>
