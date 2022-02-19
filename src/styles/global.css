@@ -2,10 +2,208 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+  --md-light-on-background: #1B1B1E;
+
+  --md-light-surface: #FDFBFF;
+  --md-light-surface1: linear-gradient(0deg, rgba(0, 86, 210, 0.05), rgba(0, 86, 210, 0.05)), #FDFBFF;
+  --md-light-surface2: linear-gradient(0deg, rgba(0, 86, 210, 0.08), rgba(0, 86, 210, 0.08)), #FDFBFF;
+  --md-light-surface3: linear-gradient(0deg, rgba(0, 86, 210, 0.11), rgba(0, 86, 210, 0.11)), #FDFBFF;
+  --md-light-surface4: linear-gradient(0deg, rgba(0, 86, 210, 0.12), rgba(0, 86, 210, 0.12)), #FDFBFF;
+  --md-light-surface5: linear-gradient(0deg, rgba(0, 86, 210, 0.14), rgba(0, 86, 210, 0.14)), #FDFBFF;
+
+  --md-light-primary-container: #D9E2FF;
+  --md-light-secondary-container: #DCE2FA;
+
+  --md-light-on-primary-container: #001848;
+  --md-light-on-surface-variant: #44464E;
+
+  --md-light-primary-color: #0056D2;
+  --md-light-secondary-color: #585E71;
+  --md-light-outline-color: #8F909A;
+}
+
+
 html, body {
-  background-color: #161616;
+  background: var(--md-light-surface);
 }
 
 html, body, h1, h2, h3, h4, h5, h6, p, span {
-  color: #F4F4F4;
+  color: var(--md-light-on-background);
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+
+  .md-color-primary {
+    color: var(--md-light-primary-color) !important;
+  }
+
+  .md-bg-primary {
+    background: var(--md-light-primary-color);
+  }
+
+  .md-color-secondary {
+    color: var(--md-light-secondary-color) !important;
+  }
+
+  .md-on-primary-container {
+    color: var(--md-light-on-primary-container) !important;
+  }
+
+  .md-on-surface-variant {
+    color: var(--md-light-on-surface-variant) !important;
+  }
+
+  .md-surface {
+    background: var(--md-light-surface);
+  }
+
+  .md-surface-1 {
+    background: var(--md-light-surface1);
+  }
+
+  .md-surface-2 {
+    background: var(--md-light-surface2);
+  }
+
+  .md-surface-3 {
+    background: var(--md-light-surface3);
+  }
+
+  .md-surface-4 {
+    background: var(--md-light-surface4);
+  }
+
+  .md-surface-5 {
+    background: var(--md-light-surface5);
+  }
+
+  .md-display-large {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 57px;
+    line-height: 64px;
+    letter-spacing: -0.25px;
+    color: var(--md-light-on-background);
+  }
+
+  .md-display-medium {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 52px;
+    color: var(--md-light-on-background);
+  }
+
+  .md-display-small {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 44px;
+    color: var(--md-light-on-background);
+  }
+
+  .md-headline-large {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 40px;
+    color: var(--md-light-on-background);
+  }
+
+  .md-headline-medium {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 36px;
+    color: var(--md-light-on-background);
+  }
+
+  .md-headline-small {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--md-light-on-background);
+  }
+
+  .md-title-large {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 28px;
+    color: var(--md-light-on-background);
+  }
+
+  .md-title-medium {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;  
+    letter-spacing: 0.1px;
+    color: var(--md-light-on-background);
+  }
+
+  .md-title-small {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: var(--md-light-on-background);
+  }
+
+  .md-label-large {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: var(--md-light-on-background);
+  }
+
+  .md-body-large {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: var(--md-light-on-background);
+  }
+
+  .md-body-medium {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: var(--md-light-on-background);
+  }
+
+
+  .md-link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;  
+    letter-spacing: 0.1px;
+    color: var(--md-light-primary-color);
+  }
 }

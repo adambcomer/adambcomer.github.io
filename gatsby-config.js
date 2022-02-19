@@ -12,7 +12,7 @@ module.exports = {
         langKeyForNull: 'en',
         langKeyDefault: 'en',
         useLangKeyLayout: false,
-        prefixDefault: false,
+        prefixDefault: false
       }
     },
     'gatsby-plugin-catch-links',

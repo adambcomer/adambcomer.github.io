@@ -4,10 +4,13 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["'IBM Plex Sans'", "'Helvetica Neue'", "Arial", "sans-serif"],
+      sans: ['Roboto', 'Arial', 'Helvetica', 'sans-serif'],
+      mono: ["'Roboto Mono'"],
       sc: ["'Noto Sans SC'"]
-    },
+    }
   },
   variants: {},
-  plugins: []
+  plugins: [
+    require('@tailwindcss/line-clamp')
+  ]
 }

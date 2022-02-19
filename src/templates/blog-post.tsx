@@ -2,15 +2,20 @@ import React, { FC } from 'react'
 import { graphql } from 'gatsby'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import '../styles/blog-template.css'
 import { Helmet } from 'react-helmet'
 import { BlogPostQuery } from '../types/blog-post'
+import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
+
+import 'prismjs/themes/prism.css'
+import '../styles/blog-template.css'
 
 interface BlogPostTemplateProps {
   data: BlogPostQuery
 }
 
 const BlogPostTemplate: FC<BlogPostTemplateProps> = ({ data }) => {
+  const image = getImage(data.image)
+
   return (
     <>
       <Helmet htmlAttributes={{ lang: 'en' }}>
@@ -23,7 +28,7 @@ const BlogPostTemplate: FC<BlogPostTemplateProps> = ({ data }) => {
         <meta property='og:description' content={data.markdownRemark.frontmatter.description} />
         <meta property='og:type' content='website' />
         <meta property='og:url' content={`https://adambcomer.com${data.markdownRemark.frontmatter.slug}`} />
-        <meta property='og:image' content={`https://adambcomer.com/assets/img/${data.markdownRemark.frontmatter.image}`} />
+        <meta property='og:image' content={`https://adambcomer.com${getSrc(data.image) ?? ''}`} />
         <meta property='og:image:width' content='1920' />
         <meta property='og:image:height' content='1080' />
 
@@ -34,7 +39,7 @@ const BlogPostTemplate: FC<BlogPostTemplateProps> = ({ data }) => {
             "mainEntityOfPage": "https://adambcomer.com${data.markdownRemark.frontmatter.slug}",
             "headline": "${data.markdownRemark.frontmatter.title}",
             "image": [
-                "https://adambcomer.com/assets/img/${data.markdownRemark.frontmatter.image}"
+                "https://adambcomer.com${getSrc(data.image) ?? ''}"
             ],
             "datePublished": "${data.markdownRemark.frontmatter.postDate}",
             "dateModified": "${data.markdownRemark.frontmatter.date}",
@@ -70,10 +75,12 @@ const BlogPostTemplate: FC<BlogPostTemplateProps> = ({ data }) => {
         </script>
       </Helmet>
       <Navbar />
-      <main className='px-6 max-w-4xl'>
-        <h1 className='text-6xl font-light mt-16'>{data.markdownRemark.frontmatter.title}</h1>
-        <p className='text-xl mt-16'>{data.markdownRemark.frontmatter.author}</p>
-        <p className='text-xl font-light'>Updated {data.markdownRemark.frontmatter.formattedDate}</p>
+      <main className='px-6 max-w-screen-lg mx-auto'>
+        <h1 className='md-display-large mt-32'>{data.markdownRemark.frontmatter.title}</h1>
+        <p className='md-headline-small mt-16'>{data.markdownRemark.frontmatter.author}</p>
+        <p className='md-headline-small !font-light'>Updated {data.markdownRemark.frontmatter.formattedDate}</p>
+
+        {image !== undefined && <GatsbyImage image={image} alt={data.markdownRemark.frontmatter.imageAlt} className='mt-16 rounded-[32px]' />}
         <div id='blog-content' className='my-16' dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </main>
       <Footer />
@@ -92,15 +99,13 @@ export const pageQuery = graphql`
         slug
         title
         description
-        image
         author
+        imageAlt
       }
     }
-    file(relativePath: { eq: $image }) {
+    image: file(relativePath: { eq: $image }) {
       childImageSharp {
-        fluid(maxWidth: 1200) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(width: 1200)
       }
     }
   }

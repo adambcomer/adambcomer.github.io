@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 import Navbar from '../components/Navbar'
-import '../styles/blog.css'
 import Footer from '../components/Footer'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import { BlogPostsQuery } from '../types/blog-post'
+import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 
 const BlogPage: FC = () => {
   const result: BlogPostsQuery = useStaticQuery(graphql`
@@ -16,8 +16,18 @@ const BlogPage: FC = () => {
               slug
               title
               description
+              featuredImage {
+                childImageSharp {
+                  gatsbyImageData(width: 800)
+                }
+              }
             }
           }
+        }
+      }
+      image: file(relativePath: { eq: "portrait.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 720)
         }
       }
     }
@@ -31,85 +41,55 @@ const BlogPage: FC = () => {
         <title>Blog | Adam Comer | Software Developer</title>
         <meta name='description' content='My personal blog. I write about projects I’m working on, tools I’m using, and things I find interesting.' />
 
-        <meta property='og:title' content='Adam Comer | Software Developer' />
+        <meta property='og:title' content='Blog | Adam Comer | Software Developer' />
         <meta property='og:description' content='My personal blog. I write about projects I’m working on, tools I’m using, and things I find interesting.' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://adambcomer.com/blog/' />
-        <meta property='og:image' content='https://adambcomer.com/portrait.png' />
+        <meta property='og:image' content={`https://adambcomer.com${getSrc(result.image) ?? ''}`} />
         <meta property='og:image:width' content='720' />
         <meta property='og:image:height' content='720' />
       </Helmet>
       <Navbar />
-      <main className='w-100'>
-        <div className='mx-6 my-64'>
-          <h1 className='text-6xl font-light'>Blog</h1>
-          <p className='mt-6 text-lg text-1-color'>Writings about my projects and ideas</p>
+      <main className='px-6 md:px-12 mb-32 max-w-screen-2xl mx-auto'>
+        <div className='mx-6 my-64 text-center'>
+          <h1 className='md-display-large'>Blog</h1>
+          <p className='md-headline-medium md-color-secondary mt-6'>Writings about my projects and ideas</p>
         </div>
 
-        <hr />
+        <div>
+          <h2 className='text-center md-display-small'>Pages</h2>
 
-        <div className='grid grid-cols-1 lg:grid-cols-5 px-6 py-16 gap-x-12'>
-          <div className='lg:block'>
-            <h2 className='text-xl font-semibold'>Pages</h2>
-          </div>
-          <div className='mt-8 lg:mt-0 lg:col-span-4'>
-
-            <div className='grid grid-cols-1 lg:grid-cols-4'>
-              <div className='col-span-3'>
-                <Link className='hover:underline' to='/blog/simple-database/'>
-                  <h3 className='text-3xl font-light mb-6'>Build a Simple Database</h3>
-                </Link>
+          <div className='grid gap-6 grid-cols-1 lg:grid-cols-12 mt-8'>
+            <Link to='/blog/simple-database' className='col-span-4'>
+              <div className='md-surface-2 p-8 rounded-[32px] overflow-hidden h-full hover:md-surface-5'>
+                <p className='md-body-medium md-color-secondary'>Page</p>
+                <h3 className='md-headline-medium font-medium line-clamp-2'>Build a Simple Database</h3>
+                <p className='md-body-large mt-4 line-clamp-3'>Introductory tutorial to designing and building a LSM-Tree based Key-Value Store like RocksDB</p>
               </div>
-              <div className='col-span-1'>
-                <p className='text-sm font-light text-1-color'>Introductory tutorial to designing and building a LSM-Tree based Key-Value Store like RocksDB</p>
-                <Link to='/blog/simple-database/'>
-                  <div className='flex items-center mt-4'>
-                    <svg className='link-svg-fill' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'>
-                      <polygon points='18 6 16.57 7.393 24.15 15 4 15 4 17 24.15 17 16.57 24.573 18 26 28 16 18 6' />
-                    </svg>
-
-                    <span className='ml-4 link-1-color hover:underline'>View Posts</span>
-                  </div>
-                </Link>
-              </div>
-            </div>
+            </Link>
 
           </div>
         </div>
 
-        <hr />
+        <div className='mt-32'>
+          <h2 className='text-center md-display-small'>Posts</h2>
 
-        <div className='grid grid-cols-1 lg:grid-cols-5 px-6 py-16 gap-x-12'>
-          <div className='lg:block'>
-            <p className='text-xl font-semibold'>Posts</p>
-          </div>
-          <div className='mt-8 lg:mt-0 lg:col-span-4'>
+          <div className='grid gap-6 grid-cols-1 lg:grid-cols-12 mt-8'>
             {result.posts.edges.map(({ node }, i: number) => {
+              const image = getImage(node.frontmatter.featuredImage)
               return (
-                <React.Fragment key={i}>
-                  <div className='grid grid-cols-1 lg:grid-cols-4'>
-                    <div className='col-span-3'>
-                      <Link className='hover:underline' to={node.frontmatter.slug}>
-                        <h3 className='text-3xl font-light mb-6'>{node.frontmatter.title}</h3>
-                      </Link>
-                    </div>
-                    <div className='col-span-1'>
-                      <p className='text-sm font-light text-1-color'>{node.frontmatter.description}</p>
-                      <Link className='hover:underline link-1-color' to={node.frontmatter.slug}>
-                        <div className='flex items-center mt-4'>
-                          <svg className='link-svg-fill' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'>
-                            <polygon points='18 6 16.57 7.393 24.15 15 4 15 4 17 24.15 17 16.57 24.573 18 26 28 16 18 6' />
-                          </svg>
-                          <span className='ml-4 link-1-color'>Read more</span>
-                        </div>
-                      </Link>
-                    </div>
+                <Link to={node.frontmatter.slug} className='col-span-4' key={i}>
+                  <div className='md-surface-2 p-8 rounded-[32px] overflow-hidden h-full hover:md-surface-5'>
+                    {image !== undefined && <GatsbyImage image={image} className='-mt-8 -mx-8 aspect-video' alt='Adam Comer' />}
+
+                    <p className='md-body-medium md-color-secondary mt-8'>Article</p>
+                    <h3 className='md-headline-medium font-medium line-clamp-2'>{node.frontmatter.title}</h3>
+                    <p className='md-body-large mt-4 line-clamp-3'>{node.frontmatter.description}</p>
                   </div>
-                  {i !== result.posts.edges.length - 1 &&
-                    <hr className='my-8' style={{ borderColor: '#6f6f6f' }} />}
-                </React.Fragment>
+                </Link>
               )
             })}
+
           </div>
         </div>
       </main>

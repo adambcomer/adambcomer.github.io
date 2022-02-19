@@ -2,7 +2,8 @@
 slug: "/blog/chess-analysis/"
 title: "Relationship Between Chess Opening Knowledge and Player Rating"
 description: "How does knowledge of Chess Openings relate to player rating? In this analysis, I investigate the use Book Openings and Master Games with a sample of 20,000 public Lichess Games."
-image: "post-2-cover.jpg"
+image: "blog/post-2-cover.jpg"
+featuredImage: "../../../images/blog/post-2-cover.jpg"
 imageAlt: "Pawns on a Chess board"
 author: "Adam Comer"
 date: 2021-08-08T18:36:55+0000

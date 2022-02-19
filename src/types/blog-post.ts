@@ -1,5 +1,8 @@
+import { IGatsbyImageData } from 'gatsby-plugin-image'
+
 export interface BlogPostsQuery {
   posts: BlogPosts
+  image: IGatsbyImageData
 }
 
 interface BlogPosts {
@@ -9,6 +12,7 @@ interface BlogPosts {
         slug: string
         title: string
         description: string
+        featuredImage: IGatsbyImageData
       }
     }
   }>
@@ -21,11 +25,12 @@ export interface BlogPostQuery {
       title: string
       description: string
       author: string
-      image: string
+      imageAlt: string
       postDate: string
       formattedDate: string
       date: string
     }
     html: string
   }
+  image: IGatsbyImageData
 }

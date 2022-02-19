@@ -6,8 +6,6 @@ import Footer from '../components/Footer/index'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { Helmet } from 'react-helmet'
 
-import '../styles/index.css'
-
 const IndexPage: FC = () => {
   return (
     <>

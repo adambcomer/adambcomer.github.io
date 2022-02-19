@@ -26,13 +26,13 @@ const Navbar: FC = () => {
       </div>
 
       <div className='flex flex-row hidden lg:block'>
-        <span className='mx-4 text-lg hover:underline'><Link to='/' onClick={navItemClicked}>Home</Link></span>
-        <span className='mx-4 text-lg hover:underline'><Link to='/blog/' onClick={navItemClicked}>Blog</Link></span>
-        <span className='mx-4 text-lg hover:underline'><Link to='/projects/' onClick={navItemClicked}>Projects</Link></span>
-        <span className='mx-4 text-lg hover:underline'><Link to='/experience/' onClick={navItemClicked}>Experience</Link></span>
+        <Link to='/' onClick={navItemClicked}><button className='inline-flex items-center py-3 px-3 md-title-medium md-button rounded-full mx-2 hover:md-surface-3'><i className='material-icons mr-2'>home</i>Home</button></Link>
+        <Link to='/blog/' onClick={navItemClicked}><button className='inline-flex items-center py-3 px-3 md-title-medium md-button rounded-full mx-2 hover:md-surface-3'><i className='material-icons mr-2'>article</i>Blog</button></Link>
+        <Link to='/projects/' onClick={navItemClicked}><button className='inline-flex items-center py-3 px-3 md-title-medium md-button rounded-full mx-2 hover:md-surface-3'><i className='material-icons mr-2'>build</i>Projects</button></Link>
+        <Link to='/experience/' onClick={navItemClicked}><button className='inline-flex items-center py-3 px-3 md-title-medium md-button rounded-full mx-2 hover:md-surface-3'><i className='material-icons mr-2'>work</i>Experience</button></Link>
       </div>
 
-      <svg className='icon lg:hidden' version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' onClick={navClicked}>
+      <svg className='lg:hidden' version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' onClick={navClicked}>
         <rect x='14' y='4' width='4' height='4' />
         <rect x='4' y='4' width='4' height='4' />
         <rect x='24' y='4' width='4' height='4' />
@@ -47,10 +47,10 @@ const Navbar: FC = () => {
       {open &&
         <div className='fixed lg:hidden bottom-0 left-0 right-0 z-50 mobile-nav'>
           <hr />
-          <div className='ml-8 mt-8 text-xl hover:underline'><Link to='/' onClick={navItemClicked}>Home</Link></div>
-          <div className='ml-8 mt-8 text-xl hover:underline'><Link to='/blog/' onClick={navItemClicked}>Blog</Link></div>
-          <div className='ml-8 mt-8 text-xl hover:underline'><Link to='/projects/' onClick={navItemClicked}>Projects</Link></div>
-          <div className='ml-8 mt-8 text-xl hover:underline'><Link to='/experience/' onClick={navItemClicked}>Experience</Link></div>
+          <div><Link to='/' onClick={navItemClicked}><button className='inline-flex items-center py-3 px-3 md-title-medium md-button rounded-full mx-2 mt-4'><i className='material-icons mr-2'>home</i>Home</button></Link></div>
+          <div><Link to='/blog/' onClick={navItemClicked}><button className='inline-flex items-center py-3 px-3 md-title-medium md-button rounded-full mx-2 mt-4'><i className='material-icons mr-2'>article</i>Blog</button></Link></div>
+          <div><Link to='/projects/' onClick={navItemClicked}><button className='inline-flex items-center py-3 px-3 md-title-medium md-button rounded-full mx-2 mt-4'><i className='material-icons mr-2'>build</i>Projects</button></Link></div>
+          <div><Link to='/experience/' onClick={navItemClicked}><button className='inline-flex items-center py-3 px-3 md-title-medium md-button rounded-full mx-2 mt-4'><i className='material-icons mr-2'>work</i>Experience</button></Link></div>
         </div>}
     </nav>
   )

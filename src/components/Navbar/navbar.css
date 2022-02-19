@@ -3,11 +3,7 @@
   align-items: center;
 }
 
-.icon {
-  fill: #F4F4F4;
-}
-
 .mobile-nav {
-  background: #161616; 
+  background: var(--md-light-surface); 
   top: 80px;
 }
