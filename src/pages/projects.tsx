@@ -129,7 +129,7 @@ const ProjectsPage: FC = () => {
           <div className='grid gap-6 grid-cols-1 lg:grid-cols-12 mt-8'>
             <Link to='/blog/install-gitlab-runner-kubernetes/' className='col-span-4'>
               <div className='md-surface-2 p-8 rounded-[32px] overflow-hidden h-full hover:md-surface-5'>
-                <StaticImage className='-mt-8 -mx-8 aspect-video' src='../images/blog/post-1-cover.jpeg' alt='Adam Comer' />
+                <StaticImage className='-mt-8 -mx-8 aspect-video' src='../images/blog/post-1-cover.jpeg' alt='Gitlab logo on purple background' />
 
                 <p className='md-body-medium md-color-secondary mt-8'>Article</p>
                 <h3 className='md-headline-medium font-medium line-clamp-2'>How to Install a GitLab Runner on Kubernetes</h3>
@@ -138,7 +138,7 @@ const ProjectsPage: FC = () => {
             </Link>
             <Link to='/blog/simple-database/' className='col-span-4'>
               <div className='md-surface-2 p-8 rounded-[32px] overflow-hidden h-full hover:md-surface-5'>
-                <StaticImage className='-mt-8 -mx-8 aspect-video' src='../images/blog/simple-database-motivation-design-cover.jpg' alt='Adam Comer' />
+                <StaticImage className='-mt-8 -mx-8 aspect-video' src='../images/blog/simple-database-motivation-design-cover.jpg' alt='Servers in a data center' />
 
                 <p className='md-body-medium md-color-secondary mt-8'>Article</p>
                 <h3 className='md-headline-medium font-medium line-clamp-2'>Build a Simple Database</h3>
@@ -147,7 +147,7 @@ const ProjectsPage: FC = () => {
             </Link>
             <Link to='/blog/chess-analysis/' className='col-span-4'>
               <div className='md-surface-2 p-8 rounded-[32px] overflow-hidden h-full hover:md-surface-5'>
-                <StaticImage className='-mt-8 -mx-8 aspect-video' src='../images/blog/post-2-cover.jpg' alt='Adam Comer' />
+                <StaticImage className='-mt-8 -mx-8 aspect-video' src='../images/blog/post-2-cover.jpg' alt='Pawns on a chessboard' />
 
                 <p className='md-body-medium md-color-secondary mt-8'>Article</p>
                 <h3 className='md-headline-medium font-medium line-clamp-2'>Relationship Between Chess Opening Knowledge and Player Rating</h3>

@@ -12,6 +12,7 @@ interface BlogPosts {
         slug: string
         title: string
         description: string
+        imageAlt: string
         featuredImage: IGatsbyImageData
       }
     }

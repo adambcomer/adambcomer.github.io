@@ -16,6 +16,7 @@ const SimpleDatabasePage: FC = () => {
               slug
               title
               description
+              imageAlt
               featuredImage {
                 childImageSharp {
                   gatsbyImageData(width: 800)
@@ -65,7 +66,7 @@ const SimpleDatabasePage: FC = () => {
               return (
                 <Link to={node.frontmatter.slug} className='col-span-4' key={i}>
                   <div className='md-surface-2 p-8 rounded-[32px] overflow-hidden h-full hover:md-surface-5'>
-                    {image !== undefined && <GatsbyImage image={image} className='-mt-8 -mx-8 aspect-video' alt='Adam Comer' />}
+                    {image !== undefined && <GatsbyImage image={image} className='-mt-8 -mx-8 aspect-video' alt={node.frontmatter.imageAlt} />}
 
                     <p className='md-body-medium md-color-secondary mt-8'>Article</p>
                     <h3 className='md-headline-medium font-medium line-clamp-2'>{node.frontmatter.title}</h3>

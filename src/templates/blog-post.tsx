@@ -105,7 +105,7 @@ export const pageQuery = graphql`
     }
     image: file(relativePath: { eq: $image }) {
       childImageSharp {
-        gatsbyImageData(width: 1200)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
