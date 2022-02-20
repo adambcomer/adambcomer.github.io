@@ -78,9 +78,12 @@ const IndexPage: FC = () => {
           <p className='m-2 text-center md-headline-small md-color-secondary'>Experience, skills, and expertise</p>
 
           <div className='relative md-surface-3 mt-8 px-6 pt-6 pb-16 md:p-12 rounded-[32px] md:rounded-[64px]'>
-            <h3 className='md-display-medium'>Fullstack Developer</h3>
+            <h3 className='md-display-medium'>Software Developer</h3>
             <div className='grid gap-8 grid-cols-1 lg:grid-cols-2 my-4'>
-              <p className='md-body-large'>I’m a full-stack developer with Frontend, Backend, and DevOps experience. As a Software Developer at Knowtworthy, I work on the Frontend, Backend, and AWS infrastructure. Most of my efforts are focused on building out our Web App and Backend on the MERN stack. Additionally, I manage and maintain our CI/CD system and our Kubernetes cluster on AWS, ensuring that our work is tested and deployed to customers with confidence. Outside of work, I enjoy working with Python and Rust as the basis for my personal projects.</p>
+              <div>
+                <p className='md-body-large'>I’m a full-stack developer with Frontend, Backend, and DevOps experience. As a Software Developer at <OutboundLink href='https://knowtworthy.com/' className='md-link underline hover:md-on-primary-container'>Knowtworthy</OutboundLink>, I work on both the Frontend Web App and Backend API using MongoDB, Koa.js, React, and Node.js (modified MERN stack). Additionally, I take a lead role in designing and maintaining our cloud infrastructure on AWS. This is includes managing our CI/CD system and Kubernetes cluster to ensure that the team’s work is tested and deployed with confidence.</p>
+                <p className='md-body-large mt-4'>Outside of work, I enjoy working with Python and Rust as the basis for my personal projects.</p>
+              </div>
               <div>
                 <p className='md-title-small md-on-surface-variant'>Languages</p>
                 <div className='flex flex-wrap'>
@@ -109,8 +112,11 @@ const IndexPage: FC = () => {
           </div>
 
           <div className='relative md-surface-3 mt-16 mt-8 px-6 pt-6 pb-16 md:p-12 rounded-[32px] md:rounded-[64px]'>
-            <h3 className='md-display-medium'>Co-Founder of Knowtworthy</h3>
-            <p className='md-body-large my-4 lg:w-1/2'>Knowtworthy is a Meetings Productivity tool for business professionals to aid in organizing, formatting, and sharing meeting minutes. My responsibilities at Knowtworthy extend to every layer of stack: Frontend, Backend, and Cloud Infrastructure. Additionally, I work closely with the business side of the company on customer acquisition. Everyday, I work closely with my Co-Founders to take our product ideas and make them into functioning systems.</p>
+            <h3 className='md-display-medium'>Co-founder of Knowtworthy</h3>
+            <div>
+              <p className='md-body-large my-4 lg:w-1/2'><OutboundLink href='https://knowtworthy.com/' className='md-link underline hover:md-on-primary-container'>Knowtworthy</OutboundLink> is a Meetings Productivity tool for business professionals to aid in organizing, formatting, and sharing meeting minutes. My role at the company is technology and engineering focused, putting me in charge of the technology stack. My responsibilities at Knowtworthy extend to every layer of stack: Frontend, Backend, and Cloud Infrastructure.</p>
+              <p className='md-body-large my-4 mt-4 lg:w-1/2'>With my Co-founders, <OutboundLink href='https://alexgordienko.com/' className='md-link underline hover:md-on-primary-container'>Alex</OutboundLink> and <OutboundLink href='http://www.cs.toronto.edu/~sidgupta/' className='md-link underline hover:md-on-primary-container'>Sid</OutboundLink>, we’ve taken Knowtworthy from idea stage at the <OutboundLink href='https://hatchery.engineering.utoronto.ca/' className='md-link underline hover:md-on-primary-container'>University of Toronto’s Entrepreneurship Hatchery</OutboundLink> to releasing our flagship product to paying customers. Throughout this process, we’ve listened to our customers to build a product that helps them save time with the features they want.</p>
+            </div>
 
             <OutboundLink href='https://knowtworthy.com/'><button className='absolute right-8 bottom-6 md:right-16 inline-flex items-center cursor-pointer md-title-large md-color-primary hover:md-color-secondary'>Knowtworthy <i className='material-icons ml-2'>arrow_forward</i></button></OutboundLink>
           </div>

@@ -24,10 +24,10 @@ const ExperiencePage: FC = () => {
         <link rel='canonical' href='https://adambcomer.com/experience/' />
 
         <title>Experience | Adam Comer | Software Developer</title>
-        <meta name='description' content='My work experience and resume. The tools and technologies I’ve used throughout my career.' />
+        <meta name='description' content='My work experience as a fullstack developer. Learn about the roles I’ve had and the skills I’ve gained along the way.' />
 
         <meta property='og:title' content='Experience | Adam Comer | Software Developer' />
-        <meta property='og:description' content='My work experience and resume. The tools and technologies I’ve used throughout my career.' />
+        <meta property='og:description' content='My work experience as a fullstack developer. Learn about the roles I’ve had and the skills I’ve gained along the way.' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://adambcomer.com/experience/' />
         <meta property='og:image' content={`https://adambcomer.com${getSrc(result.image) ?? ''}`} />
@@ -73,18 +73,36 @@ const ExperiencePage: FC = () => {
           <p className='md-body-large mt-2'>Nov 2017 - Present</p>
 
           <h3 className='md-title-small md-on-surface-variant mt-6'>About</h3>
-          <p className='md-body-large mt-2'><OutboundLink href='https://knowtworthy.com/' className='md-link underline hover:md-on-primary-container'>Knowtworthy</OutboundLink> is a meetings communication tool to help organize meetings for teams of all sizes. At Knowtworthy, I designed, built, and currently maintain the entire software stack. On top of that, I built our backend API, web app, and server infrastructure on AWS. I founded the company with my co-founders <OutboundLink href='http://alexgordienko.com/' className='md-link underline hover:md-on-primary-container'>Alex</OutboundLink> and <OutboundLink href='https://sidguptacode.github.io/' className='md-link underline hover:md-on-primary-container'>Sid</OutboundLink>. During the summer after our first year in university, Knowtworthy was part <OutboundLink href='https://hatchery.engineering.utoronto.ca/nest-info-page/' className='md-link underline hover:md-on-primary-container'>UofT’s Hatchery’s NEST Program</OutboundLink> and won second place at the <OutboundLink href='https://news.engineering.utoronto.ca/startups-to-watch-from-hatchery-demo-day-2018/' className='md-link underline hover:md-on-primary-container'>Hatchery’s Demo Day</OutboundLink>, fetching in $10,000 for the company.</p>
+          <p className='md-body-large mt-2'><OutboundLink href='https://knowtworthy.com/' className='md-link underline hover:md-on-primary-container'>Knowtworthy</OutboundLink> is a Meetings Productivity tool for business professionals to aid in organizing, formatting, and sharing meeting minutes. My job at the company is primarily a Full Stack Software Developer. My responsibility are to build and maintain the Web App and Backend API. Additionally, I manage our Kubernetes Cluster on AWS.</p>
+          <p className='md-body-large mt-4'>When I joined the company, my focus was designing and building the Backend API in Node.js, Koa.js, and MongoDB and establishing infrastructure on AWS. Today, my responsibilities have expanded to the Frontend, other Backend Services, and the CI/CD systems. On the Frontend, I redesigned the Web App from scratch using our new design language, Typescript, and React Hooks. On top of the Backend API in Node.js, I authored our audio streaming server for realtime Speech-to-Text with Go, a design choice we made to improve the performance of our services. Lastly, I created our CI/CD system on Gitlab CI/CD to automate testing and quickly roll out updates to users.</p>
+          <p className='md-body-large mt-4'>My contributions on the AWS infrastructure and Kubernetes cluster are innumerable, but I will list a few notable ones. I setup the Kubernetes cluster on AWS to host all of our services, including but not limited to: the Backend API, Audio Streaming Server, and Audio Processor Workers. Additionally, this includes our staging environment for QA testing before releases. Using AWS CloudFront and AWS Load Balancers, I created a layered solution to distribute our Web App globally with minimal latency and failovers for our backend services. Finally, I setup Elasticsearch to offer a search service to our users and collect logs from our backend servers.</p>
 
           <h3 className='md-title-small md-on-surface-variant mt-6'>Tools and Technologies</h3>
           <div className='flex flex-wrap mt-2'>
             <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Javascript</span>
-            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>React</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Typescript</span>
             <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>HTML</span>
             <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>CSS</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>React</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Websockets</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Gatsby</span>
             <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Node.js</span>
-            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Python</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Go</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Docker</span>
             <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Kubernetes</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Elasticsearch</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>MongoDB</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>AWS EC2</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>AWS EKS</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>AWS CloudFront</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>AWS S3</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>AWS SQS</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>AWS OpenSearch</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>AWS X-Ray</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>AWS Cloudwatch</span>
             <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Google Speech-to-Text</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Git</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Gitlab CI/CD</span>
           </div>
         </div>
 
@@ -99,7 +117,7 @@ const ExperiencePage: FC = () => {
 
           <h3 className='md-title-small md-on-surface-variant mt-6'>About</h3>
           <p className='md-body-large mt-2'>During my summer internship at <OutboundLink href='https://www.bmo.com/' className='md-link underline hover:md-on-primary-container'>BMO</OutboundLink>, I was tasked with designing and building the web frontend for a new Business Intelligence(BI) tool at the Bank. The tool was targeted at non-technical employees to help them draw up reports and better understand their data. Using the <OutboundLink href='https://www.carbondesignsystem.com/' className='md-link underline hover:md-on-primary-container'>Carbon Design System</OutboundLink>, I built the UI prototypes and pitched the design to management. Additionally, I built the web frontend with HTML, CSS, and jQuery on Microsoft’s C# MVC.</p>
-          <p className='md-body-large mt-2'>When I wasn’t working on the BI tool, I helped the Business Associates automate tedious tasks with Python scripts. My most impactful effort was a <OutboundLink href='https://en.wikipedia.org/wiki/Regression_testing' className='md-link underline hover:md-on-primary-container'>regression analysis</OutboundLink> tool to verify that new code changes to a legacy system were backwards compatible.</p>
+          <p className='md-body-large mt-4'>When I wasn’t working on the BI tool, I helped the Business Associates automate tedious tasks with Python scripts. My most impactful effort was a <OutboundLink href='https://en.wikipedia.org/wiki/Regression_testing' className='md-link underline hover:md-on-primary-container'>regression analysis</OutboundLink> tool to verify that new code changes to a legacy system were backwards compatible.</p>
 
           <h3 className='md-title-small md-on-surface-variant mt-6'>Tools and Technologies</h3>
           <div className='flex flex-wrap mt-2'>
@@ -154,8 +172,8 @@ const ExperiencePage: FC = () => {
             <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Android</span>
             <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>Swift</span>
             <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>iOS</span>
-            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>App Engine</span>
-            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>GCP</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>GCP App Engine</span>
+            <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>SQL</span>
             <span className='md-label-large !text-white md-bg-primary px-3 py-1.5 rounded-lg mr-4 mt-2'>MySQL</span>
           </div>
         </div>
