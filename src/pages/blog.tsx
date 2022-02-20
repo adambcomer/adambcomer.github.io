@@ -61,7 +61,7 @@ const BlogPage: FC = () => {
           <h2 className='text-center md-display-small'>Pages</h2>
 
           <div className='grid gap-6 grid-cols-1 lg:grid-cols-12 mt-8'>
-            <Link to='/blog/simple-database' className='col-span-4'>
+            <Link to='/blog/simple-database/' className='col-span-4'>
               <div className='md-surface-2 p-8 rounded-[32px] overflow-hidden h-full hover:md-surface-5'>
                 <p className='md-body-medium md-color-secondary'>Page</p>
                 <h3 className='md-headline-medium font-medium line-clamp-2'>Build a Simple Database</h3>
