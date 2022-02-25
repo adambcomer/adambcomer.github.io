@@ -6,6 +6,9 @@ import Footer from '../components/Footer/index'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { Helmet } from 'react-helmet'
 
+// require('@fontsource/noto-sans-sc/400.css')
+// require('@fontsource/noto-sans-sc/700.css')
+
 const IndexPage: FC = () => {
   return (
     <>

@@ -12,9 +12,6 @@ import '@fontsource/roboto-mono/latin-600.css'
 
 import '@fontsource/material-icons/index.css'
 
-import '@fontsource/noto-sans-sc/400.css'
-import '@fontsource/noto-sans-sc/700.css'
-
 import { getCLS, getFID, getLCP } from 'web-vitals'
 
 function sendToGoogleAnalytics ({ name, delta, value, id }) {
