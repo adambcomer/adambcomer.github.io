@@ -6,13 +6,13 @@ image: "blog/simple-database-write-ahead-log-cover.jpg"
 featuredImage: "../../../../images/blog/simple-database-write-ahead-log-cover.jpg"
 imageAlt: "Pile of wood logs"
 author: "Adam Comer"
-date: 2021-06-09T02:28:03+0000
+date: 2022-04-03T16:37:07+0000
 postDate: 2020-06-19T04:55:44+0000
 ---
 
 Last article, [we created our MemTable for in-memory record storage](/blog/simple-database/memtable/). To recover our data after the database restarts, we need our first layer of on-disk persistence, the WAL. Looking at RocksDB, we will discuss the design and structure of its WAL. After analyzing the standard, we will design a specification for our WAL. Furthermore, we will debate the tradeoffs of Buffered vs Unbuffered I/O in the context of data integrity and disk speed. Lastly, we will build our variant of the WAL in Rust.
 
-## What is a Write Ahead Log(WAL)?
+## What Is a Write Ahead Log(WAL)?
 When a record is written to our database, it is stored in two palaces: the MemTable and the WAL. The WAL acts as an on-disk backup for the MemTable by keeping a running record of all of the database operations. In the event of a restart, the MemTable can be fully recovered by replaying the operations in the WAL. When a MemTable reaches capacity and is transformed into a SSTable, the WAL is wiped from the disk to make room for a new WAL.
 
 As mentioned in [part two](/blog/simple-database/memtable/), the key insight of a LSM-Tree database is that sequential I/O is faster than random I/O, and databases should match this reality. The WAL uses exclusively sequential I/O to store data on disk; but, there are drawbacks to not using random I/O. The WAL pays for its improved write speed with lost disk space. Every time a record is updated, old versions of the record are kept, eating away at disk space. This is known as [Space Amplification](http://smalldatum.blogspot.com/2015/11/read-write-space-amplification-pick-2_23.html) in database design theory. Space Amplification is a multiple of how much storage space is used for a given dataset size. For example, a 1GB dataset with a 2X Space Amplification factor would result in 2GB of disk usage. Although not important for our project, it is something that database designers are cognizant of and optimize for.
@@ -90,10 +90,10 @@ Although there is a lot of overhead of reading and deserializing, we push most o
 
 Note, the `BufReader` is a Rust abstraction and is not the same as the OS’s Buffered I/O. This is an important distinction because an application can use an Unbuffered I/O solution in the code but the OS will still buffer the writes, if not properly configured. By using both OS buffering and Rust buffering, the two layers of buffering maximize the read performance of our WAL.
 
-### WALIterator Impl
+### WALIterator Methods
 In order to be classified as an iterator, the `WALIterator` needs to implement the `Iterator` trait in addition to its own methods.
 
-#### new()
+#### Create a New WALIterator
 Starting with the `WALIterator`’s custom method, we need a basic constructor method. It will open a file in read-only mode for the `BufReader`. 
 
 ```rust
@@ -105,7 +105,7 @@ pub fn new(path: PathBuf) -> io::Result<WALIterator> {
 }
 ```
 
-#### next()
+#### Read Entries From the WAL One-By-One
 To implement the `Iterator` trait, a `Item` type and `rust›next()` method need to be defined. The Item type of the iterator will be the WALEntry that was defined before. The `rust›next()` method will deserialize the next entry from a WAL file with the format from our specification. 
 
 ```rust
@@ -182,9 +182,9 @@ pub struct WAL {
 }
 ```
 
-### WAL Impl
+### WAL Methods
 	
-#### new()
+#### Create a New WAL
 Like always, a constructor is necessary to instantiate a new `WAL`. Given a directory, a new WAL file is created with the current time in microseconds. In the case of multiple WAL files in the same directory, the timestamps allow the recovery process to apply the operations in order.
 
 ```rust
@@ -203,7 +203,7 @@ pub fn new(dir: &Path) -> io::Result<WAL> {
 }
 ```
 
-#### from_path()
+#### Load an Existing WAL From a File Path
 If a WAL file already exists, we want to instantiate it from the file’s path. 
 
 ```rust
@@ -219,7 +219,7 @@ pub fn from_path(path: &Path) -> io::Result<WAL> {
 }
 ```
 
-#### set()
+#### Record a Set Operation in the WAL
 When a new Key-Value pair is written to the database, it is first written to the `MemTable` and `WAL`. Our set method takes in the record, serializes the data, and appends it to the `WAL`. This function uses the layout defined in the design above.
 
 ```rust
@@ -238,7 +238,7 @@ pub fn set(&mut self, key: &[u8], value: &[u8], timestamp: u128) -> io::Result<(
 
 Here we can see the value of the `BufWriter`. The metadata, such as the tombstones and key-value lengths, is only a few bytes and warrants batching write operations.
 
-#### delete()
+#### Record a Delete Operation in the WAL
 Adding a delete operation is similar to the set method, just without the value.
 
 ```rust
@@ -255,7 +255,7 @@ pub fn delete(&mut self, key: &[u8], timestamp: u128) -> io::Result<()> {
 }
 ```
 
-#### flush()
+#### Write the Buffered Changes to Disk
 After we set or delete a record, the contents of the operation haven’t been passed to the OS to write to disk. The flush method takes the modified buffer in the `BufWriter` and stores it. Although we could call this method at the end of set and delete, separating these concerns gives the database the ability to bulk insert records without flushing to disk after each operation. 
 
 ```rust
@@ -271,7 +271,7 @@ pub fn flush(&mut self) -> io::Result<()> {
 
 Luckily, the `BufWriter` knows this is a common design pattern and has a built-in flush method.
 
-#### load\_from\_dir()
+#### Load and Merge the WALs in a Directory
 In most of my coding projects, I include a [utilities file for all miscellaneous functions](https://github.com/adambcomer/database-engine/blob/master/src/utils.rs) that are used repeatedly throughout the application. One common task our database does is searching for files with an extension. Given a folder, this function will do just that. 
 
 ```rust

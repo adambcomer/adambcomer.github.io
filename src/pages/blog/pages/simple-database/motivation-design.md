@@ -6,7 +6,7 @@ image: "blog/simple-database-motivation-design-cover.jpg"
 featuredImage: "../../../../images/blog/simple-database-motivation-design-cover.jpg"
 imageAlt: "Servers in a data center"
 author: "Adam Comer"
-date: 2020-09-20T23:46:56+0000
+date: 2022-04-03T16:37:07+0000
 postDate: 2020-05-28T23:34:47+0000
 ---
 
@@ -19,7 +19,7 @@ The first question we must always ask ourselves is _“Why?”_. For me, this pr
 
 While learning how to build my own database, I found two types of resources: overly abstract blogs and very specific documentation. The blogs were easy to understand but lacked in substance and detail. On the other hand, the documentation had the specificity I was looking for but was narrowly applicable to a single database. My goal is to hit somewhere in the middle. **I want to explain the broad ideas behind database design and build a concrete implementation to exhibit how the two are connected**. This resource is aimed at helping someone with a computer science background learn more about database storage engines.
 
-### Why use Rust?
+### Why Use Rust?
 I want to learn [Rust](https://www.rust-lang.org/), and there is no better way to learn a new programming language than by starting an ambitious project. I’ve dabbled in Rust in the past but never committed to building anything beyond a few toy programs. This project is my justification for going all-in on the language and learning more about it in the process.
 
 As a systems language, building complex low-level systems is Rust’s bread and butter. Latency sensitive applications — especially databases — need to control what resources are used and how they are freed. With no garbage collector, Rust provides the control and performance a database needs. Although we aren’t looking to break any speed records, having a sense of how resources are managed gives us a better understanding of the challenges database designers face.
@@ -40,7 +40,7 @@ LSM-Trees are commonly used in document databases and big-data stores, like [Ela
 
 We are going to use a LSM-Tree as the model of our database because the data flow is easier to understand. Additionally, the Sorted Runs are stored as immutable files that only change during the Compaction process, limiting the complexity of disk operations. Using a B-Tree involves conceptualizing an ever-changing data-structure and maintaining a matching model on disk. If you want to learn about [how to make a B-Tree based database, cstack](https://cstack.github.io/db_tutorial/) has a great series explaining how to build a SQLite clone. It is very well done, and I highly recommend it.
 
-### Why is Our Database Relevant?
+### Why Is Our Database Relevant?
 Our database will be a LSM-Tree based Key-Value Store like RocksDB. RocksDB is used in internal Facebook applications and in other databases as the storage layer. LSM-Tree based Key-Value Stores are used in many different types of databases. For example, [CockroachDB](https://www.cockroachlabs.com/blog/cockroachdb-on-rocksd/) and [YugaByte](https://blog.yugabyte.com/how-we-built-a-high-performance-document-store-on-rocksdb/), relational SQL databases, use RocksDB to store and query the database records. [Dgraph](https://dgraph.io/blog/post/badger-over-rocksdb-in-dgraph/), a graph database, uses [BadgerDB](https://github.com/dgraph-io/badger)(another Key-Value store) for records and connections. [ElasticSearch](https://www.elastic.co/elasticsearch/), a document database, used [Lucene](https://lucene.apache.org/)(LSM-Tree based storage) for text records. Our database mirrors RocksDB minus the unnecessary extra features that make it especially fast. But, the principles defined in this series are directly applicable to other databases that you may know and love.
 
 ## Database Design
@@ -64,16 +64,24 @@ When a MemTable is flushed to disk, we take that Sorted Run and store it on disk
 ### API
 The database’s API consists of four methods: Get, Set, Delete, and Scan.
 
-#### Get(*key*)
+#### Get a Record From the Database
+Method: `get(byte[] key) -> byte[]`
+
 The Get method searches for a record in the database, either returning that record or None. First, this method queries the MemTable for the record. Second, if no result is found in the MemTable, SSTables are queried from the lowest to the highest level. When a record is found, we return the record at the lowest level, because the records at higher levels are guaranteed to be older.
 
-#### Set(*key*, *value*)
+#### Set a Record in the Database
+Method: `set(byte[] key, byte[] value) -> bool`
+
 The Set method sets a key-value pair in the database. Initially, this record is inserted into the MemTable and WAL. When the MemTable reaches capacity, a new SSTable is created, and the MemTable and WAL are cleared. As more Tables are created, compaction merges SSTables from lower to higher levels, cleaning out old records. 
 
-#### Delete(*key*)
+#### Delete a Record From the Database
+Method: `delete(byte[] key) -> bool`
+
 The Delete method removes a record from the database by storing a boolean that represents that this record was deleted, called a Tombstone. This method is similar to the Set method but without the value. You may ask: Why can’t we remove this record from the database instead of writing more data? We add a Tombstone because cleaning out a record from the database would involve rewriting all of the SSTables that contain that key. This would be too time consuming for database clients that expect a response in a few milliseconds. To make deletes work in reasonable times, we sacrifice a little disk space with a Tombstone. With Tombstones, our search must be subsequently modified. Our new Get will stop when a Tombstone is reached and return None, since a tombstone means that this record was most recently deleted.
 
-#### Scan(*low_key*, *high_key*)
+#### Iterate Over the Records in a Key Range in the Database
+Method: `scan(byte[] high_key, byte[] low_key) -> RecordIterator`
+
 The Scan method collects all of the records between the *low_key* and *high_key*, inclusive. An Iterator is created to search through all of the SSTables and return the records within the range of the two keys. This is done by finding the *low_key* (or next highest value) in each SSTable and reading records one-by-one until the next record is greater than the *high_key*.
 
 Scans are useful if we want to aggregate groups of records. For example, in a weather app, the keys for the temperature records could be in the format of `{station #}/{timestamp}`. To get all of the records for a given time period, we scan on a station number with minimum and maximum timestamp keys. The results would allow us to graph the temperature of a weather station. Although useful, scans are expensive, because they require reading from every SSTable. Scans are best suited to short ranges with few records.

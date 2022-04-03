@@ -6,13 +6,13 @@ image: "blog/simple-database-memtable-cover.jpg"
 featuredImage: "../../../../images/blog/simple-database-memtable-cover.jpg"
 imageAlt: "Empty glass elevator shaft"
 author: "Adam Comer"
-date:	2021-01-24T19:45:04+0000
+date:	2022-04-03T16:37:07+0000
 postDate: 2020-06-12T00:18:28+0000
 ---
 
 Now that we have finished [outlining our motivations and designs of our database](/blog/simple-database/motivation-design/), we will start by building our first component, the MemTable. The MemTable is the first layer in our database and where records are immediately stored. We will discuss the design choices RocksDB made for their database and what benefits came with those choices. Additionally, we will look at the benefits and drawbacks of our MemTable. Finally, we will implement our MemTable in Rust.
 
-## What is the MemTable?
+## What Is the Memtable?
 The MemTable (aka. Memory Table) is the in-memory cache of the latest set of record writes applied to the database. Simply, it is a container, whether that be a [Vector](https://en.wikipedia.org/wiki/Dynamic_array), [Linked-List](https://en.wikipedia.org/wiki/Linked_list), or any other container, that holds the written records sorted, in total order, by key. By sorting the records, lookups and scans in the MemTable can be done efficiently using a data structure that supports a `O(Log N)` access pattern.
 
 At their core, LSM-Tree databases take a random I/O problem in a B-Tree model and turn it into a sequential I/O problem, which is much faster. This is achieved by batching the writes for updated records. The MemTable does this working in coordination with two methods: the Write Ahead Log(WAL) and the Sorted String Table(SSTable). First, the WAL holds a replica of the MemTable so we can be assured that our data is intact in the event of a restart. Instead of storing the MemTable byte-for-byte, the WAL stores a running log of the operations applied to the database, hence its name. By replaying the operations stored in the WAL, the MemTable can be recovered. Second, the SSTables are created to store MemTables once they have reached capacity. Again, this writes all of the records to disk in one go, eliminating the need for random disk writes.
@@ -71,10 +71,10 @@ pub struct MemTableEntry {
 
 The Key and Value don’t need much explanation. The Timestamp is the time this write occurred in microseconds and is used to order writes to the same key when cleaning our old data in SSTables. In order to support fast deletes, we have Tombstones for deleted records. With Tombstones, a value isn’t necessary for these `MemTableEntry`s; thus, we can make it optional.
 
-### MemTable Impl 
-With the structs out of the way,  we can get to building the methods, the functionality, of our MemTable.  
+### MemTable Methods 
+With the structs out of the way, we can get to building the methods, the functionality, of our MemTable.  
 
-#### new()
+#### Create a New Memtable
 First, we need a way to create new MemTables.
 
 ```rust
@@ -87,7 +87,7 @@ pub fn new() -> MemTable {
 }
 ```
 
-#### get_index()
+#### Find the Index of a MemTableEntry by Key
 When we access the MemTable for gets, sets, and deletes, we need to run a Binary Search over the entries of the MemTable. Rust is nice enough to include a Binary Search implementation in the Vec standard library. This function is necessary to explicitly find a record in question or find an acceptable index a record can be inserted at while maintaining the total order of the records in the MemTable. 
 
 ```rust
@@ -104,7 +104,7 @@ fn get_index(&self, key: &[u8]) -> Result<usize, usize> {
 
 This helper function reduces the amount of code maintenance necessary if we want to change the sort field. 
 
-#### set()
+#### Set a Key-Value Pair in the MemTable
 To set a Key-Value pair in the database, we need to find the entry in the MemTable with the same key to overwrite it or find the position where we can insert a new entry. Here, we can see how our helper function, `rust›get_index(&self, key: &[u8])`, simplifies this process.
 
 ```rust
@@ -139,7 +139,7 @@ pub fn set(&mut self, key: &[u8], value: &[u8], timestamp: u128) {
 
 Using get_index, we can either get an `Ok` or `Err` for the records existence in the Vector. If the `Result` is `Ok`, we overwrite the entry in the MemTable and update the total size of the MemTable. If the `Result` is `Err`, we insert the entry at the index returned and add the size of the entry the total size of the MemTable.
 
-#### delete()
+#### Delete a Key-Value Pair From the MemTable
 Deleting a record from our database is very similar to setting a Key-Value pair, just without the Value. Even if the value doesn’t exist in the MemTable we have to insert the Tombstone record because this record may exist in the SSTables. Keeping Tombstones allows the database to clean up deleted records during Compaction.
 
 ```rust
@@ -171,7 +171,7 @@ pub fn delete(&mut self, key: &[u8], timestamp: u128) {
 
 The only differences are no Value and slightly less size update logic. 
 
-#### get()
+#### Fetch a MemTableEntry by Key
 To retrieve an entry, we search the Vector using Binary Search. 
 
 ```rust
