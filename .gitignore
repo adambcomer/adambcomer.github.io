@@ -5,3 +5,5 @@
 /.vscode
 
 .DS_store
+# Local Netlify folder
+.netlify

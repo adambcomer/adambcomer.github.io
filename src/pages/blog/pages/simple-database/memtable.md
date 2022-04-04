@@ -1,12 +1,12 @@
 ---
 slug: "/blog/simple-database/memtable/"
 title: "Build a Database Pt. 2: MemTable"
-description: "Build the first component of an LSM-Tree database, the MemTable. We look at how RocksDB designed their MemTable and build our own."
+description: "Build the first component of an LSM-Tree database, the MemTable. We look at how RocksDB designed their MemTable and build our own for our database engine."
 image: "blog/simple-database-memtable-cover.jpg"
 featuredImage: "../../../../images/blog/simple-database-memtable-cover.jpg"
 imageAlt: "Empty glass elevator shaft"
 author: "Adam Comer"
-date:	2022-04-03T16:37:07+0000
+date:	2022-04-04T19:21:04+0000
 postDate: 2020-06-12T00:18:28+0000
 ---
 

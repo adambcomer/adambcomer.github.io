@@ -1,12 +1,12 @@
 ---
 slug: "/blog/simple-database/motivation-design/"
 title: "Build a Database Pt. 1: Motivation & Design"
-description: "Learn the motivations and designs behind building a simple LSM-Tree based Key-Value Store style database, similar to RocksDB."
+description: "Learn the motivations and designs behind building a simple LSM-Tree based Key-Value Store style database engine, similar to RocksDB."
 image: "blog/simple-database-motivation-design-cover.jpg"
 featuredImage: "../../../../images/blog/simple-database-motivation-design-cover.jpg"
 imageAlt: "Servers in a data center"
 author: "Adam Comer"
-date: 2022-04-03T16:37:07+0000
+date: 2022-04-04T19:21:04+0000
 postDate: 2020-05-28T23:34:47+0000
 ---
 
