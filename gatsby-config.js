@@ -73,7 +73,7 @@ module.exports = {
         background_color: '#161616',
         theme_color: '#0062ff',
         display: 'standalone',
-        icon: 'src/images/portrait.png'
+        icon: 'src/images/adam-comer-portrait.jpg'
       }
     }
   ]
