@@ -10,7 +10,7 @@ import { PageQuery } from '../types/page'
 const ProjectsPage: FC = () => {
   const result: PageQuery = useStaticQuery(graphql`
     {
-      image: file(relativePath: { eq: "portrait.png" }) {
+      image: file(relativePath: { eq: "adam-comer-portrait.jpg" }) {
         childImageSharp {
           gatsbyImageData(width: 720)
         }

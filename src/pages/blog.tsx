@@ -26,7 +26,7 @@ const BlogPage: FC = () => {
           }
         }
       }
-      image: file(relativePath: { eq: "portrait.png" }) {
+      image: file(relativePath: { eq: "adam-comer-portrait.jpg" }) {
         childImageSharp {
           gatsbyImageData(width: 720)
         }
