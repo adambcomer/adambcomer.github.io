@@ -40,7 +40,11 @@ const IndexPage: FC = () => {
                 "https://twitter.com/adambcomer",
                 "https://github.com/adambcomer",
                 "https://gitlab.com/adambcomer",
-                "https://knowtworthy.com/blog/author/adambcomer/"
+                "https://stackoverflow.com/users/17834001/adambcomer",
+                "https://knowtworthy.com/blog/author/adambcomer/",
+                "https://www.chess.ca/en/ratings/p/?id=176776",
+                "https://www.chess.com/member/adambcomer",
+                "https://lichess.org/@/adambcomer"
             ]
           }
         `}
