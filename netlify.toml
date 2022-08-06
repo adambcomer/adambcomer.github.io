@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/lin-tree-solver/*"
-  to = "https://eager-wescoff-8fd2b7.netlify.app/:splat"
+  to = "https://statuesque-taiyaki-c2d264.netlify.app/:splat"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
