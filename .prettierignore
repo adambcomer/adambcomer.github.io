@@ -1,0 +1,8 @@
+public
+.cache
+
+*.md
+*.html
+*.json
+*.yml
+*.yaml

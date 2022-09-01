@@ -1,4 +1,3 @@
-
 #blog-content h2 {
   font-style: normal;
   font-weight: normal;
@@ -53,13 +52,13 @@
 }
 
 #blog-content ol {
-	margin-top: 16px;
-	list-style-type: decimal;
-	list-style-position: inside;
+  margin-top: 16px;
+  list-style-type: decimal;
+  list-style-position: inside;
 }
 
-#blog-content pre {  
-  font-family: "Roboto Mono" !important;
+#blog-content pre {
+  font-family: 'Roboto Mono' !important;
   margin-top: 24px;
   padding: 16px 32px;
   background: var(--md-light-surface1);
@@ -67,11 +66,11 @@
   border-radius: 16px;
 }
 
-#blog-content code[class*="language-"] {
-  font-family: "Roboto Mono" !important;
+#blog-content code[class*='language-'] {
+  font-family: 'Roboto Mono' !important;
 }
 
-#blog-content :not(pre) > code[class*="language-"] {
+#blog-content :not(pre) > code[class*='language-'] {
   background: var(--md-light-surface1);
   border-radius: 6px;
   padding: 0px 4px;

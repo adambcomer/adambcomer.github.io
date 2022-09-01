@@ -6,7 +6,10 @@ const NotFoundPage: FC = () => {
     <main>
       <title>404 Not found</title>
       <h1>Page not found</h1>
-      <Link to='/' className='hover:underline'>Go home</Link>.
+      <Link to='/' className='hover:underline'>
+        Go home
+      </Link>
+      .
     </main>
   )
 }

@@ -2,34 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  --md-light-on-background: #1B1B1E;
+  --md-light-on-background: #1b1b1e;
 
-  --md-light-surface: #FDFBFF;
-  --md-light-surface1: linear-gradient(0deg, rgba(0, 86, 210, 0.05), rgba(0, 86, 210, 0.05)), #FDFBFF;
-  --md-light-surface2: linear-gradient(0deg, rgba(0, 86, 210, 0.08), rgba(0, 86, 210, 0.08)), #FDFBFF;
-  --md-light-surface3: linear-gradient(0deg, rgba(0, 86, 210, 0.11), rgba(0, 86, 210, 0.11)), #FDFBFF;
-  --md-light-surface4: linear-gradient(0deg, rgba(0, 86, 210, 0.12), rgba(0, 86, 210, 0.12)), #FDFBFF;
-  --md-light-surface5: linear-gradient(0deg, rgba(0, 86, 210, 0.14), rgba(0, 86, 210, 0.14)), #FDFBFF;
+  --md-light-surface: #fdfbff;
+  --md-light-surface1: linear-gradient(
+      0deg,
+      rgba(0, 86, 210, 0.05),
+      rgba(0, 86, 210, 0.05)
+    ),
+    #fdfbff;
+  --md-light-surface2: linear-gradient(
+      0deg,
+      rgba(0, 86, 210, 0.08),
+      rgba(0, 86, 210, 0.08)
+    ),
+    #fdfbff;
+  --md-light-surface3: linear-gradient(
+      0deg,
+      rgba(0, 86, 210, 0.11),
+      rgba(0, 86, 210, 0.11)
+    ),
+    #fdfbff;
+  --md-light-surface4: linear-gradient(
+      0deg,
+      rgba(0, 86, 210, 0.12),
+      rgba(0, 86, 210, 0.12)
+    ),
+    #fdfbff;
+  --md-light-surface5: linear-gradient(
+      0deg,
+      rgba(0, 86, 210, 0.14),
+      rgba(0, 86, 210, 0.14)
+    ),
+    #fdfbff;
 
-  --md-light-primary-container: #D9E2FF;
-  --md-light-secondary-container: #DCE2FA;
+  --md-light-primary-container: #d9e2ff;
+  --md-light-secondary-container: #dce2fa;
 
   --md-light-on-primary-container: #001848;
-  --md-light-on-surface-variant: #44464E;
+  --md-light-on-surface-variant: #44464e;
 
-  --md-light-primary-color: #0056D2;
-  --md-light-secondary-color: #585E71;
-  --md-light-outline-color: #8F909A;
+  --md-light-primary-color: #0056d2;
+  --md-light-secondary-color: #585e71;
+  --md-light-outline-color: #8f909a;
 }
 
-
-html, body {
+html,
+body {
   background: var(--md-light-surface);
 }
 
-html, body, h1, h2, h3, h4, h5, h6, p, span {
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
   color: var(--md-light-on-background);
 }
 
@@ -50,7 +83,6 @@ html, body, h1, h2, h3, h4, h5, h6, p, span {
 }
 
 @layer utilities {
-
   .md-color-primary {
     color: var(--md-light-primary-color) !important;
   }
@@ -156,7 +188,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, span {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;  
+    line-height: 24px;
     letter-spacing: 0.1px;
     color: var(--md-light-on-background);
   }
@@ -197,12 +229,11 @@ html, body, h1, h2, h3, h4, h5, h6, p, span {
     color: var(--md-light-on-background);
   }
 
-
   .md-link {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;  
+    line-height: 24px;
     letter-spacing: 0.1px;
     color: var(--md-light-primary-color);
   }

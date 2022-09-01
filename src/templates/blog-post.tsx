@@ -19,24 +19,45 @@ const BlogPostTemplate: FC<BlogPostTemplateProps> = ({ data }) => {
   return (
     <>
       <Helmet htmlAttributes={{ lang: 'en' }}>
-        <link rel='canonical' href={`https://adambcomer.com${data.markdownRemark.frontmatter.slug}`} />
+        <link
+          rel='canonical'
+          href={`https://adambcomer.com${data.markdownRemark.frontmatter.slug}`}
+        />
 
         <title>{data.markdownRemark.frontmatter.title} | Adam Comer</title>
-        <meta name='description' content={data.markdownRemark.frontmatter.description} />
+        <meta
+          name='description'
+          content={data.markdownRemark.frontmatter.description}
+        />
 
-        <meta property='og:title' content={`${data.markdownRemark.frontmatter.title} | Adam Comer`} />
-        <meta property='og:description' content={data.markdownRemark.frontmatter.description} />
+        <meta
+          property='og:title'
+          content={`${data.markdownRemark.frontmatter.title} | Adam Comer`}
+        />
+        <meta
+          property='og:description'
+          content={data.markdownRemark.frontmatter.description}
+        />
         <meta property='og:type' content='website' />
-        <meta property='og:url' content={`https://adambcomer.com${data.markdownRemark.frontmatter.slug}`} />
-        <meta property='og:image' content={`https://adambcomer.com${getSrc(data.image) ?? ''}`} />
+        <meta
+          property='og:url'
+          content={`https://adambcomer.com${data.markdownRemark.frontmatter.slug}`}
+        />
+        <meta
+          property='og:image'
+          content={`https://adambcomer.com${getSrc(data.image) ?? ''}`}
+        />
         <meta property='og:image:width' content='1920' />
         <meta property='og:image:height' content='1080' />
 
-        <script type='application/ld+json'>{`
+        <script type='application/ld+json'>
+          {`
         {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "mainEntityOfPage": "https://adambcomer.com${data.markdownRemark.frontmatter.slug}",
+            "mainEntityOfPage": "https://adambcomer.com${
+              data.markdownRemark.frontmatter.slug
+            }",
             "headline": "${data.markdownRemark.frontmatter.title}",
             "image": [
                 "https://adambcomer.com${getSrc(data.image) ?? ''}"
@@ -79,12 +100,28 @@ const BlogPostTemplate: FC<BlogPostTemplateProps> = ({ data }) => {
       </Helmet>
       <Navbar />
       <main className='px-6 max-w-screen-lg mx-auto'>
-        <h1 className='md-display-large mt-32'>{data.markdownRemark.frontmatter.title}</h1>
-        <p className='md-headline-small mt-16'>{data.markdownRemark.frontmatter.author}</p>
-        <p className='md-headline-small !font-light'>Updated {data.markdownRemark.frontmatter.formattedDate}</p>
+        <h1 className='md-display-large mt-32'>
+          {data.markdownRemark.frontmatter.title}
+        </h1>
+        <p className='md-headline-small mt-16'>
+          {data.markdownRemark.frontmatter.author}
+        </p>
+        <p className='md-headline-small !font-light'>
+          Updated {data.markdownRemark.frontmatter.formattedDate}
+        </p>
 
-        {image !== undefined && <GatsbyImage image={image} alt={data.markdownRemark.frontmatter.imageAlt} className='mt-16 rounded-[32px]' />}
-        <div id='blog-content' className='my-16' dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        {image !== undefined && (
+          <GatsbyImage
+            image={image}
+            alt={data.markdownRemark.frontmatter.imageAlt}
+            className='mt-16 rounded-[32px]'
+          />
+        )}
+        <div
+          id='blog-content'
+          className='my-16'
+          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+        />
       </main>
       <Footer />
     </>
@@ -92,7 +129,7 @@ const BlogPostTemplate: FC<BlogPostTemplateProps> = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query($slug: String!, $image: String!) {
+  query ($slug: String!, $image: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {

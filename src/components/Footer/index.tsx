@@ -10,10 +10,10 @@ interface FooterProps {
 
 const Footer: FC<FooterProps> = ({ lang = 'en' }) => {
   if (lang === 'zh-cn') {
-    return (<FooterZHCN />)
+    return <FooterZHCN />
   }
 
-  return (<FooterEN />)
+  return <FooterEN />
 }
 
 export default Footer

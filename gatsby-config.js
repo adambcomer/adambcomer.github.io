@@ -29,9 +29,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingIds: [
-          'G-NPWF2XR6L3'
-        ]
+        trackingIds: ['G-NPWF2XR6L3']
       }
     },
     'gatsby-plugin-sitemap',
@@ -67,8 +65,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Adam Comer\'s Website',
-        short_name: 'Adam Comer\'s Website',
+        name: "Adam Comer's Website",
+        short_name: "Adam Comer's Website",
         start_url: '/',
         background_color: '#161616',
         theme_color: '#0062ff',

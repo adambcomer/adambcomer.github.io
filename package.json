@@ -7,7 +7,11 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint:check": "eslint .",
+    "lint": "eslint --fix .",
+    "format:check": "prettier --check .",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -52,6 +56,8 @@
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.5",
-    "ts-standard": "^11.0.0"
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "prettier": "^2.7.1"
   }
 }

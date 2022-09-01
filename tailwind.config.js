@@ -1,7 +1,5 @@
 module.exports = {
-  content: [
-    './src/**/*.{js,jsx,ts,tsx}'
-  ],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
       sans: ['Roboto', 'Arial', 'Helvetica', 'sans-serif'],
@@ -10,7 +8,5 @@ module.exports = {
     }
   },
   variants: {},
-  plugins: [
-    require('@tailwindcss/line-clamp')
-  ]
+  plugins: [require('@tailwindcss/line-clamp')]
 }

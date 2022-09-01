@@ -14,7 +14,7 @@ import '@fontsource/material-icons/index.css'
 
 import { getCLS, getFID, getLCP } from 'web-vitals'
 
-function sendToGoogleAnalytics ({ name, delta, value, id }) {
+function sendToGoogleAnalytics({ name, delta, value, id }) {
   console.log(`${name} matching ID ${id} changed by ${delta}`)
 
   // Assumes the global `gtag()` function exists, see:
