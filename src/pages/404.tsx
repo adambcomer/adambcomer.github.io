@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 
-const NotFoundPage: FC = () => {
+const NotFoundPage = (): JSX.Element => {
   return (
     <main>
       <title>404 Not found</title>

@@ -1,77 +1,14 @@
-import React, { FC } from 'react'
+import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
-import { Helmet } from 'react-helmet'
 import { graphql, useStaticQuery } from 'gatsby'
 import { getSrc } from 'gatsby-plugin-image'
 import { PageQuery } from '../types/page'
 
-const ExperiencePage: FC = () => {
-  const result: PageQuery = useStaticQuery(graphql`
-    {
-      image: file(relativePath: { eq: "adam-comer-portrait.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(width: 720)
-        }
-      }
-    }
-  `)
-
+const ExperiencePage = (): JSX.Element => {
   return (
     <>
-      <Helmet htmlAttributes={{ lang: 'en' }}>
-        <link rel='canonical' href='https://adambcomer.com/experience/' />
-
-        <title>Experience | Adam Comer | Software Developer</title>
-        <meta
-          name='description'
-          content='My work experience as a fullstack developer. Learn about the roles I’ve had and the skills I’ve gained along the way.'
-        />
-
-        <meta
-          property='og:title'
-          content='Experience | Adam Comer | Software Developer'
-        />
-        <meta
-          property='og:description'
-          content='My work experience as a fullstack developer. Learn about the roles I’ve had and the skills I’ve gained along the way.'
-        />
-        <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://adambcomer.com/experience/' />
-        <meta
-          property='og:image'
-          content={`https://adambcomer.com${getSrc(result.image) ?? ''}`}
-        />
-        <meta property='og:image:width' content='720' />
-        <meta property='og:image:height' content='720' />
-
-        <script type='application/ld+json'>
-          {`
-          {
-            "@context": "http://schema.org",
-            "@type": "Person",
-            "name": "Adam Comer",
-            "url": "https://adambcomer.com/",
-            "email": "adambcomer@gmail.com",
-            "image": "https://adambcomer.com${getSrc(result.image) ?? ''}",
-            "sameAs": [
-                "https://www.facebook.com/adam.comer.779",
-                "https://www.linkedin.com/in/adambcomer",
-                "https://www.instagram.com/adamcomer/",
-                "https://twitter.com/adambcomer",
-                "https://github.com/adambcomer",
-                "https://gitlab.com/adambcomer",
-                "https://stackoverflow.com/users/17834001/adambcomer",
-                "https://knowtworthy.com/blog/author/adambcomer/",
-                "https://www.chess.ca/en/ratings/p/?id=176776",
-                "https://www.chess.com/member/adambcomer",
-                "https://lichess.org/@/adambcomer"
-            ]
-          }
-        `}
-        </script>
-      </Helmet>
       <Navbar />
       <main className='px-6 md:px-12 mb-32'>
         <div className='mx-6 my-64 text-center'>
@@ -398,3 +335,70 @@ const ExperiencePage: FC = () => {
 }
 
 export default ExperiencePage
+
+export const Head = () => {
+  const result: PageQuery = useStaticQuery(graphql`
+    {
+      image: file(relativePath: { eq: "adam-comer-portrait.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(width: 720)
+        }
+      }
+    }
+  `)
+
+  return (
+    <>
+      <link rel='canonical' href='https://adambcomer.com/experience/' />
+
+      <title>Experience | Adam Comer | Software Developer</title>
+      <meta
+        name='description'
+        content='My work experience as a fullstack developer. Learn about the roles I’ve had and the skills I’ve gained along the way.'
+      />
+
+      <meta
+        property='og:title'
+        content='Experience | Adam Comer | Software Developer'
+      />
+      <meta
+        property='og:description'
+        content='My work experience as a fullstack developer. Learn about the roles I’ve had and the skills I’ve gained along the way.'
+      />
+      <meta property='og:type' content='website' />
+      <meta property='og:url' content='https://adambcomer.com/experience/' />
+      <meta
+        property='og:image'
+        content={`https://adambcomer.com${getSrc(result.image) ?? ''}`}
+      />
+      <meta property='og:image:width' content='720' />
+      <meta property='og:image:height' content='720' />
+
+      <script type='application/ld+json'>
+        {`
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "Adam Comer",
+    "url": "https://adambcomer.com/",
+    "email": "adambcomer@gmail.com",
+    "image": "https://adambcomer.com${getSrc(result.image) ?? ''}",
+    "sameAs": [
+        "https://www.facebook.com/adam.comer.779",
+        "https://www.linkedin.com/in/adambcomer",
+        "https://www.instagram.com/adamcomer/",
+        "https://twitter.com/adambcomer",
+        "https://github.com/adambcomer",
+        "https://gitlab.com/adambcomer",
+        "https://stackoverflow.com/users/17834001/adambcomer",
+        "https://knowtworthy.com/blog/author/adambcomer/",
+        "https://www.chess.ca/en/ratings/p/?id=176776",
+        "https://www.chess.com/member/adambcomer",
+        "https://lichess.org/@/adambcomer"
+    ]
+  }
+`}
+      </script>
+    </>
+  )
+}

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import Navbar from '../components/Navbar'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { getSrc, StaticImage } from 'gatsby-plugin-image'
@@ -6,17 +6,7 @@ import Footer from '../components/Footer'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { PageQuery } from '../types/page'
 
-const IndexPage: FC = () => {
-  const result: PageQuery = useStaticQuery(graphql`
-    {
-      image: file(relativePath: { eq: "adam-comer-portrait.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(width: 720)
-        }
-      }
-    }
-  `)
-
+const IndexPage = (): JSX.Element => {
   return (
     <>
       <Navbar />
@@ -350,32 +340,43 @@ const IndexPage: FC = () => {
 
 export default IndexPage
 
-export const Head = () => (
-  <>
-    <link rel='canonical' href='https://adambcomer.com/' />
+export const Head = () => {
+  const result: PageQuery = useStaticQuery(graphql`
+    {
+      image: file(relativePath: { eq: "adam-comer-portrait.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(width: 720)
+        }
+      }
+    }
+  `)
 
-    <title>Adam Comer | Software Developer</title>
-    <meta
-      name='description'
-      content='Adam Comer is a Software Developer and Co-Founder Knowtworthy. He is a Frontend, Backend, and Fullstack Developer that specializes in Javascript, Node.js, Python, Docker, Kubernetes, MongoDB, and AWS.'
-    />
+  return (
+    <>
+      <link rel='canonical' href='https://adambcomer.com/' />
 
-    <meta property='og:title' content='Adam Comer | Software Developer' />
-    <meta
-      property='og:description'
-      content='Adam Comer is a Software Developer and Co-Founder Knowtworthy. He is a Frontend, Backend, and Fullstack Developer that specializes in Javascript, Node.js, Python, Docker, Kubernetes, MongoDB, and AWS.'
-    />
-    <meta property='og:type' content='website' />
-    <meta property='og:url' content='https://adambcomer.com/' />
-    <meta
-      property='og:image'
-      content={`https://adambcomer.com${getSrc(result.image) ?? ''}`}
-    />
-    <meta property='og:image:width' content='720' />
-    <meta property='og:image:height' content='720' />
+      <title>Adam Comer | Software Developer</title>
+      <meta
+        name='description'
+        content='Adam Comer is a Software Developer and Co-Founder Knowtworthy. He is a Frontend, Backend, and Fullstack Developer that specializes in Javascript, Node.js, Python, Docker, Kubernetes, MongoDB, and AWS.'
+      />
 
-    <script type='application/ld+json'>
-      {`
+      <meta property='og:title' content='Adam Comer | Software Developer' />
+      <meta
+        property='og:description'
+        content='Adam Comer is a Software Developer and Co-Founder Knowtworthy. He is a Frontend, Backend, and Fullstack Developer that specializes in Javascript, Node.js, Python, Docker, Kubernetes, MongoDB, and AWS.'
+      />
+      <meta property='og:type' content='website' />
+      <meta property='og:url' content='https://adambcomer.com/' />
+      <meta
+        property='og:image'
+        content={`https://adambcomer.com${getSrc(result.image) ?? ''}`}
+      />
+      <meta property='og:image:width' content='720' />
+      <meta property='og:image:height' content='720' />
+
+      <script type='application/ld+json'>
+        {`
   {
     "@context": "http://schema.org",
     "@type": "Person",
@@ -398,6 +399,7 @@ export const Head = () => (
     ]
   }
 `}
-    </script>
-  </>
-)
+      </script>
+    </>
+  )
+}

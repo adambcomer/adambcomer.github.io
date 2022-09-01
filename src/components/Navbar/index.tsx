@@ -1,8 +1,8 @@
-import React, { useState, FC } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import './navbar.css'
 
-const Navbar: FC = () => {
+const Navbar = (): JSX.Element => {
   const [open, setOpen] = useState(false)
 
   function navClicked(): void {

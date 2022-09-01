@@ -5,16 +5,6 @@ module.exports = {
     siteUrl: 'https://adambcomer.com'
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-i18n',
-      options: {
-        langKeyForNull: 'en',
-        langKeyDefault: 'en',
-        useLangKeyLayout: false,
-        prefixDefault: false
-      }
-    },
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-source-filesystem',
