@@ -8,7 +8,7 @@ import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 export const pageQuery = graphql`
   {
     posts: allMarkdownRemark(
-      sort: { fields: frontmatter___postDate }
+      sort: { frontmatter: { postDate: ASC } }
       filter: { fileAbsolutePath: { glob: "/**/pages/simple-database/**.md" } }
     ) {
       edges {
