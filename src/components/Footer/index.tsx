@@ -103,7 +103,7 @@ const Footer = (): JSX.Element => {
         </div>
 
         <div className='lg:col-span-12 mt-12 lg:mt-0'>
-          © 2022 Adam Comer — All rights reserved
+          © 2023 Adam Comer — All rights reserved
         </div>
       </footer>
     </>
