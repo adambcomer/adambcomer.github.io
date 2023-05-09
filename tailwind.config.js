@@ -7,6 +7,5 @@ module.exports = {
       sc: ["'Noto Sans SC'"]
     }
   },
-  variants: {},
-  plugins: [require('@tailwindcss/line-clamp')]
+  variants: {}
 }
