@@ -12,9 +12,15 @@ import '@fontsource/roboto-mono/latin-600.css'
 
 import '@fontsource/material-icons/index.css'
 
-import { getCLS, getFID, getLCP } from 'web-vitals'
+import { Metric, onCLS, onFID, onLCP } from 'web-vitals'
 
-function sendToGoogleAnalytics({ name, delta, value, id }) {
+declare global {
+  interface Window {
+    gtag: any
+  }
+}
+
+function sendToGoogleAnalytics({ name, delta, value, id }: Metric) {
   console.log(`${name} matching ID ${id} changed by ${delta}`)
 
   // Assumes the global `gtag()` function exists, see:
@@ -36,6 +42,6 @@ function sendToGoogleAnalytics({ name, delta, value, id }) {
   })
 }
 
-getCLS(sendToGoogleAnalytics)
-getFID(sendToGoogleAnalytics)
-getLCP(sendToGoogleAnalytics)
+onCLS(sendToGoogleAnalytics)
+onFID(sendToGoogleAnalytics)
+onLCP(sendToGoogleAnalytics)

@@ -1,6 +1,7 @@
-const path = require('path')
+import { GatsbyConfig } from 'gatsby'
+import path from 'path'
 
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl: 'https://adambcomer.com'
   },
@@ -66,3 +67,5 @@ module.exports = {
     }
   ]
 }
+
+export default config
