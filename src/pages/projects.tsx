@@ -14,7 +14,7 @@ const ProjectsPage = () => {
         <div className='mx-6 my-64 text-center'>
           <h1 className='md-display-large'>Projects</h1>
           <p className='md-headline-medium md-color-secondary mt-6'>
-            My coding projects I've built for fun
+            My coding projects I&apos;ve built for fun
           </p>
         </div>
 

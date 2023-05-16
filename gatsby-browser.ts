@@ -16,7 +16,7 @@ import { Metric, onCLS, onFID, onLCP } from 'web-vitals'
 
 declare global {
   interface Window {
-    gtag: any
+    gtag: (...args: unknown[]) => void
   }
 }
 
