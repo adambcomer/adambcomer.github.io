@@ -4,8 +4,7 @@
   "description": "",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
+    "dev": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint:check": "eslint .",
@@ -51,7 +50,7 @@
     "web-vitals": "3.3.1"
   },
   "devDependencies": {
-    "@types/node": "^20.1.5",
+    "@types/node": "20.1.7",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "@typescript-eslint/eslint-plugin": "5.59.6",
@@ -60,7 +59,7 @@
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-react": "7.32.2",
     "prettier": "2.8.8",
-    "typescript": "^5.0.4"
+    "typescript": "5.0.4"
   },
   "packageManager": "yarn@3.5.1"
 }

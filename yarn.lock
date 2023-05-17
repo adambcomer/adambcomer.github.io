@@ -3244,17 +3244,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:20.1.7":
+  version: 20.1.7
+  resolution: "@types/node@npm:20.1.7"
+  checksum: b722794290d22db1741e739c256876ca774b76ea2d647d9ec9d52c49b1b01049cc6f6332499a01ac81d641e8d078b33e4c5c59e409db80390ac6b8d7ef0c08a7
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^17.0.5":
   version: 17.0.45
   resolution: "@types/node@npm:17.0.45"
   checksum: aa04366b9103b7d6cfd6b2ef64182e0eaa7d4462c3f817618486ea0422984c51fc69fd0d436eae6c9e696ddfdbec9ccaa27a917f7c2e8c75c5d57827fe3d95e8
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^20.1.5":
-  version: 20.1.5
-  resolution: "@types/node@npm:20.1.5"
-  checksum: 0d073ed7b9cc51e2354dcf3a8ccca84d08c7d513fa8fac9462cabc164435b30f2ad296e9f2f911e6ce72da837b704f1075379be84a93bb24f76d328a2d9e8561
   languageName: node
   linkType: hard
 
@@ -12805,7 +12805,7 @@ __metadata:
     "@fontsource/material-icons": 4.5.4
     "@fontsource/roboto": 4.5.8
     "@fontsource/roboto-mono": 4.5.10
-    "@types/node": ^20.1.5
+    "@types/node": 20.1.7
     "@types/react": 18.2.6
     "@types/react-dom": 18.2.4
     "@typescript-eslint/eslint-plugin": 5.59.6
@@ -12835,7 +12835,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     tailwindcss: 3.3.2
-    typescript: ^5.0.4
+    typescript: 5.0.4
     web-vitals: 3.3.1
   languageName: unknown
   linkType: soft
@@ -15823,7 +15823,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.0.4":
+"typescript@npm:5.0.4":
   version: 5.0.4
   resolution: "typescript@npm:5.0.4"
   bin:
@@ -15833,7 +15833,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^5.0.4#~builtin<compat/typescript>":
+"typescript@patch:typescript@5.0.4#~builtin<compat/typescript>":
   version: 5.0.4
   resolution: "typescript@patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"
   bin:
