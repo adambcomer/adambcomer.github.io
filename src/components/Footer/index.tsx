@@ -93,6 +93,10 @@ const Footer = (): JSX.Element => {
           <div className='mt-2 text-lg hover:underline'>
             <Link to='/experience/'>Experience</Link>
           </div>
+
+          <div className='mt-2 text-lg hover:underline'>
+            <Link to='/healthcare-data/'>Healthcare Data</Link>
+          </div>
         </div>
 
         <div className='lg:col-span-2 mt-12 lg:mt-0'>

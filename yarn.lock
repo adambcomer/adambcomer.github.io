@@ -3279,6 +3279,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/prismjs@npm:1.26.0":
+  version: 1.26.0
+  resolution: "@types/prismjs@npm:1.26.0"
+  checksum: cd5e7a6214c1f4213ec512a5fcf6d8fe37a56b813fc57ac95b5ff5ee074742bfdbd2f2730d9fd985205bf4586728e09baa97023f739e5aa1c9735a7c1ecbd11a
+  languageName: node
+  linkType: hard
+
 "@types/prop-types@npm:*":
   version: 15.7.5
   resolution: "@types/prop-types@npm:15.7.5"
@@ -4471,6 +4478,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-plugin-prismjs@npm:2.1.0":
+  version: 2.1.0
+  resolution: "babel-plugin-prismjs@npm:2.1.0"
+  peerDependencies:
+    prismjs: ^1.18.0
+  checksum: 8bc59ca46b493cb255ec914e26a0dd39c1aaee881e3701d6726db40152d4a176a96ac1438f80b0d705b188bee4106538de809bc79dff9774400da3d8331affce
+  languageName: node
+  linkType: hard
+
 "babel-plugin-remove-graphql-queries@npm:^5.10.0":
   version: 5.10.0
   resolution: "babel-plugin-remove-graphql-queries@npm:5.10.0"
@@ -4553,7 +4569,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-preset-gatsby@npm:^3.10.0":
+"babel-preset-gatsby@npm:3.10.0, babel-preset-gatsby@npm:^3.10.0":
   version: 3.10.0
   resolution: "babel-preset-gatsby@npm:3.10.0"
   dependencies:
@@ -12806,10 +12822,13 @@ __metadata:
     "@fontsource/roboto": 4.5.8
     "@fontsource/roboto-mono": 4.5.10
     "@types/node": 20.1.7
+    "@types/prismjs": 1.26.0
     "@types/react": 18.2.6
     "@types/react-dom": 18.2.4
     "@typescript-eslint/eslint-plugin": 5.59.6
     "@typescript-eslint/parser": 5.59.6
+    babel-plugin-prismjs: 2.1.0
+    babel-preset-gatsby: 3.10.0
     eslint: 8.40.0
     eslint-config-prettier: 8.8.0
     eslint-plugin-react: 7.32.2
