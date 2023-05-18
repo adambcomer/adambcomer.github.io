@@ -39,7 +39,7 @@ const IndexPage = (): JSX.Element => {
               style={{ background: 'var(--md-light-surface1)' }}
             >
               <code className='language-bash'>
-                curl --proto '=https' -sSf
+                curl --proto &apos;=https&apos; -sSf
                 https://healthcare-data.adambcomer.com/npi/npi_data_april_2023.sqlite.zst
                 | zstd -d - -o npi_data_april_2023.sqlite
               </code>
