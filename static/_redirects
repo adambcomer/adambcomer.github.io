@@ -6,5 +6,5 @@
 /blog/simple-database/wal.html /blog/simple-database/wal 301
 /lin-tree-solver https://lin-tree-solver.adambcomer.com 301
 /lin-tree-solver/* https://lin-tree-solver.adambcomer.com/:splat 301
-/wisckey https://wisckey.adambcomer.com 301
-/wisckey/* https://wisckey.adambcomer.com/:splat 301
+/wisckey-database https://wisckey-database.adambcomer.com 301
+/wisckey-database/* https://wisckey-database.adambcomer.com/:splat 301
