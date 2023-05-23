@@ -502,8 +502,8 @@ if __name__ == '__main__':
 - [Histogram of of the ELO Difference between the Players](/assets/img/chess-analysis/BlitzPlayerDifference.jpeg)
 - [Bar graph of the number of games played grouped by the number of Book moves featured](/assets/img/chess-analysis/BlitzBookMoves.jpeg)
 - [Bar graph of the number of games played grouped by the number of Master moves featured](/assets/img/chess-analysis/BlitzMasterMoves.jpeg)
-- [Scatter plot of Average Player ELO vs number of Book moves featured](/assets/img/chess-analysis/BlitzBookMovesElo.jpeg)
-- [Scatter plot of Average Player ELO vs number of Master moves featured](/assets/img/chess-analysis/BlitzMasterMovesElo.jpeg)
+- [Scatter plot of Average Player ELO vs number of Book moves featured](/assets/img/chess-analysis/BlitzBookMovesELO.jpeg)
+- [Scatter plot of Average Player ELO vs number of Master moves featured](/assets/img/chess-analysis/BlitzMasterMovesELO.jpeg)
 
 #### Bullet
 - [Histogram of ELO with the White Pieces](/assets/img/chess-analysis/BulletWhiteElo.jpeg)
@@ -511,5 +511,5 @@ if __name__ == '__main__':
 - [Histogram of of the ELO Difference between the Players](/assets/img/chess-analysis/BulletPlayerDifference.jpeg)
 - [Bar graph of the number of games played grouped by the number of Book moves featured](/assets/img/chess-analysis/BulletBookMoves.jpeg)
 - [Bar graph of the number of games played grouped by the number of Master moves featured](/assets/img/chess-analysis/BulletMasterMoves.jpeg)
-- [Scatter plot of Average Player ELO vs number of Book moves featured](/assets/img/chess-analysis/BulletBookMovesElo.jpeg)
-- [Scatter plot of Average Player ELO vs number of Master moves featured](/assets/img/chess-analysis/BulletMasterMovesElo.jpeg)
+- [Scatter plot of Average Player ELO vs number of Book moves featured](/assets/img/chess-analysis/BulletBookMovesELO.jpeg)
+- [Scatter plot of Average Player ELO vs number of Master moves featured](/assets/img/chess-analysis/BulletMasterMovesELO.jpeg)
