@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import Prism from 'prismjs'
 
 const IndexPage = (): JSX.Element => {
@@ -25,12 +24,12 @@ const IndexPage = (): JSX.Element => {
           <p className='mt-8'>
             Download and decompress the latest SQLite formatted archive of NPI
             Provider data from CMS. Archives are compressed using{' '}
-            <OutboundLink
+            <a
               href='http://facebook.github.io/zstd/'
               className='md-link underline hover:md-on-primary-container'
             >
               <code>zstd</code>
-            </OutboundLink>
+            </a>
             .
           </p>
           <div className='mt-8'>
@@ -50,22 +49,22 @@ const IndexPage = (): JSX.Element => {
 
           <ul className='mt-8 mx-4'>
             <li className='text-lg list-disc'>
-              <OutboundLink
+              <a
                 href='https://healthcare-data.adambcomer.com/npi/npi_data_may_2023.sqlite.zst'
                 className='md-link hover:md-on-primary-container'
               >
                 May 2023 SQLite Database (npi_data_may_2023.sqlite.zst) [695.42
                 MB]
-              </OutboundLink>
+              </a>
             </li>
             <li className='text-lg list-disc'>
-              <OutboundLink
+              <a
                 href='https://healthcare-data.adambcomer.com/npi/npi_data_april_2023.sqlite.zst'
                 className='md-link hover:md-on-primary-container'
               >
                 April 2023 SQLite Database (npi_data_april_2023.sqlite.zst)
                 [758.87 MB]
-              </OutboundLink>
+              </a>
             </li>
           </ul>
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { graphql, useStaticQuery } from 'gatsby'
 import { getSrc } from 'gatsby-plugin-image'
 import { PageQuery } from '../types/page'
@@ -31,12 +30,12 @@ const ExperiencePage = (): JSX.Element => {
 
           <h3 className='md-title-small md-on-surface-variant mt-6'>About</h3>
           <p className='md-body-large mt-2'>
-            <OutboundLink
+            <a
               href='https://knowtworthy.com/'
               className='md-link underline hover:md-on-primary-container'
             >
               Knowtworthy
-            </OutboundLink>{' '}
+            </a>{' '}
             is a Meetings Productivity tool for business professionals to aid in
             organizing, formatting, and sharing meeting minutes. My job at the
             company is primarily a Full Stack Software Developer. My
@@ -160,22 +159,22 @@ const ExperiencePage = (): JSX.Element => {
           <h3 className='md-title-small md-on-surface-variant mt-6'>About</h3>
           <p className='md-body-large mt-2'>
             During my summer internship at{' '}
-            <OutboundLink
+            <a
               href='https://www.bmo.com/'
               className='md-link underline hover:md-on-primary-container'
             >
               BMO
-            </OutboundLink>
+            </a>
             , I was tasked with designing and building the web frontend for a
             new Business Intelligence(BI) tool at the Bank. The tool was
             targeted at non-technical employees to help them draw up reports and
             better understand their data. Using the{' '}
-            <OutboundLink
+            <a
               href='https://www.carbondesignsystem.com/'
               className='md-link underline hover:md-on-primary-container'
             >
               Carbon Design System
-            </OutboundLink>
+            </a>
             , I built the UI prototypes and pitched the design to management.
             Additionally, I built the web frontend with HTML, CSS, and jQuery on
             Microsoft’s C# MVC.
@@ -184,12 +183,12 @@ const ExperiencePage = (): JSX.Element => {
             When I wasn’t working on the BI tool, I helped the Business
             Associates automate tedious tasks with Python scripts. My most
             impactful effort was a{' '}
-            <OutboundLink
+            <a
               href='https://en.wikipedia.org/wiki/Regression_testing'
               className='md-link underline hover:md-on-primary-container'
             >
               regression analysis
-            </OutboundLink>{' '}
+            </a>{' '}
             tool to verify that new code changes to a legacy system were
             backwards compatible.
           </p>
@@ -239,20 +238,20 @@ const ExperiencePage = (): JSX.Element => {
 
           <h3 className='md-title-small md-on-surface-variant mt-6'>About</h3>
           <p className='md-body-large mt-2'>
-            <OutboundLink
+            <a
               href='http://www.bdmtrucks.com/'
               className='md-link underline hover:md-on-primary-container'
             >
               BDM Trucks
-            </OutboundLink>{' '}
+            </a>{' '}
             is a commercial truck repair service in Manassas, VA that needed a
             new website. I built them a new website using HTML, CSS, and{' '}
-            <OutboundLink
+            <a
               href='https://getbootstrap.com/'
               className='md-link underline hover:md-on-primary-container'
             >
               Bootstrap 4
-            </OutboundLink>
+            </a>
             . Additionally, I optimized the on-page SEO of their new website to
             draw more traffic from their local area.
           </p>
@@ -287,12 +286,12 @@ const ExperiencePage = (): JSX.Element => {
 
           <h3 className='md-title-small md-on-surface-variant mt-6'>About</h3>
           <p className='md-body-large mt-2'>
-            <OutboundLink
+            <a
               href='https://www.su.edu/pharmacy/'
               className='md-link underline hover:md-on-primary-container'
             >
               Shenandoah University’s School of Pharmacy
-            </OutboundLink>{' '}
+            </a>{' '}
             needed a tool to collect data on drug abuse from local clinics in
             the Northern Virginia area. I built an iOS and Android app to assist
             their team in collecting reports from doctors and students in

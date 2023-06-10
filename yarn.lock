@@ -7412,20 +7412,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-google-gtag@npm:5.10.0":
-  version: 5.10.0
-  resolution: "gatsby-plugin-google-gtag@npm:5.10.0"
-  dependencies:
-    "@babel/runtime": ^7.20.13
-    minimatch: ^3.1.2
-  peerDependencies:
-    gatsby: ^5.0.0-next
-    react: ^18.0.0 || ^0.0.0
-    react-dom: ^18.0.0 || ^0.0.0
-  checksum: 09ea392fca49569aad024c83f7d9a7b478e3c79555223a57c18be7541924b1ca151311c2ce0504f9adbce5f10b22dc1c4d1b70a2d365fe8bcb5c3900d98c7b24
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-image@npm:3.10.0":
   version: 3.10.0
   resolution: "gatsby-plugin-image@npm:3.10.0"
@@ -11645,7 +11631,6 @@ __metadata:
     eslint-plugin-react: 7.32.2
     gatsby: 5.10.0
     gatsby-plugin-catch-links: 5.10.0
-    gatsby-plugin-google-gtag: 5.10.0
     gatsby-plugin-image: 3.10.0
     gatsby-plugin-manifest: 5.10.0
     gatsby-plugin-offline: 6.10.0
@@ -11664,7 +11649,6 @@ __metadata:
     react-dom: 18.2.0
     tailwindcss: 3.3.2
     typescript: 5.1.3
-    web-vitals: 3.3.2
   languageName: unknown
   linkType: soft
 
@@ -14884,13 +14868,6 @@ __metadata:
   version: 1.1.4
   resolution: "web-namespaces@npm:1.1.4"
   checksum: 5149842ccbfbc56fe4f8758957b3f8c8616a281874a5bb84aa1b305e4436a9bad853d21c629a7b8f174902449e1489c7a6c724fccf60965077c5636bd8aed42b
-  languageName: node
-  linkType: hard
-
-"web-vitals@npm:3.3.2":
-  version: 3.3.2
-  resolution: "web-vitals@npm:3.3.2"
-  checksum: 76e832341d213d5de6f6767fef7f8c02163ab94326912a6355bbf6e194d930196ca5094b0d0d493b4c194acaaabcc96f0adc87870b913a7b9a51b225807abccf
   languageName: node
   linkType: hard
 

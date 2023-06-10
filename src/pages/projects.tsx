@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { getSrc, StaticImage } from 'gatsby-plugin-image'
 import { PageQuery } from '../types/page'
@@ -27,12 +26,12 @@ const ProjectsPage = () => {
           <h3 className='md-title-small md-on-surface-variant mt-6'>About</h3>
           <p className='md-body-large mt-2'>
             This{' '}
-            <OutboundLink
+            <a
               href='https://adambcomer.com/lin-tree-solver/'
               className='md-link underline hover:md-on-primary-container'
             >
               Linguistics Tree Solver
-            </OutboundLink>{' '}
+            </a>{' '}
             automatically builds linguistics syntax trees. After taking a syntax
             course at the University of Toronto, I wanted to make a tool that
             applied the theory we learned in class. Unlike the tree builders we
@@ -76,19 +75,19 @@ const ProjectsPage = () => {
 
           <h3 className='md-title-small md-on-surface-variant mt-6'>About</h3>
           <p className='md-body-large mt-2'>
-            <OutboundLink
+            <a
               href='https://www.devpost.com/software/knowtworthy-sentiment'
               className='md-link underline hover:md-on-primary-container'
             >
               Sentiment
-            </OutboundLink>{' '}
+            </a>{' '}
             was a Hackathon project made at{' '}
-            <OutboundLink
+            <a
               href='https://hackthe6ix.com/'
               className='link-0-color hover:underline'
             >
               Hack The 6ix
-            </OutboundLink>
+            </a>
             . The project’s goal was to tracks a meeting conversation and find
             its sentiment. Using the transcripts of the meeting and an open
             source linguistic analysis tool, we were able to successfully build
@@ -134,21 +133,21 @@ const ProjectsPage = () => {
           <p className='md-body-large mt-2'>
             AI Chatbots have been around for a while but have been traditionally
             based on keywords.{' '}
-            <OutboundLink
+            <a
               href='https://github.com/adambcomer/Tensorflow-Seq2Seq-Dialogs'
               className='md-link underline hover:md-on-primary-container'
             >
               This project
-            </OutboundLink>{' '}
+            </a>{' '}
             aimed to have the chatbot understand the sematic contents of the
             messages by processing the messages with a neural network. The
             neural network was a{' '}
-            <OutboundLink
+            <a
               href='https://google.github.io/seq2seq/'
               className='link-0-color hover:underline'
             >
               Seq2Seq model
-            </OutboundLink>
+            </a>
             , the state of the art at the time, and was moderately successful at
             processing chat messages.
           </p>

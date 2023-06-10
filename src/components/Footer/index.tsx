@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const Footer = (): JSX.Element => {
   return (
@@ -11,7 +10,7 @@ const Footer = (): JSX.Element => {
           <span className='text-2xl'>ADAM COMER</span>
           <div className='flex flex-row mt-6'>
             <div className='mr-4'>
-              <OutboundLink href='mailto:adambcomer@gmail.com'>
+              <a href='mailto:adambcomer@gmail.com'>
                 <svg
                   className='w-8'
                   xmlns='http://www.w3.org/2000/svg'
@@ -22,10 +21,10 @@ const Footer = (): JSX.Element => {
                     transform='translate(0)'
                   />
                 </svg>
-              </OutboundLink>
+              </a>
             </div>
             <div className='mx-4'>
-              <OutboundLink href='https://www.linkedin.com/in/adambcomer'>
+              <a href='https://www.linkedin.com/in/adambcomer'>
                 <svg
                   className='w-8'
                   xmlns='http://www.w3.org/2000/svg'
@@ -36,10 +35,10 @@ const Footer = (): JSX.Element => {
                     transform='translate(0 0)'
                   />
                 </svg>
-              </OutboundLink>
+              </a>
             </div>
             <div className='mx-4'>
-              <OutboundLink href='https://github.com/adambcomer'>
+              <a href='https://github.com/adambcomer'>
                 <svg
                   className='w-8'
                   xmlns='http://www.w3.org/2000/svg'
@@ -47,10 +46,10 @@ const Footer = (): JSX.Element => {
                 >
                   <path d='M16,2a14,14,0,0,0-4.43,27.28c.7.13,1-.3,1-.67s0-1.21,0-2.38c-3.89.84-4.71-1.88-4.71-1.88A3.71,3.71,0,0,0,6.24,22.3c-1.27-.86.1-.85.1-.85A2.94,2.94,0,0,1,8.48,22.9a3,3,0,0,0,4.08,1.16,2.93,2.93,0,0,1,.88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4,5.4,0,0,1,1.44-3.76,5,5,0,0,1,.14-3.7s1.17-.38,3.85,1.43a13.3,13.3,0,0,1,7,0c2.67-1.81,3.84-1.43,3.84-1.43a5,5,0,0,1,.14,3.7,5.4,5.4,0,0,1,1.44,3.76c0,5.38-3.27,6.56-6.39,6.91a3.33,3.33,0,0,1,.95,2.59c0,1.87,0,3.38,0,3.84s.25.81,1,.67A14,14,0,0,0,16,2Z' />
                 </svg>
-              </OutboundLink>
+              </a>
             </div>
             <div className='mx-4'>
-              <OutboundLink href='https://twitter.com/adambcomer'>
+              <a href='https://twitter.com/adambcomer'>
                 <svg
                   className='w-8'
                   xmlns='http://www.w3.org/2000/svg'
@@ -61,10 +60,10 @@ const Footer = (): JSX.Element => {
                     transform='translate(0)'
                   />
                 </svg>
-              </OutboundLink>
+              </a>
             </div>
             <div className='mx-4'>
-              <OutboundLink href='https://www.instagram.com/adamcomer/'>
+              <a href='https://www.instagram.com/adamcomer/'>
                 <svg
                   className='w-8'
                   xmlns='http://www.w3.org/2000/svg'
@@ -74,7 +73,7 @@ const Footer = (): JSX.Element => {
                   <path d='M16,9.8378A6.1622,6.1622,0,1,0,22.1622,16,6.1622,6.1622,0,0,0,16,9.8378ZM16,20a4,4,0,1,1,4-4A4,4,0,0,1,16,20Z' />
                   <path d='M16,6.1622c3.2041,0,3.5837.0122,4.849.07a6.6418,6.6418,0,0,1,2.2283.4132,3.9748,3.9748,0,0,1,2.2774,2.2774,6.6418,6.6418,0,0,1,.4132,2.2283c.0577,1.2653.07,1.6449.07,4.849s-.0122,3.5837-.07,4.849a6.6418,6.6418,0,0,1-.4132,2.2283,3.9748,3.9748,0,0,1-2.2774,2.2774,6.6418,6.6418,0,0,1-2.2283.4132c-1.2652.0577-1.6446.07-4.849.07s-3.5838-.0122-4.849-.07a6.6418,6.6418,0,0,1-2.2283-.4132,3.9748,3.9748,0,0,1-2.2774-2.2774,6.6418,6.6418,0,0,1-.4132-2.2283c-.0577-1.2653-.07-1.6449-.07-4.849s.0122-3.5837.07-4.849a6.6418,6.6418,0,0,1,.4132-2.2283A3.9748,3.9748,0,0,1,8.9227,6.6453a6.6418,6.6418,0,0,1,2.2283-.4132c1.2653-.0577,1.6449-.07,4.849-.07M16,4c-3.259,0-3.6677.0138-4.9476.0722A8.8068,8.8068,0,0,0,8.14,4.63,6.1363,6.1363,0,0,0,4.63,8.14a8.8068,8.8068,0,0,0-.5578,2.9129C4.0138,12.3323,4,12.741,4,16s.0138,3.6677.0722,4.9476A8.8074,8.8074,0,0,0,4.63,23.8605a6.1363,6.1363,0,0,0,3.51,3.51,8.8068,8.8068,0,0,0,2.9129.5578C12.3323,27.9862,12.741,28,16,28s3.6677-.0138,4.9476-.0722a8.8074,8.8074,0,0,0,2.9129-.5578,6.1363,6.1363,0,0,0,3.51-3.51,8.8074,8.8074,0,0,0,.5578-2.9129C27.9862,19.6677,28,19.259,28,16s-.0138-3.6677-.0722-4.9476A8.8068,8.8068,0,0,0,27.37,8.14a6.1363,6.1363,0,0,0-3.51-3.5095,8.8074,8.8074,0,0,0-2.9129-.5578C19.6677,4.0138,19.259,4,16,4Z' />
                 </svg>
-              </OutboundLink>
+              </a>
             </div>
           </div>
         </div>

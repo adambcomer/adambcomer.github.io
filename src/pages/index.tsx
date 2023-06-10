@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { getSrc, StaticImage } from 'gatsby-plugin-image'
 import Footer from '../components/Footer'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { PageQuery } from '../types/page'
 
 const IndexPage = (): JSX.Element => {
@@ -20,24 +19,24 @@ const IndexPage = (): JSX.Element => {
               Software Developer and Co-founder of Knowtworthy
             </p>
             <div className='flex flex-row gap-12 mt-12 w-full place-content-evenly md:place-content-start'>
-              <OutboundLink
+              <a
                 href='https://www.linkedin.com/in/adambcomer'
                 className='cursor-pointer md-title-large md-color-primary hover:md-color-secondary'
               >
                 LinkedIn
-              </OutboundLink>
-              <OutboundLink
+              </a>
+              <a
                 href='https://twitter.com/adambcomer'
                 className='cursor-pointer md-title-large md-color-primary hover:md-color-secondary'
               >
                 Twitter
-              </OutboundLink>
-              <OutboundLink
+              </a>
+              <a
                 href='https://github.com/adambcomer'
                 className='cursor-pointer md-title-large md-color-primary hover:md-color-secondary'
               >
                 Github
-              </OutboundLink>
+              </a>
             </div>
           </div>
 
@@ -62,12 +61,12 @@ const IndexPage = (): JSX.Element => {
                 <p className='md-body-large'>
                   I’m a full-stack developer with Frontend, Backend, and DevOps
                   experience. As a Software Developer at{' '}
-                  <OutboundLink
+                  <a
                     href='https://knowtworthy.com/'
                     className='md-link underline hover:md-on-primary-container'
                   >
                     Knowtworthy
-                  </OutboundLink>
+                  </a>
                   , I work on both the Frontend Web App and Backend API using
                   MongoDB, Koa.js, React, and Node.js (modified MERN stack).
                   Additionally, I take a lead role in designing and maintaining
@@ -145,12 +144,12 @@ const IndexPage = (): JSX.Element => {
             <h3 className='md-display-medium'>Co-founder of Knowtworthy</h3>
             <div>
               <p className='md-body-large my-4 lg:w-1/2'>
-                <OutboundLink
+                <a
                   href='https://knowtworthy.com/'
                   className='md-link underline hover:md-on-primary-container'
                 >
                   Knowtworthy
-                </OutboundLink>{' '}
+                </a>{' '}
                 is a Meetings Productivity tool for business professionals to
                 aid in organizing, formatting, and sharing meeting minutes. My
                 role at the company is technology and engineering focused,
@@ -160,26 +159,26 @@ const IndexPage = (): JSX.Element => {
               </p>
               <p className='md-body-large my-4 mt-4 lg:w-1/2'>
                 With my Co-founders,{' '}
-                <OutboundLink
+                <a
                   href='https://alexgordienko.com/'
                   className='md-link underline hover:md-on-primary-container'
                 >
                   Alex
-                </OutboundLink>{' '}
+                </a>{' '}
                 and{' '}
-                <OutboundLink
+                <a
                   href='http://www.cs.toronto.edu/~sidgupta/'
                   className='md-link underline hover:md-on-primary-container'
                 >
                   Sid
-                </OutboundLink>
+                </a>
                 , we’ve taken Knowtworthy from idea stage at the{' '}
-                <OutboundLink
+                <a
                   href='https://hatchery.engineering.utoronto.ca/'
                   className='md-link underline hover:md-on-primary-container'
                 >
                   University of Toronto’s Entrepreneurship Hatchery
-                </OutboundLink>{' '}
+                </a>{' '}
                 to releasing our flagship product to paying customers.
                 Throughout this process, we’ve listened to our customers to
                 build a product that helps them save time with the features they
@@ -187,11 +186,11 @@ const IndexPage = (): JSX.Element => {
               </p>
             </div>
 
-            <OutboundLink href='https://knowtworthy.com/'>
+            <a href='https://knowtworthy.com/'>
               <button className='absolute right-8 bottom-6 md:right-16 inline-flex items-center cursor-pointer md-title-large md-color-primary hover:md-color-secondary'>
                 Knowtworthy <i className='material-icons ml-2'>arrow_forward</i>
               </button>
-            </OutboundLink>
+            </a>
           </div>
         </div>
 
@@ -276,12 +275,12 @@ const IndexPage = (): JSX.Element => {
           </p>
 
           <div className='grid grid-cols-1 md:grid-cols-2 col-span-4 mt-8 rounded-[32px] overflow-hidden border border-[#8F909A]'>
-            <OutboundLink href='mailto:adambcomer@gmail.com'>
+            <a href='mailto:adambcomer@gmail.com'>
               <div className='md-title-medium md-color-primary hover:!text-black inline-flex items-center border-b md:border-r border-[#8F909A] hover:bg-[#D9E2FF] px-12 py-6 w-full'>
                 <i className='material-icons mr-4'>mail</i> adambcomer@gmail.com
               </div>
-            </OutboundLink>
-            <OutboundLink href='https://www.linkedin.com/in/adambcomer'>
+            </a>
+            <a href='https://www.linkedin.com/in/adambcomer'>
               <div className='group md-title-medium md-color-primary hover:!text-black inline-flex items-center border-b border-l border-[#8F909A] hover:bg-[#D9E2FF] -ml-px px-12 py-6 w-full'>
                 <i className='mr-3'>
                   <svg
@@ -297,8 +296,8 @@ const IndexPage = (): JSX.Element => {
                 </i>
                 @adambcomer
               </div>
-            </OutboundLink>
-            <OutboundLink href='https://github.com/adambcomer'>
+            </a>
+            <a href='https://github.com/adambcomer'>
               <div className='group md-title-medium md-color-primary hover:!text-black inline-flex items-center border-t md:border-r border-[#8F909A] hover:bg-[#D9E2FF] -mt-px px-12 py-6 w-full'>
                 <i className='mr-4'>
                   <svg
@@ -311,8 +310,8 @@ const IndexPage = (): JSX.Element => {
                 </i>
                 @adambcomer
               </div>
-            </OutboundLink>
-            <OutboundLink href='https://twitter.com/adambcomer'>
+            </a>
+            <a href='https://twitter.com/adambcomer'>
               <div className='group md-title-medium md-color-primary hover:!text-black inline-flex items-center border-t border-l border-[#8F909A] hover:bg-[#D9E2FF] -mt-px -ml-px px-12 py-6 w-full'>
                 <i className='mr-4'>
                   <svg
@@ -328,7 +327,7 @@ const IndexPage = (): JSX.Element => {
                 </i>
                 @adambcomer
               </div>
-            </OutboundLink>
+            </a>
           </div>
         </div>
       </main>

@@ -17,12 +17,6 @@ const config: GatsbyConfig = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-plugin-google-gtag',
-      options: {
-        trackingIds: ['G-NPWF2XR6L3']
-      }
-    },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-postcss',
     {
