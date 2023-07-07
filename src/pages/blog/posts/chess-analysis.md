@@ -1,22 +1,22 @@
 ---
-slug: "/blog/chess-analysis/"
-title: "Relationship Between Chess Opening Knowledge and Player Rating"
-description: "How does knowledge of Chess Openings relate to player rating? In this analysis, I investigate the use Book Openings and Master Games with a sample of 20,000 public Lichess Games."
-image: "blog/post-2-cover.jpg"
-featuredImage: "../../../images/blog/post-2-cover.jpg"
-imageAlt: "Pawns on a chessboard"
-author: "Adam Comer"
+slug: '/blog/chess-analysis/'
+title: 'Relationship Between Chess Opening Knowledge and Player Rating'
+description: 'How does knowledge of Chess Openings relate to player rating? In this analysis, I investigate the use Book Openings and Master Games with a sample of 20,000 public Lichess Games.'
+image: 'blog/post-2-cover.jpg'
+featuredImage: '../../../images/blog/post-2-cover.jpg'
+imageAlt: 'Pawns on a chessboard'
+author: 'Adam Comer'
 date: 2021-08-08T18:36:55+0000
 postDate: 2021-02-16T03:30:17+0000
 ---
 
 ## Introduction
+
 At the start of the pandemic, I picked up a new hobby: Chess. I've become an avid online player in the evenings and puzzle solver in all of my free time. When I'm not having fun with my hobby, I'm studying Statistics and Cognitive Science at the University of Toronto. My courses have introduced me to a plethora of statistical tools that I'm eager to apply to the game. This post is the result of my “Professional Development” assignment for the class STA303, where I am to build/write something to enhance my image as a statistician.
 
 For this project, I will analyze the relationship between knowledge in the opening phase of chess games and rating of players. Many chess players refer to known sequences of moves in the opening as _Opening Theory_ or simply _Theory_. Furthermore, players will refer to a known board position that has been analyzed beforehand as being _In Book_. My initial hypothesis was that players memorize deeper lines of Opening Theory as they progress up the rating ladder to give themselves an advantage when the game transitions to the middlegame. As a player, this felt intuitive because I found myself automatically memorizing moves after checking my games with a Chess Engine and/or searching a database for a similar position. This project will test how long players at every level stay in book using a dataset of public games from Lichess.
 
-**Disclaimer:** I’m not a strong Chess player. And you can verify this by looking at [my Chess.com profile and games](https://www.chess.com/member/adambcomer). That being said, I’m not going to be analyzing individual games or positions in this article. Instead, I’m going to base my analysis on the similarity of play from the Lichess games to an opening book and games played by Masters. 
-
+**Disclaimer:** I’m not a strong Chess player. And you can verify this by looking at [my Chess.com profile and games](https://www.chess.com/member/adambcomer). That being said, I’m not going to be analyzing individual games or positions in this article. Instead, I’m going to base my analysis on the similarity of play from the Lichess games to an opening book and games played by Masters.
 
 ## Data
 
@@ -39,7 +39,7 @@ games.head()
 
 ```
                              GameType          White  WhiteElo  WhiteRatingDiff         Black  BlackElo  BlackRatingDiff Result                                            Opening  ECO TimeControl  OpeningMoves  MasterMoves
-ID                                                                                                                                                                                                                            
+ID
 https://lichess.org/tGpzk7yJ    Blitz   calvinmaster      2186                4  dislikechess      1907               -4    1-0          King's Gambit Accepted: Schallopp Defense  C34       180+0             6            8
 https://lichess.org/LzvBtZ93   Bullet    Gregster101      1385               10     flavietta      1339               -9    1-0       King's Gambit Accepted: King's Knight Gambit  C34       120+1             5            9
 https://lichess.org/TR5upkT0    Blitz          Napen      1905                8       Volcoom      1836               -9    1-0  Ruy Lopez: Schliemann Defense, Schoenemann Attack  C63       180+0             7           18
@@ -48,7 +48,6 @@ https://lichess.org/Qh8ynBVM    Blitz  farhad_karaji       988               -7 
 
 [20000 rows x 12 columns]
 ```
-
 
 ## Analysis
 
@@ -65,7 +64,6 @@ blitz_games = games[games['GameType'] == 'Blitz']
 
 Next, the distribution of games needs to be checked. Ideally, the players ratings should be representative of the population, which has a nice bell-shaped curve.
 
-
 ```python
 fig, ax = plot.subplots()
 plot.hist(blitz_games['WhiteElo'], bins=50, color='#0062ff')
@@ -76,6 +74,7 @@ ax.set_ylabel('Games')
 
 plot.show()
 ```
+
 ![Histogram of ELO with the White Pieces for Blitz games](../../../images/blog/chess-analysis/BlitzWhiteElo.jpeg)
 
 For the player with the white pieces, this sample of games looks representative.
@@ -90,11 +89,12 @@ ax.set_ylabel('Games')
 
 plot.show()
 ```
+
 ![Histogram of ELO with the Black Pieces for Blitz games](../../../images/blog/chess-analysis/BlitzBlackElo.jpeg)
 
 Again, for the player with the black pieces, this sample of games looks representative.
 
-Next, the games should be balanced. That is, the ratings between the players should be similar. Games where the difference is too large will guarantee one side will win, potentially biasing downstream analysis. 
+Next, the games should be balanced. That is, the ratings between the players should be similar. Games where the difference is too large will guarantee one side will win, potentially biasing downstream analysis.
 
 ```python
 fig, ax = plot.subplots()
@@ -106,10 +106,10 @@ ax.set_ylabel('Games')
 
 plot.show()
 ```
+
 ![Histogram of of the ELO Difference between the Players for Blitz games](../../../images/blog/chess-analysis/BlitzPlayerDifference.jpeg)
 
 Most of the games fall in the fair range of ±200 rating points. There are a few outliers bleeding into the ±500 point range.
-
 
 ```python
 # 11562 Games remaining
@@ -132,6 +132,7 @@ ax.set_ylabel('Games')
 
 plot.show()
 ```
+
 ![Bar graph of the number of games played grouped by the number of Book moves featured for Blitz games](../../../images/blog/chess-analysis/BlitzBookMoves.jpeg)
 
 Grouping by the number of Book Moves featured, a nice gradually descending distribution is apparent. Clearly, the majority of games have 2-6 Book Moves played.
@@ -143,13 +144,14 @@ blitz_games['ELOAverage'] = (blitz_games['WhiteElo'] + blitz_games['BlackElo']) 
 
 res = stats.linregress(blitz_games['OpeningMoves'], blitz_games['ELOAverage'])
 ```
+
 ```
 Regression Results:
   slope: 12.878527255330097
-  intercept: 1576.655656676459, 
-  rvalue: 0.08137428579792201, 
-  pvalue: 1.8927751604955526e-18, 
-  stderr: 1.4670922151454777, 
+  intercept: 1576.655656676459,
+  rvalue: 0.08137428579792201,
+  pvalue: 1.8927751604955526e-18,
+  stderr: 1.4670922151454777,
   intercept_stderr: 5.938045602789431
 ```
 
@@ -160,16 +162,17 @@ ax.set_xlabel('# of Book Moves')
 ax.set_ylabel('Average ELO of Players')
 
 plot.scatter(blitz_games['OpeningMoves'], blitz_games['ELOAverage'], alpha=0.05, color='#0062ff')
-plot.plot(blitz_games['OpeningMoves'], res.intercept + res.slope * blitz_games['OpeningMoves'], color='#fa4d56', 
+plot.plot(blitz_games['OpeningMoves'], res.intercept + res.slope * blitz_games['OpeningMoves'], color='#fa4d56',
           label=f'ELO = {round(res.slope, 2)} * BookMoves + {round(res.intercept, 2)}')
 
 plot.show()
 ```
+
 ![Scatter plot of Average Player ELO vs number of Book moves featured for Blitz games](../../../images/blog/chess-analysis/BlitzBookMovesELO.jpeg)
 
 Looking at our regression, there is a slight positive relationship that is significant (p < 0.05) but has a small R^2 of 0.00662. I expected the variance to be high but not this high.
 
-The first version of my analysis stopped here. After sitting on it for a few days, I realized that players don’t stop memorizing lines when the Encyclopedia of Chess Openings line ends, they often follow a game played by Masters before entering a novelty. After adding this extra field, I made a second regression of the player ratings and the number of moves followe from a Master game. 
+The first version of my analysis stopped here. After sitting on it for a few days, I realized that players don’t stop memorizing lines when the Encyclopedia of Chess Openings line ends, they often follow a game played by Masters before entering a novelty. After adding this extra field, I made a second regression of the player ratings and the number of moves followe from a Master game.
 
 ```python
 fig, ax = plot.subplots()
@@ -181,6 +184,7 @@ ax.set_ylabel('Games')
 
 plot.show()
 ```
+
 ![Bar graph of the number of games played grouped by the number of Master moves featured for Blitz games](../../../images/blog/chess-analysis/BlitzMasterMoves.jpeg)
 
 Comparing this bar chart with the previous, players are sticking to Master games for longer than Book Moves alone. This gives us good evidence that _Opening Theory_ consists of more than a 2-6 move Opening Book.
@@ -188,6 +192,7 @@ Comparing this bar chart with the previous, players are sticking to Master games
 ```python
 res = stats.linregress(blitz_games['MasterMoves'], blitz_games['ELOAverage'])
 ```
+
 ```
 Regression Results:
   slope: 30.674892863592703
@@ -205,14 +210,15 @@ ax.set_xlabel('# of Master Moves')
 ax.set_ylabel('Average ELO of Players')
 
 plot.scatter(blitz_games['MasterMoves'], blitz_games['ELOAverage'], alpha=0.05, color='#0062ff')
-plot.plot(blitz_games['MasterMoves'], res.intercept + res.slope * blitz_games['MasterMoves'], color='#fa4d56', 
+plot.plot(blitz_games['MasterMoves'], res.intercept + res.slope * blitz_games['MasterMoves'], color='#fa4d56',
           label=f'ELO = {round(res.slope, 2)} * MasterMoves + {round(res.intercept, 2)}')
 
 plot.show()
 ```
+
 ![Scatter plot of Average Player ELO vs number of Master moves featured for Blitz games](../../../images/blog/chess-analysis/BlitzMasterMovesELO.jpeg)
 
-Looking at our second regression, there is a positive relationship that is significant (p < 0.05) but has a modest R^2 of 0.13919. This was the relationship I hypothesized in the introduction. 
+Looking at our second regression, there is a positive relationship that is significant (p < 0.05) but has a modest R^2 of 0.13919. This was the relationship I hypothesized in the introduction.
 
 ### Bullet
 
@@ -234,6 +240,7 @@ bullet_games['ELOAverage'] = (bullet_games['WhiteElo'] + bullet_games['BlackElo'
 
 res = stats.linregress(bullet_games['OpeningMoves'], bullet_games['ELOAverage'])
 ```
+
 ```
 Regression Results:
   slope: -18.938642094441818
@@ -251,19 +258,20 @@ ax.set_xlabel('# of Book Moves')
 ax.set_ylabel('Average ELO of Players')
 
 plot.scatter(bullet_games['OpeningMoves'], bullet_games['ELOAverage'], alpha=0.05, color='#0062ff')
-plot.plot(bullet_games['OpeningMoves'], res.intercept + res.slope * bullet_games['OpeningMoves'], color='#fa4d56', 
+plot.plot(bullet_games['OpeningMoves'], res.intercept + res.slope * bullet_games['OpeningMoves'], color='#fa4d56',
           label=f'ELO = {round(res.slope, 2)} * BookMoves + {round(res.intercept, 2)}')
 
 plot.show()
 ```
+
 ![Scatter plot of Average Player ELO vs number of Book moves featured for Bullet games](../../../images/blog/chess-analysis/BulletBookMovesELO.jpeg)
 
 Initially, this regression and graph caught me off guard. Why would playing fewer book moves correlate with a higher rating? To verify this this relationship, I did a second regression of player rating and Master moves.
 
-
 ```python
 res = stats.linregress(bullet_games['MasterMoves'], bullet_games['ELOAverage'])
 ```
+
 ```
 Regression Results:
   slope: 8.206545855725649
@@ -281,31 +289,32 @@ ax.set_xlabel('# of Master Moves')
 ax.set_ylabel('Average ELO of Players')
 
 plot.scatter(bullet_games['MasterMoves'], bullet_games['ELOAverage'], alpha=0.05, color='#0062ff')
-plot.plot(bullet_games['MasterMoves'], res.intercept + res.slope * bullet_games['MasterMoves'], color='#fa4d56', 
+plot.plot(bullet_games['MasterMoves'], res.intercept + res.slope * bullet_games['MasterMoves'], color='#fa4d56',
           label=f'ELO = {round(res.slope, 2)} * MasterMoves + {round(res.intercept, 2)}')
 
 plot.show()
 ```
+
 ![Scatter plot of Average Player ELO vs number of Master moves featured for Bullet games](../../../images/blog/chess-analysis/BulletMasterMovesELO.jpeg)
 
-When looking at the number of master moves played and player rating, the relationship is greatly diminished compared to the Blitz section. This confirms the trend in the prior regression. 
+When looking at the number of master moves played and player rating, the relationship is greatly diminished compared to the Blitz section. This confirms the trend in the prior regression.
 
 To a non-chess player this relationship might be very unexpected. If opening moves are typically memorized, why are players not playing Book moves or Master moves just like in blitz? In the Discussion section, I will explore this finding more.
 
 ## Discussion
 
-In the Analysis, I looked at relationship of moves played from an Opening Book and Master Games and player rating for Blitz and Bullet time formats. I verified that player ratings were representative and normally distributed, matching what I expected. Additionally, I verified that there was a downward trend of Book and Master moves featured past the limited set of first moves, as expected. 
+In the Analysis, I looked at relationship of moves played from an Opening Book and Master Games and player rating for Blitz and Bullet time formats. I verified that player ratings were representative and normally distributed, matching what I expected. Additionally, I verified that there was a downward trend of Book and Master moves featured past the limited set of first moves, as expected.
 
-In the Blitz regression analysis, a weak positive relationship between the number of Book moves and rating was present. And a strong positive relationship existed between the number of Master moves and rating. There are two possible ways to interpret this result. 
+In the Blitz regression analysis, a weak positive relationship between the number of Book moves and rating was present. And a strong positive relationship existed between the number of Master moves and rating. There are two possible ways to interpret this result.
 
-1. Strong players can generally find the top moves that Masters play. 
-2. Strong players are using moves from a database of Master games to improve. 
+1. Strong players can generally find the top moves that Masters play.
+2. Strong players are using moves from a database of Master games to improve.
 
-There is probably a mix of both going here. Good moves are objectively good in perfect information game like Chess and players are looking at what others are doing to improve their game. 
+There is probably a mix of both going here. Good moves are objectively good in perfect information game like Chess and players are looking at what others are doing to improve their game.
 
-In the Bullet regression analysis, a weak negative negative relationship between the number of Book moves and rating was present. And a weak positive relationship existed between the number of Master moves and rating. This was an unexpected result. Many online chess players will tell you that Bullet Chess is a fundamentally different game than Blitz Chess. Many games are won or lost on time, not checkmate. This favors the player who can play faster, not better. To increase the amount of time your opponent consumes per move, players try to complicate the position and throw unusual moves at their opponent. 
+In the Bullet regression analysis, a weak negative negative relationship between the number of Book moves and rating was present. And a weak positive relationship existed between the number of Master moves and rating. This was an unexpected result. Many online chess players will tell you that Bullet Chess is a fundamentally different game than Blitz Chess. Many games are won or lost on time, not checkmate. This favors the player who can play faster, not better. To increase the amount of time your opponent consumes per move, players try to complicate the position and throw unusual moves at their opponent.
 
-In the recent [IM not a GM tournament](https://www.chess.com/article/view/2021-im-not-a-gm-speed-chess-championship), [International Master(IM) Levy Rozman recounts his opening preparation for the bullet section consisted of the unusual move 1.b3](https://youtu.be/C3QlcE55VUo?t=794), featured below. 
+In the recent [IM not a GM tournament](https://www.chess.com/article/view/2021-im-not-a-gm-speed-chess-championship), [International Master(IM) Levy Rozman recounts his opening preparation for the bullet section consisted of the unusual move 1.b3](https://youtu.be/C3QlcE55VUo?t=794), featured below.
 
 <div style='width:50%;margin:auto;'>
 
@@ -326,6 +335,7 @@ Overall, I analyzed 20,000 Lichess Bullet and Blitz games to compare opening kno
 All resources used to create this dataset and analysis.
 
 ### Datasets
+
 - [Lichess Games](https://database.lichess.org/#standard_games)
 - [Master Games](https://rebel13.nl/download/data.html)
 - [Opening Book](https://github.com/niklasf/eco)
@@ -497,6 +507,7 @@ if __name__ == '__main__':
 ### Graphs
 
 #### Blitz
+
 - [Histogram of ELO with the White Pieces](/assets/img/chess-analysis/BlitzWhiteElo.jpeg)
 - [Histogram of ELO with the Black Pieces](/assets/img/chess-analysis/BlitzBlackElo.jpeg)
 - [Histogram of of the ELO Difference between the Players](/assets/img/chess-analysis/BlitzPlayerDifference.jpeg)
@@ -506,6 +517,7 @@ if __name__ == '__main__':
 - [Scatter plot of Average Player ELO vs number of Master moves featured](/assets/img/chess-analysis/BlitzMasterMovesELO.jpeg)
 
 #### Bullet
+
 - [Histogram of ELO with the White Pieces](/assets/img/chess-analysis/BulletWhiteElo.jpeg)
 - [Histogram of ELO with the Black Pieces](/assets/img/chess-analysis/BulletBlackElo.jpeg)
 - [Histogram of of the ELO Difference between the Players](/assets/img/chess-analysis/BulletPlayerDifference.jpeg)

@@ -1,9 +1,1 @@
-public
-.cache
 .yarn
-
-*.md
-*.html
-*.json
-*.yml
-*.yaml
