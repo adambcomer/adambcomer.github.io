@@ -39,8 +39,8 @@ const IndexPage = (): JSX.Element => {
             >
               <code className='language-bash'>
                 curl --proto &apos;=https&apos; -sSf
-                https://healthcare-data.adambcomer.com/npi/npi_data_may_2023.sqlite.zst
-                | zstd -d - -o npi_data_may_2023.sqlite
+                https://healthcare-data.adambcomer.com/npi/npi_data_july_2023.sqlite.zst
+                | zstd -d - -o npi_data_july_2023.sqlite
               </code>
             </pre>
           </div>
@@ -49,6 +49,24 @@ const IndexPage = (): JSX.Element => {
 
           <ul className='mt-8 mx-4'>
             <li className='text-lg list-disc'>
+              <li className='text-lg list-disc'>
+                <a
+                  href='https://healthcare-data.adambcomer.com/npi/npi_data_july_2023.sqlite.zst'
+                  className='md-link hover:md-on-primary-container'
+                >
+                  July 2023 SQLite Database (npi_data_july_2023.sqlite.zst)
+                  [738.06 MB]
+                </a>
+              </li>
+              <li className='text-lg list-disc'>
+                <a
+                  href='https://healthcare-data.adambcomer.com/npi/npi_data_june_2023.sqlite.zst'
+                  className='md-link hover:md-on-primary-container'
+                >
+                  June 2023 SQLite Database (npi_data_june_2023.sqlite.zst)
+                  [733.77 MB]
+                </a>
+              </li>
               <a
                 href='https://healthcare-data.adambcomer.com/npi/npi_data_may_2023.sqlite.zst'
                 className='md-link hover:md-on-primary-container'
