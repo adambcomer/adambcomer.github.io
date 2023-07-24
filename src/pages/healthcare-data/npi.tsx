@@ -15,17 +15,214 @@ const IndexPage = (): JSX.Element => {
         <div className='mx-6 my-64 text-center'>
           <h1 className='md-display-large'>NPI Healthcare Data</h1>
           <p className='md-headline-medium md-color-secondary mt-6'>
-            Monthly Archives of Healthcare Providers and NPI numbers
+            REST API and Monthly Archives of Healthcare Providers and NPI
+            numbers
           </p>
         </div>
 
         <div className='mt-48 max-w-screen-lg mx-auto'>
-          <h2 className='text-center md-display-large'>Archives</h2>
+          <h2 className='text-center md-display-large'>REST API</h2>
+          <p className='mt-8'>
+            Access NPI Provider data via a HTTP based REST API. Data for this
+            API comes from{' '}
+            <a
+              href='https://download.cms.gov/nppes/NPI_Files.html'
+              className='md-link underline hover:md-on-primary-container'
+            >
+              monthly archives of NPI Provider information
+            </a>{' '}
+            by Centers for Medicare & Medicaid Services (CMS).
+          </p>
+
+          <p className='mt-8'>
+            These archives are available to download below if you wish to host
+            your own. Alternatively, this API provides a simple, ergonomic way
+            to access this large corpus of information without needing to
+            process the entire archive.
+          </p>
+
+          <h3 className='md-headline-medium mt-16'>Features</h3>
+          <ul className='mt-8 mx-4'>
+            <li className='list-disc'>
+              No Authentication/Authorization need to access
+            </li>
+            <li className='list-disc'>CORS enabled for all origins</li>
+            <li className='list-disc'>
+              Cached and proxied through Cloudflare CDN for great performance
+            </li>
+          </ul>
+
+          <h3 className='md-headline-medium mt-16'>Request Schema</h3>
+          <p className='mt-8'>
+            Replace <code>{`{NPI_NUMBER}`}</code> with a Provider's NPI number.
+          </p>
+          <div className='mt-8'>
+            <pre
+              className='py-4 px-8 rounded-2xl overflow-auto w-full'
+              style={{ background: 'var(--md-light-surface1)' }}
+            >
+              <code className='language-bash'>
+                https://npi-healthcare-data.adambcomer.com/npis/{`{NPI_NUMBER}`}
+              </code>
+            </pre>
+          </div>
+
+          <h3 className='md-headline-medium mt-16'>Example Request</h3>
+          <p className='mt-8'>
+            This example API request uses <code>curl</code> and{' '}
+            <a
+              href='https://jqlang.github.io/jq/'
+              className='md-link underline hover:md-on-primary-container'
+            >
+              <code>jq</code>
+            </a>{' '}
+            to demonstrates how to access NPI Provider data from CMS archives by
+            their NPI number.
+          </p>
+
+          <div className='mt-8'>
+            <pre
+              className='py-4 px-8 rounded-2xl overflow-auto w-full'
+              style={{ background: 'var(--md-light-surface1)' }}
+            >
+              <code className='language-bash'>
+                curl -sSf
+                https://npi-healthcare-data.adambcomer.com/npis/1508869488 | jq
+              </code>
+            </pre>
+          </div>
+
+          <h3 className='md-headline-medium mt-16'>Example Response</h3>
+
+          <div className='mt-8'>
+            <pre
+              className='py-4 px-8 rounded-2xl overflow-auto w-full'
+              style={{ background: 'var(--md-light-surface1)' }}
+            >
+              <code className='language-json'>
+                {`{
+  "successful": true,
+  "provider": {
+    "npi": 1508869488,
+    "entity_type_code": 1,
+    "replacement_npi": null,
+    "ein": null,
+    "organization_name": null,
+    "other_organization_name": null,
+    "other_organization_name_type_code": null,
+    "credential_text": "PH.D.",
+    "name": {
+      "last_name": "HETHERINGTON",
+      "first_name": "JOHN",
+      "middle_name": "J",
+      "name_prefix_text": "DR.",
+      "name_suffix_text": null
+    },
+    "other_name": {
+      "last_name": null,
+      "first_name": null,
+      "middle_name": null,
+      "name_prefix_text": null,
+      "name_suffix_text": null,
+      "last_name_type_code": null
+    },
+    "mailing_address": {
+      "first_line": "177 W COTTONWOOD LN",
+      "second_line": "STE 7",
+      "city_name": "CASA GRANDE",
+      "state_name": "AZ",
+      "postal_code": "852222552",
+      "country_code": "US",
+      "telephone_number": "5208364618",
+      "fax_number": "5208362650"
+    },
+    "practice_location_address": {
+      "first_line": "177 W COTTONWOOD LN",
+      "second_line": "STE 7",
+      "city_name": "CASA GRANDE",
+      "state_name": "AZ",
+      "postal_code": "852222552",
+      "country_code": "US",
+      "telephone_number": "5208364618",
+      "fax_number": "5208362650"
+    },
+    "enumeration_date": "05/24/2005",
+    "last_update_date": "07/08/2007",
+    "npi_deactivation": {
+      "deactivation_reason_code": null,
+      "deactivation_date": "03/16/2006",
+      "reactivation_date": "03/27/2006"
+    },
+    "gender_code": "M",
+    "authorized_official": {
+      "last_name": null,
+      "first_name": null,
+      "middle_name": null,
+      "name_prefix_text": null,
+      "name_suffix_text": null,
+      "title_or_position": null,
+      "telephone_number": null,
+      "credential_text": null
+    },
+    "is_sole_proprietor": "X",
+    "parent_organization": {
+      "is_organization_subpart": null,
+      "parent_organization_lbn": null,
+      "parent_organization_tin": null
+    },
+    "certification_date": null,
+    "licenses": [
+      {
+        "license_number": "DA4090",
+        "license_number_state_code": "AZ"
+      }
+    ],
+    "taxonomies": [
+      {
+        "taxonomy_code": "231H00000X",
+        "primary_taxonomy_switch": "Y",
+        "taxonomy_group": null
+      }
+    ],
+    "other_identifiers": [
+      {
+        "identifier": "AZOO76260",
+        "identifier_type_code": 1,
+        "identifier_state": "AZ",
+        "identifier_issuer": "BLUE CROSS/BLUE SHIELD"
+      },
+      {
+        "identifier": "133376",
+        "identifier_type_code": 1,
+        "identifier_state": "WA",
+        "identifier_issuer": "DEPT OF LABOR & INDUSTRIE"
+      },
+      {
+        "identifier": "1Z2179",
+        "identifier_type_code": 1,
+        "identifier_state": "AZ",
+        "identifier_issuer": "HEALTHNET"
+      },
+      {
+        "identifier": "802117",
+        "identifier_type_code": 5,
+        "identifier_state": "AZ",
+        "identifier_issuer": null
+      }
+    ]
+  }
+}
+`}
+              </code>
+            </pre>
+          </div>
+
+          <h2 className='mt-12 text-center md-display-large'>Archives</h2>
           <p className='mt-8'>
             Download and decompress the latest SQLite formatted archive of NPI
             Provider data from CMS. Archives are compressed using{' '}
             <a
-              href='http://facebook.github.io/zstd/'
+              href='https://facebook.github.io/zstd/'
               className='md-link underline hover:md-on-primary-container'
             >
               <code>zstd</code>
@@ -89,10 +286,16 @@ const IndexPage = (): JSX.Element => {
           <h3 className='md-headline-medium mt-16'>Documentation</h3>
 
           <p className='mt-8'>
-            The Centers for Medicare & Medicaid Services (CMS) publishes a
-            monthly archive of all recognized providers and their associated NPI
-            number. This data is invaluable because it enables downstream
-            services to consistency reference healthcare providers.
+            The Centers for Medicare & Medicaid Services (CMS) publishes a{' '}
+            <a
+              href='https://download.cms.gov/nppes/NPI_Files.html'
+              className='md-link underline hover:md-on-primary-container'
+            >
+              monthly archive of all recognized providers and their associated
+              NPI number
+            </a>
+            . This data is invaluable because it enables downstream services to
+            consistency reference healthcare providers.
           </p>
 
           <p className='mt-4'>
@@ -109,7 +312,7 @@ const IndexPage = (): JSX.Element => {
             benefits of fast indexes, table joins, and stable datatypes.
           </p>
 
-          <h4 className='md-headline-small mt-8'>Table Schemas</h4>
+          <h4 className='md-headline-small mt-16'>Table Schemas</h4>
           <pre
             className='mt-8 py-4 px-8 rounded-2xl overflow-auto w-full'
             style={{ background: 'var(--md-light-surface1)' }}

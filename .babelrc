@@ -4,7 +4,7 @@
     [
       "prismjs",
       {
-        "languages": ["bash", "sql"],
+        "languages": ["bash", "sql", "json"],
         "plugins": [],
         "css": true
       }
