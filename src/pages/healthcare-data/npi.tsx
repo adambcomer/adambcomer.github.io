@@ -54,7 +54,7 @@ const IndexPage = (): JSX.Element => {
 
           <h3 className='md-headline-medium mt-16'>Request Schema</h3>
           <p className='mt-8'>
-            Replace <code>{`{NPI_NUMBER}`}</code> with a Provider's NPI number.
+            Replace <code>{`{NPI_NUMBER}`}</code> with a Provider&apos;s NPI number.
           </p>
           <div className='mt-8'>
             <pre
