@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+  {{ partial "head.html" . }}
+
+
+  <body class="surface on-surface-text">
+    {{ partial "header.html" }}
+
+
+    <main class="px-6 md:px-12 mb-32 max-w-screen-2xl mx-auto">
+      <div class="my-64">
+        <h1 class="display-large">Experience</h1>
+        <p class="headline-small">My work experience and resume</p>
+      </div>
+
+      <div class="surface-container-high rounded-[32px] p-6 md:p-12">
+        <h2 class="display-small">Knowtworthy</h2>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">Role</h3>
+        <p class="body-large mt-2">Software Developer and Co-Founder</p>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">Time</h3>
+        <p class="body-large mt-2">Nov 2017 - Present</p>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">About</h3>
+        <p class="body-large mt-2">
+          <a
+            href="https://knowtworthy.com/"
+            class="primary-text underline hover:secondary-text"
+          >
+            Knowtworthy
+          </a>
+          is a Meetings Productivity tool for business professionals to aid in
+          organizing, formatting, and sharing meeting minutes. My job at the
+          company is primarily a Full Stack Software Developer. My
+          responsibility are to build and maintain the Web App and Backend API.
+          Additionally, I manage our Kubernetes Cluster on AWS.
+        </p>
+        <p class="body-large mt-4">
+          When I joined the company, my focus was designing and building the
+          Backend API in Node.js, Koa.js, and MongoDB and establishing
+          infrastructure on AWS. Today, my responsibilities have expanded to the
+          Frontend, other Backend Services, and the CI/CD systems. On the
+          Frontend, I redesigned the Web App from scratch using our new design
+          language, Typescript, and React Hooks. On top of the Backend API in
+          Node.js, I authored our audio streaming server for realtime
+          Speech-to-Text with Go, a design choice we made to improve the
+          performance of our services. Lastly, I created our CI/CD system on
+          Gitlab CI/CD to automate testing and quickly roll out updates to
+          users.
+        </p>
+        <p class="body-large mt-4">
+          My contributions on the AWS infrastructure and Kubernetes cluster are
+          innumerable, but I will list a few notable ones. I setup the
+          Kubernetes cluster on AWS to host all of our services, including but
+          not limited to: the Backend API, Audio Streaming Server, and Audio
+          Processor Workers. Additionally, this includes our staging environment
+          for QA testing before releases. Using AWS CloudFront and AWS Load
+          Balancers, I created a layered solution to distribute our Web App
+          globally with minimal latency and failovers for our backend services.
+          Finally, I setup Elasticsearch to offer a search service to our users
+          and collect logs from our backend servers.
+        </p>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">
+          Tools and Technologies
+        </h3>
+        <div class="flex flex-wrap mt-2">
+          {{ $tech := slice "Javascript" "Typescript" "HTML" "CSS" "React" "Websockets" "Gatsby.js" "Node.js" "Golang" "Docker" "Kubernetes" "Elasticsearch" "MongoDB" "AWS EC2" "AWS EKS" "AWS ECS" "AWS Cloudfront" "AWS S3" "AWS SQS" "AWS OpenSearch" "AWS X-Ray" "AWS Cloudwatch" "Google Text-to-Speech" "Git" "Gitlab CI/CD" }}
+          {{ range $tech }}
+            <span
+              class="label-large secondary-container on-secondary-container-text px-2 py-1 rounded-lg mr-4 mt-2"
+              >{{ . }}</span
+            >
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="surface-container-high rounded-[32px] p-6 md:p-12 mt-32">
+        <h2 class="display-small">Bank of Montreal (BMO)</h2>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">Role</h3>
+        <p class="body-large mt-2">Software Developer Intern</p>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">Time</h3>
+        <p class="body-large mt-2">May 2019 - Aug 2019</p>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">About</h3>
+        <p class="body-large mt-2">
+          During my summer internship at
+          <a
+            href="https://www.bmo.com/"
+            class="primary-text underline hover:secondary-text"
+          >
+            BMO
+          </a>
+          , I was tasked with designing and building the web frontend for a new
+          Business Intelligence(BI) tool at the Bank. The tool was targeted at
+          non-technical employees to help them draw up reports and better
+          understand their data. Using the
+          <a
+            href="https://www.carbondesignsystem.com/"
+            class="primary-text underline hover:secondary-text"
+          >
+            Carbon Design System
+          </a>
+          , I built the UI prototypes and pitched the design to management.
+          Additionally, I built the web frontend with HTML, CSS, and jQuery on
+          Microsoft’s C# MVC.
+        </p>
+        <p class="md-body-large mt-4">
+          When I wasn’t working on the BI tool, I helped the Business Associates
+          automate tedious tasks with Python scripts. My most impactful effort
+          was a
+          <a
+            href="https://en.wikipedia.org/wiki/Regression_testing"
+            class="primary-text underline hover:secondary-text"
+          >
+            regression analysis
+          </a>
+          tool to verify that new code changes to a legacy system were backwards
+          compatible.
+        </p>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">
+          Tools and Technologies
+        </h3>
+        <div class="flex flex-wrap mt-2">
+          {{ $tech := slice "Javascript" "jQuery" "HTML" "CSS" "Python" "C#" "MVC" "ElasticSearch" "Kibana" }}
+          {{ range $tech }}
+            <span
+              class="label-large secondary-container on-secondary-container-text px-2 py-1 rounded-lg mr-4 mt-2"
+              >{{ . }}</span
+            >
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="surface-container-high rounded-[32px] p-6 md:p-12 mt-32">
+        <h2 class="display-small">BDM Trucks</h2>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">Role</h3>
+        <p class="body-large mt-2">Web Developer</p>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">Time</h3>
+        <p class="body-large mt-2">Sep 2017 - Nov 2017</p>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">About</h3>
+        <p class="body-large mt-2">
+          <a
+            href="http://www.bdmtrucks.com/"
+            class="primary-text underline hover:secondary-text"
+          >
+            BDM Trucks
+          </a>
+          is a commercial truck repair service in Manassas, VA that needed a new
+          website. I built them a new website using HTML, CSS, and
+          <a
+            href="https://getbootstrap.com/"
+            class="primary-text underline hover:secondary-text"
+          >
+            Bootstrap 4
+          </a>
+          . Additionally, I optimized the on-page SEO of their new website to
+          draw more traffic from their local area.
+        </p>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">
+          Tools and Technologies
+        </h3>
+        <div class="flex flex-wrap mt-2">
+          {{ $tech := slice "HTML" "CSS" "Boostrap 4" "Github Pages" }}
+          {{ range $tech }}
+            <span
+              class="label-large secondary-container on-secondary-container-text px-2 py-1 rounded-lg mr-4 mt-2"
+              >{{ . }}</span
+            >
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="surface-container-high rounded-[32px] p-6 md:p-12 mt-32">
+        <h2 class="display-small">SBIRT</h2>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">Role</h3>
+        <p class="body-large mt-2">Software Developer</p>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">Time</h3>
+        <p class="body-large mt-2">Oct 2015 - Dec 2016</p>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">About</h3>
+        <p class="body-large mt-2">
+          <a
+            href="https://www.su.edu/pharmacy/"
+            class="primary-text underline hover:secondary-text"
+          >
+            Shenandoah University’s School of Pharmacy
+          </a>
+          needed a tool to collect data on drug abuse from local clinics in the
+          Northern Virginia area. I built an iOS and Android app to assist their
+          team in collecting reports from doctors and students in training.
+          Later, the data collected went into research on drug abuse and
+          intervention in the local area, potentially saving lives.
+        </p>
+
+        <h3 class="title-medium on-surface-variant-text mt-6">
+          Tools and Technologies
+        </h3>
+        <div class="flex flex-wrap mt-2">
+          {{ $tech := slice "Java" "Android" "Swift" "iOS" "GCP App Engine" "SQL" "MySQL" }}
+          {{ range $tech }}
+            <span
+              class="label-large secondary-container on-secondary-container-text px-2 py-1 rounded-lg mr-4 mt-2"
+              >{{ . }}</span
+            >
+          {{ end }}
+        </div>
+      </div>
+    </main>
+
+    {{ partial "footer.html" }}
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<nav class="flex flex-row m-6">
+  <div class="flex-1">
+    <span class="flex-1 text-2xl">
+      <a href="/">ADAM COMER</a>
+    </span>
+  </div>
+
+  <div class="flex flex-row hidden lg:block">
+    <a href="/">
+      <button
+        class="inline-flex items-center py-3 px-3 title-medium rounded-full mx-2 hover:secondary-container hover:on-secondary-container-text"
+      >
+        <span class="material-symbols-outlined mr-2">home</span>Home
+      </button>
+    </a>
+    <a href="/blog/">
+      <button
+        class="inline-flex items-center py-3 px-3 title-medium rounded-full mx-2 hover:secondary-container hover:on-secondary-container-text"
+      >
+        <i class="material-symbols-outlined mr-2">article</i>Blog
+      </button>
+    </a>
+    <a href="/projects/">
+      <button
+        class="inline-flex items-center py-3 px-3 title-medium rounded-full mx-2 hover:secondary-container hover:on-secondary-container-text"
+      >
+        <i class="material-symbols-outlined mr-2">build</i>Projects
+      </button>
+    </a>
+    <a href="/experience/">
+      <button
+        class="inline-flex items-center py-3 px-3 title-medium rounded-full mx-2 hover:secondary-container hover:on-secondary-container-text"
+      >
+        <i class="material-symbols-outlined mr-2">work</i>Experience
+      </button>
+    </a>
+  </div>
+  <button id="mobile-nav-button">
+    <svg
+      class="on-surface-fill lg:hidden"
+      version="1.1"
+      id="icon"
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      width="32px"
+      height="32px"
+      viewBox="0 0 32 32"
+    >
+      <rect x="14" y="4" width="4" height="4" />
+      <rect x="4" y="4" width="4" height="4" />
+      <rect x="24" y="4" width="4" height="4" />
+      <rect x="14" y="14" width="4" height="4" />
+      <rect x="4" y="14" width="4" height="4" />
+      <rect x="24" y="14" width="4" height="4" />
+      <rect x="14" y="24" width="4" height="4" />
+      <rect x="4" y="24" width="4" height="4" />
+      <rect x="24" y="24" width="4" height="4" />
+    </svg>
+  </button>
+
+  <div
+    id="mobile-nav"
+    class="fixed lg:hidden bottom-0 left-0 right-0 z-50 top-[80px] surface hidden"
+  >
+    <hr />
+    <div class="mt-4 mx-2">
+      <a href="/">
+        <button
+          class="inline-flex items-center py-3 px-3 title-medium rounded-full"
+        >
+          <span class="material-symbols-outlined mr-2">home</span>Home
+        </button>
+      </a>
+    </div>
+    <div class="mt-4 mx-2">
+      <a href="/blog/">
+        <button
+          class="inline-flex items-center py-3 px-3 title-medium rounded-full"
+        >
+          <i class="material-symbols-outlined mr-2">article</i>Blog
+        </button>
+      </a>
+    </div>
+    <div class="mt-4 mx-2">
+      <a href="/projects/">
+        <button
+          class="inline-flex items-center py-3 px-3 title-medium rounded-full"
+        >
+          <i class="material-symbols-outlined mr-2">build</i>Projects
+        </button>
+      </a>
+    </div>
+    <div class="mt-4 mx-2">
+      <a href="/experience/">
+        <button
+          class="inline-flex items-center py-3 px-3 title-medium rounded-full"
+        >
+          <i class="material-symbols-outlined mr-2">work</i>Experience
+        </button>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  ;(() => {
+    const mobileNavButton = document.getElementById('mobile-nav-button')
+    const mobileNav = document.getElementById('mobile-nav')
+
+    mobileNavButton.onclick = () => {
+      mobileNav.classList.toggle('hidden')
+    }
+  })()
+</script>

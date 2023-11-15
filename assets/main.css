@@ -1,0 +1,88 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'material/theme.css';
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+.blog-content h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 52px;
+  color: var(--md-light-on-background);
+  margin-top: 48px;
+}
+
+.blog-content h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 44px;
+  margin-top: 48px;
+}
+
+.blog-content h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 40px;
+  margin-top: 48px;
+}
+
+.blog-content p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  margin-top: 32px;
+}
+
+.blog-content a {
+  text-decoration: underline;
+}
+
+.blog-content strong {
+  font-weight: 500;
+}
+
+.blog-content em {
+  font-weight: 400;
+}
+
+.blog-content ol {
+  margin-top: 16px;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.blog-content pre {
+  font-family: 'Roboto Mono' !important;
+  margin-top: 24px;
+  padding: 16px 32px;
+  overflow-x: auto;
+  border-radius: 16px;
+}
+
+.blog-content ul {
+  margin-top: 16px;
+}
+
+.blog-content li {
+  margin-top: 4px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+}
+
+.blog-content img {
+  border-radius: 32px;
+}

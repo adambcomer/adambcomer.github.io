@@ -1,0 +1,11 @@
+baseURL = 'https://adambcomer.com/'
+languageCode = 'en-us'
+title = 'Adam Comer'
+
+[markup]
+  [markup.highlight]
+    noClasses = true
+    style = 'catppuccin-mocha'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
