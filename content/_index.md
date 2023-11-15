@@ -1,5 +1,5 @@
 ---
 title: 'Adam Comer | Software Developer'
-description: 'Adam Comer is a Fullstack Developer based in Denver, Colorodo. Currently, he works for Syniti as a Cloud Software Devloper specializing in Typescript, Nextjs, Golang, and Postgres.'
+description: 'Adam Comer is a Fullstack Developer based in Denver, Colorado. Currently, he works for Syniti as a Cloud Software Developer specializing in Typescript, React.js, and Golang.'
 canonical: https://adambcomer.com/
 ---
