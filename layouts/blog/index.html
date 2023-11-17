@@ -17,21 +17,20 @@
         <h2 class="display-small">Pages</h2>
 
         <div class="grid gap-6 grid-cols-1 lg:grid-cols-12 mt-8">
-          {{ range where .Pages "IsPage" false }}
-            <a href="{{ .Permalink }}" class="col-span-4">
-              <div
-                class="surface-container-high p-8 rounded-[32px] overflow-hidden h-full hover:surface-container-highest"
-              >
-                <p class="label-large">Page</p>
-                <h3 class="headline-medium line-clamp-2">
-                  {{ .Title }}
-                </h3>
-                <p class="body-large mt-4 line-clamp-3">
-                  {{ .Params.description }}
-                </p>
-              </div>
-            </a>
-          {{ end }}
+          <a href="{{ .Permalink }}" class="col-span-4">
+            <div
+              class="surface-container-high p-8 rounded-[32px] overflow-hidden h-full hover:surface-container-highest"
+            >
+              <p class="label-large">Page</p>
+              <h3 class="headline-medium line-clamp-2">
+                Build a Simple Database
+              </h3>
+              <p class="body-large mt-4 line-clamp-3">
+                Introductory tutorial to designing and building a LSM-Tree based
+                Key-Value Store like RocksDB
+              </p>
+            </div>
+          </a>
         </div>
       </div>
 
