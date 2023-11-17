@@ -8,34 +8,74 @@
   <div class="flex flex-row hidden lg:block">
     <a href="/">
       <button
-        class="inline-flex items-center py-3 px-3 title-medium rounded-full mx-2 hover:secondary-container hover:on-secondary-container-text"
+        class="group inline-flex items-center py-3 px-3 title-medium rounded-full mx-2 hover:secondary-container hover:on-secondary-container-text"
       >
-        <span class="material-symbols-outlined mr-2">home</span>Home
+        <svg
+          class="mr-2 on-surface-fill group-hover:on-secondary-container-fill"
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          viewBox="0 -960 960 960"
+          width="24"
+        >
+          <path
+            d="M160-120v-480l320-240 320 240v480H560v-280H400v280H160Z"
+          /></svg
+        >Home
       </button>
     </a>
     <a href="/blog/">
       <button
-        class="inline-flex items-center py-3 px-3 title-medium rounded-full mx-2 hover:secondary-container hover:on-secondary-container-text"
+        class="group inline-flex items-center py-3 px-3 title-medium rounded-full mx-2 hover:secondary-container hover:on-secondary-container-text"
       >
-        <i class="material-symbols-outlined mr-2">article</i>Blog
+        <svg
+          class="mr-2 on-surface-fill group-hover:on-secondary-container-fill"
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          viewBox="0 -960 960 960"
+          width="24"
+        >
+          <path
+            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm80-160h280v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Z"
+          /></svg
+        >Blog
       </button>
     </a>
     <a href="/projects/">
       <button
-        class="inline-flex items-center py-3 px-3 title-medium rounded-full mx-2 hover:secondary-container hover:on-secondary-container-text"
+        class="group inline-flex items-center py-3 px-3 title-medium rounded-full mx-2 hover:secondary-container hover:on-secondary-container-text"
       >
-        <i class="material-symbols-outlined mr-2">build</i>Projects
+        <svg
+          class="mr-2 on-surface-fill group-hover:on-secondary-container-fill"
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          viewBox="0 -960 960 960"
+          width="24"
+        >
+          <path
+            d="M686-132 444-376q-20 8-40.5 12t-43.5 4q-100 0-170-70t-70-170q0-36 10-68.5t28-61.5l146 146 72-72-146-146q29-18 61.5-28t68.5-10q100 0 170 70t70 170q0 23-4 43.5T584-516l244 242q12 12 12 29t-12 29l-84 84q-12 12-29 12t-29-12Z"
+          /></svg
+        >Projects
       </button>
     </a>
     <a href="/experience/">
       <button
-        class="inline-flex items-center py-3 px-3 title-medium rounded-full mx-2 hover:secondary-container hover:on-secondary-container-text"
+        class="group inline-flex items-center py-3 px-3 title-medium rounded-full mx-2 hover:secondary-container hover:on-secondary-container-text"
       >
-        <i class="material-symbols-outlined mr-2">work</i>Experience
+        <svg
+          class="mr-2 on-surface-fill group-hover:on-secondary-container-fill"
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          viewBox="0 -960 960 960"
+          width="24"
+        >
+          <path
+            d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm240-600h160v-80H400v80Z"
+          /></svg
+        >Experience
       </button>
     </a>
   </div>
-  <button id="mobile-nav-button">
+  <button id="mobile-nav-button" aria-label="Navigation Button">
     <svg
       class="on-surface-fill lg:hidden"
       version="1.1"

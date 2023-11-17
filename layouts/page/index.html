@@ -39,10 +39,13 @@
         </div>
 
         {{ $image := resources.Get "images/adam-comer-portrait.jpg" }}
-        {{ $image := $image.Resize "960x960 q90" }}
+        {{ $image := $image.Resize "720x720 q90" }}
         <img
           class="col-span-4 h-fit rounded-[48px] mt-16 md:mt-0"
           src="{{ $image.Permalink }}"
+          width="{{ $image.Width }}"
+          height="{{ $image.Height }}"
+          alt="Portrait of Adam Comer"
         />
       </div>
 
@@ -180,7 +183,7 @@
               class="surface-container-high rounded-[32px] overflow-hidden h-full hover:surface-container-highest"
             >
               {{ $image := resources.Get "images/blog/post-1-cover.jpeg" }}
-              {{ $image := $image.Fill "1920x1080 jpg q90" }}
+              {{ $image := $image.Fill "696x392 jpg q90 Center" }}
               <img
                 class="w-full rounded-[32px]"
                 src="{{ $image.Permalink }}"
@@ -206,7 +209,7 @@
               class="surface-container-high rounded-[32px] overflow-hidden h-full hover:surface-container-highest"
             >
               {{ $image := resources.Get "images/blog/simple-database-motivation-design-cover.jpg" }}
-              {{ $image := $image.Fill "1920x1080 jpg q90" }}
+              {{ $image := $image.Fill "696x392 jpg q90 Center" }}
               <img
                 class="w-full rounded-[32px]"
                 src="{{ $image.Permalink }}"
@@ -232,7 +235,7 @@
               class="surface-container-high rounded-[32px] overflow-hidden h-full hover:surface-container-highest"
             >
               {{ $image := resources.Get "images/blog/post-2-cover.jpg" }}
-              {{ $image := $image.Fill "1920x1080 jpg q90" }}
+              {{ $image := $image.Fill "696x392 jpg q90 Center" }}
               <img
                 class="w-full rounded-[32px]"
                 src="{{ $image.Permalink }}"
@@ -267,7 +270,17 @@
             <div
               class="title-medium inline-flex items-center border-b md:border-r border-1 px-12 py-6 w-full hover:secondary-container hover:on-secondary-container-text"
             >
-              <i class="material-symbols-outlined mr-4">mail</i>
+              <svg
+                class="w-6 mr-4 on-surface-fill group-hover:on-secondary-container-fill"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280 320-200v-80L480-520 160-720v80l320 200Z"
+                />
+              </svg>
               adambcomer@gmail.com
             </div>
           </a>
