@@ -7,7 +7,7 @@
     "tailwind:watch": "tailwindcss -i ./assets/main.css -o ./assets/style.css -w",
     "hugo:watch": "hugo server",
     "format": "prettier . --write",
-    "build": "tailwindcss -i ./assets/main.css -o ./assets/style.css && hugo"
+    "build": "tailwindcss -i ./assets/main.css -o ./assets/style.css && hugo --minify"
   },
   "author": "Adam Comer",
   "license": "ISC",
