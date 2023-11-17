@@ -55,7 +55,7 @@
           "width": 283,
           "height": 60
         }
-      },
+      }
     }
   </script> {{ $style := resources.Get "style.css" | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}" />
