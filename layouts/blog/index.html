@@ -17,7 +17,8 @@
         <h2 class="display-small">Pages</h2>
 
         <div class="grid gap-6 grid-cols-1 lg:grid-cols-12 mt-8">
-          <a href="{{ .Permalink }}" class="col-span-4">
+          {{ $simpleDatabasePage := .Page.GetPage "./simple-database/_index.md" }}
+          <a href="{{ $simpleDatabasePage.Permalink }}" class="col-span-4">
             <div
               class="surface-container-high p-8 rounded-[32px] overflow-hidden h-full hover:surface-container-highest"
             >
