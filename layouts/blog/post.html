@@ -20,8 +20,10 @@
       {{ $image := $image.Fill "1920x1080 q90" }}
       <img
         class="mt-16 rounded-[32px]"
-        alt="{{ .Params.imageAlt }}"
         src="{{ $image.Permalink }}"
+        width="{{ $image.Width }}"
+        height="{{ $image.Height }}"
+        alt="{{ .Params.imageAlt }}"
       />
 
       <div class="my-16 blog-content">
