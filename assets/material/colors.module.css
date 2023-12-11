@@ -5,6 +5,9 @@
   .primary-text {
     color: var(--md-sys-color-primary);
   }
+  .primary-fill {
+    fill: var(--md-sys-color-primary);
+  }
   .on-primary {
     background-color: var(--md-sys-color-on-primary);
   }
@@ -52,6 +55,9 @@
   }
   .secondary-text {
     color: var(--md-sys-color-secondary);
+  }
+  .secondary-fill {
+    fill: var(--md-sys-color-secondary);
   }
   .on-secondary {
     background-color: var(--md-sys-color-on-secondary);
